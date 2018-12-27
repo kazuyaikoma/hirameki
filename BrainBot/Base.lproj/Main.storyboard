@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9cl-ht-DcH" kind="relationship" relationship="viewControllers" id="nY3-lG-HkT"/>
+                        <segue destination="Ljm-N6-3aG" kind="relationship" relationship="viewControllers" id="uwb-el-KQw"/>
+                        <segue destination="HK3-h4-lXd" kind="relationship" relationship="viewControllers" id="amg-Jp-3nY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--履歴-->
+        <scene sceneID="uCF-Fc-li7">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8d-x9-zRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="9cl-ht-DcH" customClass="HistoryViewController" customModule="BrainBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ir-7w-J8H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGG-ej-p0h">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="履歴" id="GRj-l1-1qL"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y3q-qV-55w">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fGG-ej-p0h" firstAttribute="top" secondItem="skT-F3-aT4" secondAttribute="top" id="4PC-0C-cBg"/>
+                            <constraint firstItem="fGG-ej-p0h" firstAttribute="leading" secondItem="skT-F3-aT4" secondAttribute="leading" id="Dkh-Cb-7b5"/>
+                            <constraint firstItem="fGG-ej-p0h" firstAttribute="trailing" secondItem="skT-F3-aT4" secondAttribute="trailing" id="KjC-qE-8t1"/>
+                            <constraint firstItem="Y3q-qV-55w" firstAttribute="leading" secondItem="skT-F3-aT4" secondAttribute="leading" id="Wim-u4-7JH"/>
+                            <constraint firstItem="skT-F3-aT4" firstAttribute="bottom" secondItem="Y3q-qV-55w" secondAttribute="bottom" id="ZgF-6L-6a2"/>
+                            <constraint firstItem="skT-F3-aT4" firstAttribute="trailing" secondItem="Y3q-qV-55w" secondAttribute="trailing" id="bE1-8O-EDv"/>
+                            <constraint firstItem="Y3q-qV-55w" firstAttribute="top" secondItem="fGG-ej-p0h" secondAttribute="bottom" id="c0P-GP-eeE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="skT-F3-aT4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="履歴" id="idX-Lk-8UX"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="fGG-ej-p0h" id="9O9-Vn-SyF"/>
+                        <outlet property="tableView" destination="Y3q-qV-55w" id="gcg-Cq-XXT"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="841" y="-340"/>
+        </scene>
+        <!--発想-->
+        <scene sceneID="az5-54-gC3">
+            <objects>
+                <viewController id="Ljm-N6-3aG" customClass="HomeViewController" customModule="BrainBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DlA-6Y-r3a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qco-dA-PbV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="発想" id="8tj-jR-PsG"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qco-dA-PbV" firstAttribute="top" secondItem="DNs-WS-7YD" secondAttribute="top" id="K01-ho-B7w"/>
+                            <constraint firstItem="qco-dA-PbV" firstAttribute="leading" secondItem="DNs-WS-7YD" secondAttribute="leading" id="RKj-Vj-IGg"/>
+                            <constraint firstItem="qco-dA-PbV" firstAttribute="trailing" secondItem="DNs-WS-7YD" secondAttribute="trailing" id="V0Y-8K-OjJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DNs-WS-7YD"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="発想" id="OzW-AP-xrq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsj-LM-3wz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1518" y="103"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="Vbc-y3-tdj">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCb-to-BZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="HK3-h4-lXd" customClass="MenuViewController" customModule="BrainBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BYE-CU-a5y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWE-b3-M2Z">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="設定" id="N4P-aM-WRq"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QTM-kG-msV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DWE-b3-M2Z" firstAttribute="leading" secondItem="23G-W4-f94" secondAttribute="leading" id="3CQ-an-Zs9"/>
+                            <constraint firstItem="23G-W4-f94" firstAttribute="trailing" secondItem="QTM-kG-msV" secondAttribute="trailing" id="8I0-rN-c3k"/>
+                            <constraint firstItem="QTM-kG-msV" firstAttribute="leading" secondItem="23G-W4-f94" secondAttribute="leading" id="Cwb-fO-RpM"/>
+                            <constraint firstItem="23G-W4-f94" firstAttribute="bottom" secondItem="QTM-kG-msV" secondAttribute="bottom" id="D3v-Ue-FhK"/>
+                            <constraint firstItem="QTM-kG-msV" firstAttribute="top" secondItem="DWE-b3-M2Z" secondAttribute="bottom" id="KGI-wr-UyQ"/>
+                            <constraint firstItem="DWE-b3-M2Z" firstAttribute="trailing" secondItem="23G-W4-f94" secondAttribute="trailing" id="Raz-AS-P3u"/>
+                            <constraint firstItem="DWE-b3-M2Z" firstAttribute="top" secondItem="23G-W4-f94" secondAttribute="top" id="bXf-EW-9Z9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="23G-W4-f94"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="設定" id="CZg-zp-fae"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="DWE-b3-M2Z" id="bwU-Up-ft4"/>
+                        <outlet property="tableView" destination="QTM-kG-msV" id="XoF-1h-NTJ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="798" y="528"/>
+        </scene>
+    </scenes>
+</document>
