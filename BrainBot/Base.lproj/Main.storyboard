@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--履歴-->
         <scene sceneID="8k1-Ch-3ch">
             <objects>
                 <navigationController id="o7C-Kj-Uuq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="history.png" id="Oqy-m1-ELs"/>
+                    <tabBarItem key="tabBarItem" title="履歴" image="history.png" id="Oqy-m1-ELs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T9f-cr-oSe">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -79,11 +79,11 @@
             </objects>
             <point key="canvasLocation" x="1518" y="-600"/>
         </scene>
-        <!--Item-->
+        <!--アイデア-->
         <scene sceneID="tIs-Ev-lmL">
             <objects>
                 <navigationController id="bji-NP-mal" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="idea.png" id="Rqx-CN-ilH"/>
+                    <tabBarItem key="tabBarItem" title="アイデア" image="idea.png" id="Rqx-CN-ilH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kqt-D1-cky">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -169,11 +169,11 @@
             </objects>
             <point key="canvasLocation" x="1517.5999999999999" y="102.99850074962519"/>
         </scene>
-        <!--Item-->
+        <!--設定-->
         <scene sceneID="j1L-cL-nCK">
             <objects>
                 <navigationController id="Ne7-f3-bo4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="menu.png" id="SWl-5D-3s2"/>
+                    <tabBarItem key="tabBarItem" title="設定" image="menu.png" id="SWl-5D-3s2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lmp-iv-12Z">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

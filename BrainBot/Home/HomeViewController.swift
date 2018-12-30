@@ -13,13 +13,14 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "アイデア"
         
     }
 
     @IBAction func onStartTapped(_ sender: Any) {
         if let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") {
+            ideaVC.navigationItem.title = themeText.text
             self.show(ideaVC, sender: sender)
-//            self.present(ideaVC, animated: true, completion: nil)
         }
     }
 }
