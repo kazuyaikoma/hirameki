@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		71E8387BE32254BD958E4B49 /* Pods_BrainBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB03A213311F2A6DCF3E4A /* Pods_BrainBot.framework */; };
-		E5877D5221D498C000B2E1BD /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D4F21D498C000B2E1BD /* history@2x.png */; };
 		E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5021D498C000B2E1BD /* idea@2x.png */; };
 		E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5121D498C000B2E1BD /* menu@2x.png */; };
 		E5B4A57E21D47452002413A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A57D21D47452002413A1 /* AppDelegate.swift */; };
@@ -18,13 +17,14 @@
 		E5B4A58721D47453002413A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5B4A58621D47453002413A1 /* Assets.xcassets */; };
 		E5B4A58A21D47453002413A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5B4A58821D47453002413A1 /* LaunchScreen.storyboard */; };
 		E5B4A59221D480AD002413A1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A59121D480AD002413A1 /* MenuViewController.swift */; };
+		E5FBBE0821D96AB8007167B9 /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FBBE0721D96AB8007167B9 /* history@2x.png */; };
+		E5FBBE0C21D9737C007167B9 /* IdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBBE0B21D9737C007167B9 /* IdeaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0078FDAEA8EF4BF0E7FFA0A5 /* Pods-BrainBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot.release.xcconfig"; sourceTree = "<group>"; };
 		1A2B4099D6D8A04B8629BA06 /* Pods-BrainBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot.debug.xcconfig"; sourceTree = "<group>"; };
 		23DB03A213311F2A6DCF3E4A /* Pods_BrainBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5877D4F21D498C000B2E1BD /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history@2x.png"; sourceTree = "<group>"; };
 		E5877D5021D498C000B2E1BD /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
 		E5877D5121D498C000B2E1BD /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		E5B4A57A21D47452002413A1 /* BrainBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +36,8 @@
 		E5B4A58921D47453002413A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5B4A58B21D47453002413A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5B4A59121D480AD002413A1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E5FBBE0721D96AB8007167B9 /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history@2x.png"; sourceTree = "<group>"; };
+		E5FBBE0B21D9737C007167B9 /* IdeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,7 @@
 		E5877D4E21D4988C00B2E1BD /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				E5877D4F21D498C000B2E1BD /* history@2x.png */,
+				E5FBBE0721D96AB8007167B9 /* history@2x.png */,
 				E5877D5021D498C000B2E1BD /* idea@2x.png */,
 				E5877D5121D498C000B2E1BD /* menu@2x.png */,
 			);
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				E5B4A58121D47452002413A1 /* HomeViewController.swift */,
+				E5FBBE0B21D9737C007167B9 /* IdeaViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -206,7 +209,7 @@
 				E5B4A58A21D47453002413A1 /* LaunchScreen.storyboard in Resources */,
 				E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */,
 				E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */,
-				E5877D5221D498C000B2E1BD /* history@2x.png in Resources */,
+				E5FBBE0821D96AB8007167B9 /* history@2x.png in Resources */,
 				E5B4A58721D47453002413A1 /* Assets.xcassets in Resources */,
 				E5B4A58521D47452002413A1 /* Main.storyboard in Resources */,
 			);
@@ -260,6 +263,7 @@
 			files = (
 				E5B4A58221D47452002413A1 /* HomeViewController.swift in Sources */,
 				E5B4A57E21D47452002413A1 /* AppDelegate.swift in Sources */,
+				E5FBBE0C21D9737C007167B9 /* IdeaViewController.swift in Sources */,
 				E5B4A58021D47452002413A1 /* HistoryViewController.swift in Sources */,
 				E5B4A59221D480AD002413A1 /* MenuViewController.swift in Sources */,
 			);

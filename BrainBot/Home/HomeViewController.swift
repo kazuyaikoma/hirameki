@@ -9,12 +9,18 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet weak var themeText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-
+    @IBAction func onStartTapped(_ sender: Any) {
+        if let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") {
+            self.show(ideaVC, sender: sender)
+//            self.present(ideaVC, animated: true, completion: nil)
+        }
+    }
 }
 
