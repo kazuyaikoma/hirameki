@@ -9,12 +9,19 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet weak var themeText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationItem.title = "アイデア"
+        
     }
 
-
+    @IBAction func onStartTapped(_ sender: Any) {
+        if let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") {
+            ideaVC.navigationItem.title = themeText.text
+            self.show(ideaVC, sender: sender)
+        }
+    }
 }
 
