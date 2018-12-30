@@ -32,7 +32,6 @@
         <!--履歴-->
         <scene sceneID="uCF-Fc-li7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D8d-x9-zRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="9cl-ht-DcH" customClass="HistoryViewController" customModule="BrainBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ir-7w-J8H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -61,12 +60,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="skT-F3-aT4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="履歴" id="idX-Lk-8UX"/>
+                    <tabBarItem key="tabBarItem" title="履歴" image="history.png" id="idX-Lk-8UX"/>
                     <connections>
                         <outlet property="navigationBar" destination="fGG-ej-p0h" id="9O9-Vn-SyF"/>
                         <outlet property="tableView" destination="Y3q-qV-55w" id="gcg-Cq-XXT"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8d-x9-zRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="841" y="-340"/>
         </scene>
@@ -93,7 +93,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DNs-WS-7YD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="発想" id="OzW-AP-xrq"/>
+                    <tabBarItem key="tabBarItem" title="発想" image="idea.png" id="OzW-AP-xrq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsj-LM-3wz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +102,6 @@
         <!--設定-->
         <scene sceneID="Vbc-y3-tdj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MCb-to-BZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="HK3-h4-lXd" customClass="MenuViewController" customModule="BrainBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BYE-CU-a5y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -131,14 +130,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="23G-W4-f94"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="設定" id="CZg-zp-fae"/>
+                    <tabBarItem key="tabBarItem" title="設定" image="menu.png" id="CZg-zp-fae"/>
                     <connections>
                         <outlet property="navigationBar" destination="DWE-b3-M2Z" id="bwU-Up-ft4"/>
                         <outlet property="tableView" destination="QTM-kG-msV" id="XoF-1h-NTJ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCb-to-BZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="798" y="528"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="history.png" width="27" height="27"/>
+        <image name="idea.png" width="30" height="30"/>
+        <image name="menu.png" width="27" height="27"/>
+    </resources>
 </document>
