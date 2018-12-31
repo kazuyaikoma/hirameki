@@ -9,6 +9,8 @@
 import UIKit
 
 class IdeaContentViewController: UIViewController {
+    @IBOutlet weak var hintLabel: UILabel!
+    @IBOutlet weak var ideaText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

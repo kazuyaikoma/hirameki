@@ -291,6 +291,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="419"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="low-jp-VMy"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yix-Xp-D4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -321,7 +322,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYH-Lr-E1M">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYH-Lr-E1M">
                                 <rect key="frame" x="20" y="195" width="335" height="452"/>
                                 <color key="backgroundColor" white="0.93961817781690138" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
@@ -341,6 +342,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mTw-lB-OSN"/>
                     </view>
+                    <connections>
+                        <outlet property="hintLabel" destination="shO-fi-7zX" id="7UG-Fq-DKf"/>
+                        <outlet property="ideaText" destination="jYH-Lr-E1M" id="81O-T6-W41"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDh-gi-rvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
