@@ -10,35 +10,65 @@ import UIKit
 
 class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    var pageViewController: UIPageViewController!
+    var pageVC: UIPageViewController!
+    var hints = BBMaterial.hints
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        pageViewController.dataSource = self
-        pageViewController.delegate = self
-        pageViewController.view.isUserInteractionEnabled = false
+        
+        self.hints.shuffle()
+        
+        self.pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        self.pageVC.dataSource = self
+        self.pageVC.delegate = self
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "IdeaContentViewController") as UIViewController
-        self.pageViewController.setViewControllers([vc], direction: .forward, animated: false, completion: {done in })
-        self.pageViewController.view.backgroundColor = UIColor.clear
+        let vc: IdeaContentViewController = storyboard.instantiateViewController(withIdentifier: "IdeaContentViewController") as! IdeaContentViewController
         
-//        self.addChildViewController(pageViewController)
-        self.view.addSubview(self.pageViewController.view)
-//        pageViewController.didMove(toParentViewController: self)
+        vc.number = 0
+        vc.setHint(self.hints[0])
+        
+        self.pageVC.setViewControllers([vc], direction: .forward, animated: false, completion: {done in })
+        self.pageVC.view.backgroundColor = UIColor.clear
+        
+        self.addChild(self.pageVC)
+        self.view.addSubview(self.pageVC.view)
+        self.pageVC.didMove(toParent: self)
     }
     // MARK: - UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        // TODO: 実装
-        return nil
+        guard var number = (viewController as? IdeaContentViewController)?.number else {
+            return nil
+        }
+        
+        // 後方のViewControllerを生成するためカウントダウン
+        number -= 1
+        if number < 0 { return nil }
+
+        let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "IdeaContentViewController") as! IdeaContentViewController
+        vc.number = number
+        vc.setHint(self.hints[number])
+        return vc
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        // TODO: 実装
-        return nil
+        guard var number = (viewController as? IdeaContentViewController)?.number else {
+            return nil
+        }
+        
+        // 前方のViewControllerを生成するためカウントアップ
+        number += 1
+        if number >= hints.count { return nil }
+
+        let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "IdeaContentViewController") as! IdeaContentViewController
+        vc.number = number
+        vc.setHint(self.hints[number])
+        return vc
     }
     
-    
+    func indexOfViewController(_ viewController: IdeaContentViewController) -> Int {
+        let hint = viewController.getHint()
+        return self.hints.firstIndex(of: hint ?? "") ?? NSNotFound
+    }
 }
