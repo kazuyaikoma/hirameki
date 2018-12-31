@@ -8,24 +8,67 @@
 
 import UIKit
 
-class IdeaContentViewController: UIViewController {
+class IdeaContentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var ideaText: UITextField!
     var number: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: 実装
+        // キーボード表示・非表示時のイベント登録
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(IdeaContentViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     func setHint(_ hint: String) {
         // TODO: FIX: subviewsから取得してしまっているが、本来はIBOutlet接続してるUILabelを直接そのまま扱いたい。しかしこの時点で評価するとなぜかnilになる
-        (self.view.subviews.first as? UILabel)?.text = hint
+        ((self.view.subviews.filter({ $0 is UILabel }).first) as? UILabel)?.text = hint
     }
     
     func getHint() -> String? {
         // ここもsetHintと同じ課題
         // TODO: FIX: subviewsから取得してしまっているが、本来はIBOutlet接続してるUILabelを直接そのまま扱いたい。しかしこの時点で評価するとなぜかnilになる
-        return (self.view.subviews.first as? UILabel)?.text
+        return ((self.view.subviews.filter({ $0 is UILabel }).first) as? UILabel)?.text
+    }
+    
+    // 改行ボタンを押した時の処理
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを隠す
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // ideaText以外の部分をタッチした場合に非表示にする
+        if let label = self.ideaText, label.isFirstResponder {
+            label.resignFirstResponder()
+        }
+    }
+    
+    // MARK: - NotificationCenter
+    
+    @objc func keyboardWillChange(_ notification: Foundation.Notification) {
+        var info = notification.userInfo as! [String: AnyObject]
+        let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])!.cgRectValue
+        
+        // キーボードに被らないように
+        let duration: TimeInterval? = (info[UIResponder.keyboardAnimationDurationUserInfoKey]!).doubleValue
+        let options = UIView.AnimationOptions(rawValue: UInt((info[UIResponder.keyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
+        let after = {() -> Void in
+            let diff = keyboardFrame!.origin.y - UIScreen.main.bounds.size.height
+            if diff < 0 {
+                self.view.frame.origin.y = -30
+            } else {
+                self.view.frame.origin.y = 0
+            }
+        }
+        
+        UIView.animate(
+            withDuration: duration!,
+            delay:0.0,
+            options:options,
+            animations: after,
+            completion: nil
+        )
     }
 }

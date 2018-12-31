@@ -255,7 +255,7 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDl-s7-obb">
-                                <rect key="frame" x="0.0" y="108" width="375" height="419"/>
+                                <rect key="frame" x="0.0" y="78" width="375" height="449"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="dYX-rZ-I4f" kind="embed" id="KeJ-1E-W2O"/>
@@ -264,7 +264,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gDl-s7-obb" firstAttribute="top" secondItem="AfW-BP-2a0" secondAttribute="bottom" constant="30" id="9LV-ek-Vtp"/>
+                            <constraint firstItem="gDl-s7-obb" firstAttribute="top" secondItem="AfW-BP-2a0" secondAttribute="bottom" id="9LV-ek-Vtp"/>
                             <constraint firstItem="Qcz-iV-cAp" firstAttribute="leading" secondItem="5cG-2J-PEj" secondAttribute="leading" id="9rq-oc-2Ei"/>
                             <constraint firstItem="Qcz-iV-cAp" firstAttribute="trailing" secondItem="5cG-2J-PEj" secondAttribute="trailing" id="Bae-Cz-kiL"/>
                             <constraint firstItem="gDl-s7-obb" firstAttribute="trailing" secondItem="5cG-2J-PEj" secondAttribute="trailing" id="Gzk-gQ-bEN"/>
@@ -288,7 +288,7 @@
             <objects>
                 <viewController id="dYX-rZ-I4f" customClass="IdeaPageViewController" customModule="BrainBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tLR-FB-iHj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="419"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="449"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="low-jp-VMy"/>
@@ -307,7 +307,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="それを分子レベルで分割すると、\nどうなる？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shO-fi-7zX">
-                                <rect key="frame" x="20" y="25" width="335" height="140"/>
+                                <rect key="frame" x="20" y="55" width="335" height="140"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.81176470588235294" blue="0.035294117647058823" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="iU9-Vt-HlS"/>
@@ -323,7 +323,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYH-Lr-E1M">
-                                <rect key="frame" x="20" y="195" width="335" height="452"/>
+                                <rect key="frame" x="20" y="225" width="335" height="422"/>
                                 <color key="backgroundColor" white="0.93961817781690138" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -336,7 +336,7 @@
                             <constraint firstItem="mTw-lB-OSN" firstAttribute="trailing" secondItem="jYH-Lr-E1M" secondAttribute="trailing" constant="20" id="Di8-d0-hge"/>
                             <constraint firstItem="mTw-lB-OSN" firstAttribute="trailing" secondItem="shO-fi-7zX" secondAttribute="trailing" constant="20" id="Ndv-tQ-tOR"/>
                             <constraint firstItem="shO-fi-7zX" firstAttribute="leading" secondItem="mTw-lB-OSN" secondAttribute="leading" constant="20" id="VoI-au-IUA"/>
-                            <constraint firstItem="shO-fi-7zX" firstAttribute="top" secondItem="mTw-lB-OSN" secondAttribute="top" constant="5" id="XND-Yw-D58"/>
+                            <constraint firstItem="shO-fi-7zX" firstAttribute="top" secondItem="mTw-lB-OSN" secondAttribute="top" constant="35" id="XND-Yw-D58"/>
                             <constraint firstItem="jYH-Lr-E1M" firstAttribute="leading" secondItem="mTw-lB-OSN" secondAttribute="leading" constant="20" id="e7f-fP-W4g"/>
                             <constraint firstItem="mTw-lB-OSN" firstAttribute="bottom" secondItem="jYH-Lr-E1M" secondAttribute="bottom" constant="20" id="sD9-Tp-LAt"/>
                         </constraints>
