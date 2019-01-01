@@ -20,8 +20,9 @@ class IdeaContentViewController: UIViewController, UITextFieldDelegate {
                                                selector: #selector(IdeaContentViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
+    // TODO: FIX: 以下の4つメソッド、subviewsから取得してしまっているが、本来はIBOutlet接続してるUILabelを直接そのまま扱いたい。
+    // しかしこの時点で評価するとなぜかnilになる
     func setHint(_ hint: String) {
-        // TODO: FIX: subviewsから取得してしまっているが、本来はIBOutlet接続してるUILabelを直接そのまま扱いたい。しかしこの時点で評価するとなぜかnilになる
         ((self.view.subviews.filter({ $0 is UILabel }).first) as? UILabel)?.text = hint
     }
     
@@ -57,7 +58,7 @@ class IdeaContentViewController: UIViewController, UITextFieldDelegate {
         var info = notification.userInfo as! [String: AnyObject]
         let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])!.cgRectValue
         
-        // キーボードに被らないように
+        // キーボードに被らないようにする
         let duration: TimeInterval? = (info[UIResponder.keyboardAnimationDurationUserInfoKey]!).doubleValue
         let options = UIView.AnimationOptions(rawValue: UInt((info[UIResponder.keyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
         let after = {() -> Void in
