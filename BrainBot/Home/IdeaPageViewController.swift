@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 
 protocol IdeaPageViewControllerDelegate {
+    func pageView(_ viewController: IdeaPageViewController, didChangedIndex index: Int)
     func pageView(_ viewController: IdeaPageViewController, didChangedHint hint: String, text: String, index: Int)
 }
 
@@ -97,18 +98,26 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         return self.hints.firstIndex(of: hint ?? "") ?? NSNotFound
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        if !completed { return }
-        
-        guard let vc = pageViewController.viewControllers!.first as? IdeaContentViewController,
+    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        guard let vc = pageViewController.viewControllers?.first as? IdeaContentViewController,
             let hintText = vc.hintLabel.text,
-            let ideaText = vc.ideaText.text,
-            let index = self.hints.firstIndex(of: hintText)
-        else {
-            return
+            let ideaText = vc.ideaText.text
+            else {
+                return
         }
         
         self.data[hintText] = ideaText
-        self.delegate?.pageView(self, didChangedHint: hintText, text: ideaText, index: index)
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if !completed { return }
+        guard let vc = pageViewController.viewControllers?.first as? IdeaContentViewController,
+            let hintText = vc.hintLabel.text,
+            let index = self.hints.firstIndex(of: hintText)
+            else {
+                return
+        }
+        
+        self.delegate?.pageView(self, didChangedIndex: index)
     }
 }
