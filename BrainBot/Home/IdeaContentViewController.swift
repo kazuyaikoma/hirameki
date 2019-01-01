@@ -26,9 +26,15 @@ class IdeaContentViewController: UIViewController, UITextFieldDelegate {
     }
     
     func getHint() -> String? {
-        // ここもsetHintと同じ課題
-        // TODO: FIX: subviewsから取得してしまっているが、本来はIBOutlet接続してるUILabelを直接そのまま扱いたい。しかしこの時点で評価するとなぜかnilになる
         return ((self.view.subviews.filter({ $0 is UILabel }).first) as? UILabel)?.text
+    }
+    
+    func setIdea(_ idea: String) {
+        ((self.view.subviews.filter({ $0 is UITextField }).first) as? UITextField)?.text = idea
+    }
+    
+    func getIdea() -> String? {
+        return ((self.view.subviews.filter({ $0 is UITextField }).first) as? UITextField)?.text
     }
     
     // 改行ボタンを押した時の処理

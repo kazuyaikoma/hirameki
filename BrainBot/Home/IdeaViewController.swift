@@ -26,9 +26,8 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
         }
     }
     
-    func pageView(_ viewController: IdeaPageViewController, didChangedText text: String, atIndex index: Int) {
-        print("a")
-        // TODO: 実装
+    func pageView(_ viewController: IdeaPageViewController, didChangedHint hint: String, text: String, index: Int) {
+        // TODO: currentImgが移動するなどの実装
     }
 }
 
