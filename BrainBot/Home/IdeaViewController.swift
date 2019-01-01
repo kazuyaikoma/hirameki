@@ -12,11 +12,14 @@ import Foundation
 class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     @IBOutlet weak var currentImg: UIImageView!
     @IBOutlet weak var progressBar: UIView!
+    
     var containerVC: IdeaPageViewController?
+    var progWidth: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: 実装
+        // tODO: 質問数に応じてprogressBarの長さを割る
+        self.progWidth = progressBar.frame.width / (3-1)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -27,7 +30,9 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     }
     
     func pageView(_ viewController: IdeaPageViewController, didChangedHint hint: String, text: String, index: Int) {
-        // TODO: currentImgが移動するなどの実装
+        UIView.animate(withDuration: 0.25) {
+            self.currentImg.frame.origin.x = (index == 0) ? 20 : CGFloat(index) * self.progWidth
+        }
     }
 }
 
