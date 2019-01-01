@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import Foundation
 
-class IdeaViewController: UIViewController {
+class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
+    @IBOutlet weak var currentImg: UIImageView!
+    @IBOutlet weak var progressBar: UIView!
+    var containerVC: IdeaPageViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // TODO: 実装
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "embed" {
+            self.containerVC = segue.destination as? IdeaPageViewController
+            self.containerVC?.delegate = self
+        }
+    }
+    
+    func pageView(_ viewController: IdeaPageViewController, didChangedText text: String, atIndex index: Int) {
+        print("a")
+        // TODO: 実装
     }
 }
 

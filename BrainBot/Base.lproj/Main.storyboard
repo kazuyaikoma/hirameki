@@ -218,10 +218,10 @@
             </objects>
             <point key="canvasLocation" x="1518" y="830"/>
         </scene>
-        <!--Idea Content View Controller-->
+        <!--Idea View Controller-->
         <scene sceneID="HXn-7e-mAG">
             <objects>
-                <viewController storyboardIdentifier="IdeaViewController" id="RmK-ah-G0f" customClass="IdeaContentViewController" customModule="BrainBot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IdeaViewController" id="RmK-ah-G0f" customClass="IdeaViewController" customModule="BrainBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lad-1G-c2h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -258,7 +258,7 @@
                                 <rect key="frame" x="0.0" y="78" width="375" height="449"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="dYX-rZ-I4f" kind="embed" id="KeJ-1E-W2O"/>
+                                    <segue destination="dYX-rZ-I4f" kind="embed" identifier="embed" id="KeJ-1E-W2O"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -278,6 +278,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5cG-2J-PEj"/>
                     </view>
+                    <connections>
+                        <outlet property="currentImg" destination="oCR-mO-CSK" id="HCb-h3-MDP"/>
+                        <outlet property="progressBar" destination="AfW-BP-2a0" id="OSB-PI-fmd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNZ-eH-tM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import Foundation
+
+protocol IdeaPageViewControllerDelegate {
+    func pageView(_ viewController: IdeaPageViewController, didChangedText text: String, atIndex index: Int)
+}
 
 class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     var pageVC: UIPageViewController!
     var hints = BBMaterial.hints
+    
+    var delegate: IdeaPageViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +42,7 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         self.view.addSubview(self.pageVC.view)
         self.pageVC.didMove(toParent: self)
     }
+    
     // MARK: - UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -70,5 +78,12 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
     func indexOfViewController(_ viewController: IdeaContentViewController) -> Int {
         let hint = viewController.getHint()
         return self.hints.firstIndex(of: hint ?? "") ?? NSNotFound
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if let vc = pageViewController.viewControllers!.first as? IdeaContentViewController, completed {
+            // TODO: 修正
+            self.delegate?.pageView(self, didChangedText: "", atIndex: 0)
+        }
     }
 }
