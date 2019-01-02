@@ -14,8 +14,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sliderArea: UIView!
     
     var slideBar: Slider?
-    // TODO: 中央値になるよう修正
-    var currentFraction: Int = 1
+    var currentFraction: Int = BBMaterial.hints.count / 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,13 +45,14 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setupSlider() {
+        let hintsCnt = BBMaterial.hints.count
         let slider = Slider()
         slider.frame = self.sliderArea.frame
         slider.attributedTextForFraction = { fraction in
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 2
             formatter.maximumFractionDigits = 0
-            var string = formatter.string(from: (fraction * 50) as NSNumber) ?? ""
+            var string = formatter.string(from: (fraction * CGFloat(hintsCnt)) as NSNumber) ?? ""
             if string == "0" { string = "1" }       // 0は1に変換
             let strAttrsForFraction: [NSAttributedString.Key : Any] = [
                 .foregroundColor: UIColor.gray,
@@ -67,24 +67,26 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         ]
         
         slider.setMinimumLabelAttributedText(NSAttributedString(string: "1", attributes: strAttrs))
-        slider.setMaximumLabelAttributedText(NSAttributedString(string: "50", attributes: strAttrs))
+        slider.setMaximumLabelAttributedText(NSAttributedString(string: "\(hintsCnt)", attributes: strAttrs))
         slider.fraction = 0.5
         slider.shadowOffset = CGSize(width: 0, height: 10)
         slider.shadowBlur = 5
         slider.contentViewColor = BBColor.blue
         slider.valueViewColor = UIColor.white
         
-        slider.addTarget(self, action: #selector(self.sliderValueChanged), for: .valueChanged)
-        self.slideBar = slider
-        if let s = self.slideBar { self.view.addSubview(s) }
-    }
-    
-    @objc func sliderValueChanged() {
-        if let fraction = self.slideBar?.fraction {
-            var f = Int(fraction * 50)
-            if f == 0 { f = 1 }     // 0は1に変換
-            self.currentFraction = f
+        slider.didBeginTracking = { slider in
+            // TODO: 実装
         }
+        
+        slider.didEndTracking = { slider in
+            let fracStr = slider.attributedTextForFraction(slider.fraction).string
+            var fraction = Int(fracStr)
+            // 0は1に変換
+            if fraction == 0 { fraction = 1 }
+            if let f = fraction { self.currentFraction = f }
+        }
+        
+        self.view.addSubview(slider)
     }
 
     @IBAction func onStartTapped(_ sender: Any) {
@@ -135,4 +137,3 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         )
     }
 }
-

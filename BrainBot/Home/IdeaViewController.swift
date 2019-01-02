@@ -30,7 +30,10 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     
     func pageView(_ viewController: IdeaPageViewController, didChangedIndex index: Int) {
         UIView.animate(withDuration: 0.25) {
-            self.currentImg.frame.origin.x = (index == 0) ? 20 : CGFloat(index) * (self.progressBar.frame.width / (3-1))
+            var x = CGFloat(index) * (self.progressBar.frame.width / CGFloat(BBMaterial.hints.count-1))
+            // ページめくり始めでcurrentImgが不正にバックしないようにxを修正
+            if x < 20 { x = 20 }
+            self.currentImg.frame.origin.x = x
         }
     }
     
