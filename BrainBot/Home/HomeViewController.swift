@@ -12,6 +12,8 @@ import fluid_slider
 class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var themeText: UITextField!
     @IBOutlet weak var sliderArea: UIView!
+    @IBOutlet weak var countTextArea: UIView!
+    @IBOutlet weak var countText: UILabel!
     
     var slideBar: Slider?
     var currentFraction: Int = Int(round(Double(BBMaterial.hints.count) / 2.0))
@@ -24,6 +26,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(HomeViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
+        self.countText.text = String(self.currentFraction)
         self.setupSlider()
     }
     
@@ -75,7 +78,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         slider.valueViewColor = UIColor.white
         
         slider.didBeginTracking = { slider in
-            // TODO: 実装
+            // countTextAreaを隠す
+            UIView.animate(withDuration: 0.25) {
+                self.countTextArea.alpha = 0
+            }
         }
         
         slider.didEndTracking = { slider in
@@ -84,6 +90,12 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             // 0は1に変換
             if fraction == 0 { fraction = 1 }
             if let f = fraction { self.currentFraction = f }
+            
+            // countTextAreaを表示
+            self.countText.text = String(self.currentFraction)
+            UIView.animate(withDuration: 0.25) {
+                self.countTextArea.alpha = 1
+            }
         }
         
         self.view.addSubview(slider)
