@@ -14,7 +14,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sliderArea: UIView!
     
     var slideBar: Slider?
-    var currentFraction: Int = BBMaterial.hints.count / 2
+    var currentFraction: Int = Int(round(Double(BBMaterial.hints.count) / 2.0))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,8 +90,9 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func onStartTapped(_ sender: Any) {
-        if let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") {
+        if let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") as? IdeaViewController {
             ideaVC.navigationItem.title = themeText.text
+            ideaVC.designatedCount = self.currentFraction
             self.show(ideaVC, sender: sender)
         }
     }

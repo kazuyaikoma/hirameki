@@ -20,6 +20,7 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
     var hints = BBMaterial.hints
     // key: 質問文(hint), value: ユーザーからの回答
     var data: [String:String] = [:]
+    var designatedCount: Int?
     
     var delegate: IdeaPageViewControllerDelegate?
     
@@ -31,10 +32,16 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
     }
     
     func setupData() {
-        self.hints.shuffle()
+        guard let cnt = self.designatedCount else { return }
         
-        for hint in self.hints {
+        self.hints.shuffle()
+        if cnt <= hints.count-1 {
+            self.hints.removeSubrange(cnt...hints.count-1)
+        }
+        
+        for (idx, hint) in self.hints.enumerated() {
             self.data[hint] = ""
+            if cnt <= idx { return }
         }
     }
     
