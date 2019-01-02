@@ -26,6 +26,8 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
         }
     }
     
+    // MARK: - IdeaPageViewControllerDelegate
+    
     func pageView(_ viewController: IdeaPageViewController, didChangedIndex index: Int) {
         UIView.animate(withDuration: 0.25) {
             self.currentImg.frame.origin.x = (index == 0) ? 20 : CGFloat(index) * (self.progressBar.frame.width / (3-1))

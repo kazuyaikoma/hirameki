@@ -15,6 +15,7 @@
 		E50BE96621DA8752008254A2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BE96521DA8752008254A2 /* Common.swift */; };
 		E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5021D498C000B2E1BD /* idea@2x.png */; };
 		E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5121D498C000B2E1BD /* menu@2x.png */; };
+		E5889BAF21DD2CD000FAA544 /* BBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5889BAE21DD2CD000FAA544 /* BBColor.swift */; };
 		E5B4A57E21D47452002413A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A57D21D47452002413A1 /* AppDelegate.swift */; };
 		E5B4A58021D47452002413A1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A57F21D47452002413A1 /* HistoryViewController.swift */; };
 		E5B4A58221D47452002413A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A58121D47452002413A1 /* HomeViewController.swift */; };
@@ -37,6 +38,7 @@
 		E50BE96521DA8752008254A2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		E5877D5021D498C000B2E1BD /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
 		E5877D5121D498C000B2E1BD /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		E5889BAE21DD2CD000FAA544 /* BBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBColor.swift; sourceTree = "<group>"; };
 		E5B4A57A21D47452002413A1 /* BrainBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B4A57D21D47452002413A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5B4A57F21D47452002413A1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				E50BE96521DA8752008254A2 /* Common.swift */,
+				E5889BAE21DD2CD000FAA544 /* BBColor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -250,10 +253,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -290,6 +297,7 @@
 				E50BE96121DA3255008254A2 /* BBMaterial.swift in Sources */,
 				E5B4A58221D47452002413A1 /* HomeViewController.swift in Sources */,
 				E50BE96621DA8752008254A2 /* Common.swift in Sources */,
+				E5889BAF21DD2CD000FAA544 /* BBColor.swift in Sources */,
 				E5B4A57E21D47452002413A1 /* AppDelegate.swift in Sources */,
 				E5FBBE0C21D9737C007167B9 /* IdeaViewController.swift in Sources */,
 				E5B4A58021D47452002413A1 /* HistoryViewController.swift in Sources */,
