@@ -55,15 +55,15 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             var string = formatter.string(from: (fraction * CGFloat(hintsCnt)) as NSNumber) ?? ""
             if string == "0" { string = "1" }       // 0は1に変換
             let strAttrsForFraction: [NSAttributedString.Key : Any] = [
-                .foregroundColor: UIColor.gray,
-                .font: UIFont(name: "HelveticaNeue-Bold", size: 18.0) as Any
+                .foregroundColor: BBColor.blue,
+                .font: UIFont(name: "HelveticaNeue-Bold", size: 20.0) as Any
             ]
             return NSAttributedString(string: string, attributes: strAttrsForFraction)
         }
         
         let strAttrs: [NSAttributedString.Key : Any] = [
             .foregroundColor: UIColor.white,
-            .font: UIFont(name: "HelveticaNeue-Bold", size: 18.0) as Any
+            .font: UIFont(name: "HelveticaNeue", size: 18.0) as Any
         ]
         
         slider.setMinimumLabelAttributedText(NSAttributedString(string: "1", attributes: strAttrs))
