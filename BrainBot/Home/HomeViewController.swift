@@ -15,12 +15,12 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var countTextArea: UIView!
     @IBOutlet weak var countText: UILabel!
     
-    var slideBar: Slider?
     var currentFraction: Int = Int(round(Double(BBMaterial.hints.count) / 2.0))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "アイデア"
+        self.themeText.delegate = self
         
         // キーボード表示・非表示時のイベント登録
         NotificationCenter.default.addObserver(self,

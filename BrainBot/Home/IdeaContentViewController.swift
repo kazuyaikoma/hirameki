@@ -8,13 +8,14 @@
 
 import UIKit
 
-class IdeaContentViewController: UIViewController, UITextFieldDelegate {
+class IdeaContentViewController: UIViewController {
     @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var ideaText: UITextField!
     var number: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // キーボード表示・非表示時のイベント登録
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(IdeaContentViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
@@ -36,13 +37,6 @@ class IdeaContentViewController: UIViewController, UITextFieldDelegate {
     
     func getIdea() -> String? {
         return ((self.view.subviews.filter({ $0 is UITextField }).first) as? UITextField)?.text
-    }
-    
-    // 改行ボタンを押した時の処理
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // キーボードを隠す
-        textField.resignFirstResponder()
-        return true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
