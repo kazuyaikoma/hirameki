@@ -55,6 +55,7 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         
         vc.number = 0
         vc.setHint(self.hints[0])
+        vc.leftArrow.isHidden = true
         
         self.pageVC.setViewControllers([vc], direction: .forward, animated: false, completion: {done in })
         self.pageVC.view.backgroundColor = UIColor.clear
@@ -62,6 +63,19 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         self.addChild(self.pageVC)
         self.view.addSubview(self.pageVC.view)
         self.pageVC.didMove(toParent: self)
+    }
+    
+    // TODO: リファクタ可能？
+    func showNextPage(_ nextIndex: Int) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: IdeaContentViewController = storyboard.instantiateViewController(withIdentifier: "IdeaContentViewController") as! IdeaContentViewController
+        
+        let hint = self.hints[nextIndex]
+        vc.number = nextIndex
+        vc.setHint(hint)
+        vc.setIdea(self.data[hint] ?? "")
+        
+        self.pageVC.setViewControllers([vc], direction: .forward, animated: true, completion: nil)
     }
     
     // MARK: - UIPageViewControllerDataSource
@@ -97,6 +111,10 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         vc.number = number
         vc.setHint(hint)
         vc.setIdea(self.data[hint] ?? "")
+        
+        vc.leftArrow.isHidden = (number == 0)
+        vc.rightArrow.isHidden = (number == self.hints.count-1)
+        
         return vc
     }
     
