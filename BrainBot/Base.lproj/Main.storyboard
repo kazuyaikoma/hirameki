@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgx-xL-co0">
-                                <rect key="frame" x="114.5" y="322" width="146" height="30"/>
+                                <rect key="frame" x="114.5" y="322" width="145" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標アイデア数: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMQ-zS-rov">
                                         <rect key="frame" x="0.0" y="8" width="115" height="18"/>
@@ -159,7 +159,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fol-WV-gCe">
-                                        <rect key="frame" x="115" y="0.0" width="31" height="30"/>
+                                        <rect key="frame" x="115" y="0.0" width="30" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" red="0.44705882349999998" green="0.79215686269999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -172,7 +172,7 @@
                                     <constraint firstItem="sMQ-zS-rov" firstAttribute="leading" secondItem="Wgx-xL-co0" secondAttribute="leading" id="PuT-yk-2F4"/>
                                     <constraint firstAttribute="bottom" secondItem="sMQ-zS-rov" secondAttribute="bottom" constant="4" id="XDs-75-bTd"/>
                                     <constraint firstAttribute="bottom" secondItem="fol-WV-gCe" secondAttribute="bottom" id="aHc-3b-MxI"/>
-                                    <constraint firstAttribute="width" constant="146" id="jv8-zx-jRL"/>
+                                    <constraint firstAttribute="width" constant="145" id="jv8-zx-jRL"/>
                                     <constraint firstAttribute="height" constant="30" id="sQv-LQ-9i6"/>
                                     <constraint firstItem="fol-WV-gCe" firstAttribute="leading" secondItem="sMQ-zS-rov" secondAttribute="trailing" id="tkS-T6-27w"/>
                                     <constraint firstItem="sMQ-zS-rov" firstAttribute="top" secondItem="Wgx-xL-co0" secondAttribute="top" constant="8" id="vxl-wL-UUL"/>
@@ -295,10 +295,63 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcz-iV-cAp" userLabel="Button Area">
-                                <rect key="frame" x="0.0" y="557" width="375" height="60"/>
-                                <color key="backgroundColor" red="0.44705882349999998" green="0.79215686269999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="30" y="557" width="315" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flp-WJ-Sa3">
+                                        <rect key="frame" x="0.0" y="5" width="142.5" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="スルー">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ER3-Hd-kce">
+                                        <rect key="frame" x="172.5" y="5" width="142.5" height="50"/>
+                                        <color key="backgroundColor" red="0.44705882349999998" green="0.79215686269999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="中断して">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="18" name="HiraginoSans-W3"/>
+                                                        <font key="NSOriginalFont" size="18" name="HiraginoSans-W3"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="完了">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="22" name="HiraginoSans-W6"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="ER3-Hd-kce" firstAttribute="width" secondItem="flp-WJ-Sa3" secondAttribute="width" id="AAE-ow-ZFs"/>
+                                    <constraint firstItem="ER3-Hd-kce" firstAttribute="leading" secondItem="flp-WJ-Sa3" secondAttribute="trailing" constant="30" id="BWV-ni-oJk"/>
+                                    <constraint firstAttribute="bottom" secondItem="ER3-Hd-kce" secondAttribute="bottom" constant="5" id="afL-5c-ub4"/>
                                     <constraint firstAttribute="height" constant="60" id="evZ-2e-mAv"/>
+                                    <constraint firstItem="flp-WJ-Sa3" firstAttribute="top" secondItem="Qcz-iV-cAp" secondAttribute="top" constant="5" id="gQg-IF-acN"/>
+                                    <constraint firstItem="ER3-Hd-kce" firstAttribute="top" secondItem="Qcz-iV-cAp" secondAttribute="top" constant="5" id="iqu-Ln-t4q"/>
+                                    <constraint firstAttribute="bottom" secondItem="flp-WJ-Sa3" secondAttribute="bottom" constant="5" id="ozj-aU-nRH"/>
+                                    <constraint firstAttribute="trailing" secondItem="ER3-Hd-kce" secondAttribute="trailing" id="pmA-fz-eBF"/>
+                                    <constraint firstItem="flp-WJ-Sa3" firstAttribute="leading" secondItem="Qcz-iV-cAp" secondAttribute="leading" id="zqs-TT-eU6"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDl-s7-obb">
@@ -312,8 +365,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gDl-s7-obb" firstAttribute="top" secondItem="AfW-BP-2a0" secondAttribute="bottom" id="9LV-ek-Vtp"/>
-                            <constraint firstItem="Qcz-iV-cAp" firstAttribute="leading" secondItem="5cG-2J-PEj" secondAttribute="leading" id="9rq-oc-2Ei"/>
-                            <constraint firstItem="Qcz-iV-cAp" firstAttribute="trailing" secondItem="5cG-2J-PEj" secondAttribute="trailing" id="Bae-Cz-kiL"/>
+                            <constraint firstItem="Qcz-iV-cAp" firstAttribute="leading" secondItem="5cG-2J-PEj" secondAttribute="leading" constant="30" id="9rq-oc-2Ei"/>
+                            <constraint firstItem="Qcz-iV-cAp" firstAttribute="trailing" secondItem="5cG-2J-PEj" secondAttribute="trailing" constant="-30" id="Bae-Cz-kiL"/>
                             <constraint firstItem="gDl-s7-obb" firstAttribute="trailing" secondItem="5cG-2J-PEj" secondAttribute="trailing" id="Gzk-gQ-bEN"/>
                             <constraint firstItem="AfW-BP-2a0" firstAttribute="top" secondItem="5cG-2J-PEj" secondAttribute="top" constant="50" id="PYh-K7-en1"/>
                             <constraint firstItem="AfW-BP-2a0" firstAttribute="leading" secondItem="5cG-2J-PEj" secondAttribute="leading" constant="20" id="aiA-mG-An7"/>
@@ -360,10 +413,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="それを分子レベルで分割すると、\nどうなる？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shO-fi-7zX">
-                                <rect key="frame" x="20" y="55" width="335" height="140"/>
+                                <rect key="frame" x="20" y="55" width="335" height="100"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.81176470588235294" blue="0.035294117647058823" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="iU9-Vt-HlS"/>
+                                    <constraint firstAttribute="height" constant="100" id="iU9-Vt-HlS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -376,7 +429,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYH-Lr-E1M">
-                                <rect key="frame" x="20" y="225" width="335" height="422"/>
+                                <rect key="frame" x="20" y="185" width="335" height="462"/>
                                 <color key="backgroundColor" white="0.93961817781690138" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
