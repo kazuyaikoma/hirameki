@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var countTextArea: UIView!
     @IBOutlet weak var countText: UILabel!
     
-    var currentFraction: Int = Int(round(Double(BBMaterial.hints.count) / 2.0))
+    var currentFraction: Int = Int(floor(Double(BBMaterial.hints.count) / 2.0))
     
     override func viewDidLoad() {
         super.viewDidLoad()

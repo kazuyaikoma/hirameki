@@ -11,7 +11,6 @@ import Foundation
 
 protocol IdeaPageViewControllerDelegate {
     func pageView(_ viewController: IdeaPageViewController, didChangedIndex index: Int)
-    func pageView(_ viewController: IdeaPageViewController, didChangedHint hint: String, text: String, index: Int)
 }
 
 class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
@@ -51,11 +50,7 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         self.pageVC.delegate = self
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc: IdeaContentViewController = storyboard.instantiateViewController(withIdentifier: "IdeaContentViewController") as! IdeaContentViewController
-        
-        vc.number = 0
-        vc.setHint(self.hints[0])
-        vc.leftArrow.isHidden = true
+        let vc = self.instantiateContentVC(storyboard, index: 0)
         
         self.pageVC.setViewControllers([vc], direction: .forward, animated: false, completion: {done in })
         self.pageVC.view.backgroundColor = UIColor.clear
@@ -65,16 +60,9 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         self.pageVC.didMove(toParent: self)
     }
     
-    // TODO: リファクタ可能？
     func showNextPage(_ nextIndex: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc: IdeaContentViewController = storyboard.instantiateViewController(withIdentifier: "IdeaContentViewController") as! IdeaContentViewController
-        
-        let hint = self.hints[nextIndex]
-        vc.number = nextIndex
-        vc.setHint(hint)
-        vc.setIdea(self.data[hint] ?? "")
-        
+        let vc = self.instantiateContentVC(storyboard, index: nextIndex)
         self.pageVC.setViewControllers([vc], direction: .forward, animated: true, completion: nil)
     }
     
@@ -89,7 +77,7 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         number -= 1
         if number < 0 { return nil }
 
-        return self.instantiateNextVC(viewController, number: number)
+        return self.instantiateNextContentVC(viewController, number: number)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
@@ -101,19 +89,25 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         number += 1
         if number >= hints.count { return nil }
 
-        return self.instantiateNextVC(viewController, number: number)
+        return self.instantiateNextContentVC(viewController, number: number)
     }
     
-    func instantiateNextVC(_ viewController: UIViewController, number: Int) -> UIViewController {
-        let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "IdeaContentViewController") as! IdeaContentViewController
-        let hint = self.hints[number]
+    func instantiateNextContentVC(_ viewController: UIViewController, number: Int) -> UIViewController {
+        let storyboard = viewController.storyboard ?? UIStoryboard(name: "Main", bundle: nil)
+        return self.instantiateContentVC(storyboard, index: number)
+    }
+    
+    func instantiateContentVC(_ storyboard: UIStoryboard, index: Int) -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: IdeaContentViewController = storyboard.instantiateViewController(withIdentifier: "IdeaContentViewController") as! IdeaContentViewController
         
-        vc.number = number
+        let hint = self.hints[index]
+        vc.number = index
         vc.setHint(hint)
         vc.setIdea(self.data[hint] ?? "")
         
-        vc.leftArrow.isHidden = (number == 0)
-        vc.rightArrow.isHidden = (number == self.hints.count-1)
+        vc.leftArrow.isHidden = (index == 0)
+        vc.rightArrow.isHidden = (index == self.hints.count-1)
         
         return vc
     }
