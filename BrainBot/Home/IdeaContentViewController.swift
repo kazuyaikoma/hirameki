@@ -10,11 +10,15 @@ import UIKit
 
 class IdeaContentViewController: UIViewController {
     @IBOutlet weak var hintLabel: UILabel!
-    @IBOutlet weak var ideaText: UITextField!
+    @IBOutlet weak var ideaText: UITextView!
+    @IBOutlet weak var leftArrow: UIImageView!
+    @IBOutlet weak var rightArrow: UIImageView!
     var number: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hintLabel.numberOfLines = 0
         
         // キーボード表示・非表示時のイベント登録
         NotificationCenter.default.addObserver(self,
@@ -32,11 +36,11 @@ class IdeaContentViewController: UIViewController {
     }
     
     func setIdea(_ idea: String) {
-        ((self.view.subviews.filter({ $0 is UITextField }).first) as? UITextField)?.text = idea
+        ((self.view.subviews.filter({ $0 is UITextView }).first) as? UITextView)?.text = idea
     }
     
     func getIdea() -> String? {
-        return ((self.view.subviews.filter({ $0 is UITextField }).first) as? UITextField)?.text
+        return ((self.view.subviews.filter({ $0 is UITextView }).first) as? UITextView)?.text
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
