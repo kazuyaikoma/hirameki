@@ -7,5 +7,6 @@ target 'BrainBot' do
 
   # Pods for BrainBot
   pod 'NVActivityIndicatorView'
+  pod 'fluid-slider'
 
 end
