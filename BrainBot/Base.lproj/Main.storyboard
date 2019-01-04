@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgx-xL-co0">
-                                <rect key="frame" x="114.5" y="322" width="145" height="30"/>
+                                <rect key="frame" x="115" y="322" width="145" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標アイデア数: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMQ-zS-rov">
                                         <rect key="frame" x="0.0" y="8" width="115" height="18"/>
@@ -506,6 +506,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDh-gi-rvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3080.8000000000002" y="447.52623688155927"/>
+        </scene>
+        <!--Final View Controller-->
+        <scene sceneID="d1x-rb-Vd0">
+            <objects>
+                <viewController storyboardIdentifier="FinalViewController" id="SRb-Ou-qPa" customClass="FinalViewController" customModule="BrainBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qAT-RT-DpR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lJN-KO-y0x"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpo-kn-uE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3941" y="190"/>
         </scene>
     </scenes>
     <resources>

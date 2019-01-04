@@ -56,11 +56,19 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     }
     
     @IBAction func onStopTapped(_ sender: Any) {
-        // TODO: 完了後Viewの表示
+        self.showFinalView(sender)
     }
     
     @IBAction func onFinishTapped(_ sender: Any) {
+        self.showFinalView(sender)
+    }
+    
+    func showFinalView(_ sender: Any) {
         // TODO: 完了後Viewの表示
+        if let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "FinalViewController") as? FinalViewController {
+            ideaVC.navigationItem.title = self.navigationItem.title
+            self.show(ideaVC, sender: sender)
+        }
     }
     
     // MARK: - IdeaPageViewControllerDelegate
