@@ -16,9 +16,12 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var countText: UILabel!
     
     var currentFraction: Int = Int(floor(Double(BBMaterial.hints.count) / 2.0))
+    // キーボード入力時の下げ幅
+    var keyboardOriginDiff: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = "アイデア"
         self.themeText.delegate = self
         
@@ -28,6 +31,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         
         self.countText.text = String(self.currentFraction)
         self.setupSlider()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.keyboardOriginDiff = self.view.frame.origin.y
     }
     
     func setupSlider() {
@@ -110,17 +118,20 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     @objc func keyboardWillChange(_ notification: Foundation.Notification) {
         var info = notification.userInfo as! [String: AnyObject]
-        let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])!.cgRectValue
+        guard let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])?.cgRectValue
+        else {
+            return
+        }
         
         // キーボードに被らないように
         let duration: TimeInterval? = (info[UIResponder.keyboardAnimationDurationUserInfoKey]!).doubleValue
         let options = UIView.AnimationOptions(rawValue: UInt((info[UIResponder.keyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
         let after = {() -> Void in
-            let diff = keyboardFrame!.origin.y - UIScreen.main.bounds.size.height
+            let diff = keyboardFrame.origin.y - UIScreen.main.bounds.size.height
             if diff < 0 {
-                self.view.frame.origin.y = -100
+                self.view.frame.origin.y = -40
             } else {
-                self.view.frame.origin.y = 0
+                self.view.frame.origin.y = self.keyboardOriginDiff
             }
         }
         
