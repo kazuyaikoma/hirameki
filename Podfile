@@ -6,7 +6,7 @@ target 'BrainBot' do
   use_frameworks!
 
   # Pods for BrainBot
-  pod 'NVActivityIndicatorView'
   pod 'fluid-slider'
+  pod 'UICircularProgressRing'
 
 end

@@ -1,26 +1,24 @@
 PODS:
   - fluid-slider (1.0.0):
     - pop
-  - NVActivityIndicatorView (4.5.0):
-    - NVActivityIndicatorView/Presenter (= 4.5.0)
-  - NVActivityIndicatorView/Presenter (4.5.0)
   - pop (1.0.12)
+  - UICircularProgressRing (4.1.0)
 
 DEPENDENCIES:
   - fluid-slider
-  - NVActivityIndicatorView
+  - UICircularProgressRing
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - fluid-slider
-    - NVActivityIndicatorView
     - pop
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
   fluid-slider: a19a991606a34a545cba9341e7422073b4ec3a66
-  NVActivityIndicatorView: 1e4e3ed79248cf1666af182593c3a2acf0fcf193
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  UICircularProgressRing: 5a32c01f54474571b1e66e8fa050c0f83d6d981b
 
-PODFILE CHECKSUM: 93543fcba4053c2e56388f3a721cfa3d9812f123
+PODFILE CHECKSUM: 1a9957c20d45c7dece178979cd513b08abfe699e
 
 COCOAPODS: 1.5.3
