@@ -30,23 +30,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         self.setupSlider()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // キーボード起動ぞ状態を解除
-        let after = {() -> Void in
-            self.view.frame.origin.y = 0
-            self.themeText.resignFirstResponder()
-        }
-        
-        delay(0.3, callback: {
-            UIView.animate(withDuration: 0.2, delay: 0.0,
-                           options: UIView.AnimationOptions.curveEaseOut,
-                           animations: after,
-                           completion: nil
-            )
-        })
-    }
-    
     func setupSlider() {
         let hintsCnt = BBMaterial.hints.count
         let slider = Slider()
