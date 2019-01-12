@@ -23,6 +23,13 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateView()
+        
+        // 戻るボタン
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(IdeaViewController.onBackPushed))
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        
+        // エッジスワイプ無効化
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -64,11 +71,26 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     }
     
     func showFinalView(_ sender: Any) {
-        // TODO: 完了後Viewの表示
         if let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "FinalViewController") as? FinalViewController {
             ideaVC.navigationItem.title = self.navigationItem.title
             self.show(ideaVC, sender: sender)
         }
+    }
+    
+    @objc func onBackPushed() -> Void {
+        let alert: UIAlertController = UIAlertController(title: "本当に戻りますか？", message: "これまでの入力内容は破棄されます", preferredStyle:  UIAlertController.Style.alert)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+            self.navigationController?.popViewController(animated: true)
+        })
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
+            (action: UIAlertAction!) -> Void in
+            return
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: - IdeaPageViewControllerDelegate
