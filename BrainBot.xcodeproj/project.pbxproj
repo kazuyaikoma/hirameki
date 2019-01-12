@@ -26,6 +26,7 @@
 		E5B4A58A21D47453002413A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5B4A58821D47453002413A1 /* LaunchScreen.storyboard */; };
 		E5B4A59221D480AD002413A1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A59121D480AD002413A1 /* MenuViewController.swift */; };
 		E5B637EA21DF8E850038F2D6 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B637E921DF8E850038F2D6 /* FinalViewController.swift */; };
+		E5BEA33C21EA042400FBB549 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BEA33B21EA042200FBB549 /* back@2x.png */; };
 		E5FBBE0821D96AB8007167B9 /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FBBE0721D96AB8007167B9 /* history@2x.png */; };
 		E5FBBE0C21D9737C007167B9 /* IdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBBE0B21D9737C007167B9 /* IdeaViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		E5B4A58B21D47453002413A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5B4A59121D480AD002413A1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E5B637E921DF8E850038F2D6 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		E5BEA33B21EA042200FBB549 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		E5FBBE0721D96AB8007167B9 /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history@2x.png"; sourceTree = "<group>"; };
 		E5FBBE0B21D9737C007167B9 /* IdeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 		E5877D4E21D4988C00B2E1BD /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				E5BEA33B21EA042200FBB549 /* back@2x.png */,
 				E569CCCF21DE2ADC00AED26E /* left-arrow@2x.png */,
 				E569CCD021DE2ADC00AED26E /* right-arrow@2x.png */,
 				E50BE95821DA1F73008254A2 /* location@2x.png */,
@@ -248,6 +251,7 @@
 				E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */,
 				E5FBBE0821D96AB8007167B9 /* history@2x.png in Resources */,
 				E569CCD221DE2ADC00AED26E /* right-arrow@2x.png in Resources */,
+				E5BEA33C21EA042400FBB549 /* back@2x.png in Resources */,
 				E5B4A58721D47453002413A1 /* Assets.xcassets in Resources */,
 				E5B4A58521D47452002413A1 /* Main.storyboard in Resources */,
 			);
