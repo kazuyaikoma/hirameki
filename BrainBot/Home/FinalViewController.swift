@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import UICircularProgressRing
 import Toast_Swift
+import RealmSwift
 
 class FinalViewController: UIViewController {
     @IBOutlet weak var progressCircle: UICircularProgressRing!
@@ -53,6 +54,7 @@ class FinalViewController: UIViewController {
         
         // キーボード表示・非表示時のイベント登録
         NotificationCenter.default.addObserver(self, selector: #selector(FinalViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(FinalViewController.keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,8 +67,7 @@ class FinalViewController: UIViewController {
         super.viewDidAppear(animated)
         self.progressCircle.startProgress(to: self.percent, duration: 1.0)
         
-        
-        self.makeSaveToast(1.0)
+        self.save(1.2)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -76,8 +77,22 @@ class FinalViewController: UIViewController {
         }
     }
     
-    func save() {
-        self.makeSaveToast()
+    func save(_ toastInterval: TimeInterval = 0.5) {
+        do {
+            let realm = try Realm()
+            let ideas = realm.objects(Idea.self)
+            
+            if let theme = self.themeTxt, let idea = ideas.filter("theme = '\(theme)'").first {
+                try! realm.write { idea.setValue(self.textView.text ?? "", forKey: "ideas") }
+            } else {
+                let idea = Idea(value: ["date": Date.init(), "theme": self.themeTxt ?? "", "ideas": self.textView.text ?? ""])
+                try! realm.write { realm.add(idea) }
+            }
+        } catch {
+            print("realm error occurred at FinalVC#save")
+        }
+        
+        self.makeSaveToast(toastInterval)
     }
     
     func makeSaveToast(_ duration: TimeInterval = 0.5) {
@@ -112,5 +127,9 @@ class FinalViewController: UIViewController {
             animations: after,
             completion: nil
         )
+    }
+    
+    @objc func keyboardDidHide(_ notification: Foundation.Notification) {
+        self.save()
     }
 }

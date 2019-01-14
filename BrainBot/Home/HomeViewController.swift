@@ -8,6 +8,7 @@
 
 import UIKit
 import fluid_slider
+import RealmSwift
 
 class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var themeText: UITextField!
@@ -90,25 +91,40 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func onStartTapped(_ sender: Any) {
-        guard let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") as? IdeaViewController
+        guard let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") as? IdeaViewController,
+        let theme = self.themeText.text
         else { return }
         
-        if let text = self.themeText.text, text.isEmpty {
-            self.showAlert()
-            return
-        }
+        self.checkValid(theme: theme)
         
-        ideaVC.navigationItem.title = themeText.text
+        ideaVC.navigationItem.title = theme
         ideaVC.designatedCount = self.currentFraction
         self.show(ideaVC, sender: sender)
     }
     
-    func showAlert() {
-        let alert = UIAlertController(title: "思いつきたいテーマを上の空欄に入力してください", message: nil, preferredStyle:  UIAlertController.Style.alert)
+    func showAlert(_ message: String) {
+        let alert = UIAlertController(title: message, message: nil, preferredStyle:  UIAlertController.Style.alert)
         let action = UIAlertAction(title: "確認", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(action)
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func checkValid(theme: String) {
+        if theme.isEmpty {
+            self.showAlert("思いつきたいテーマを上の空欄に入力してください")
+            return
+        }
+        
+        do {
+            let realm = try Realm()
+            let ideas = realm.objects(Idea.self)
+            if let _ = ideas.filter("theme = '\(theme)'").first {
+                self.showAlert("すでに同じテーマのアイデアが存在します。「履歴」から再度ブレストできます。")
+            }
+        } catch {
+            print("realm error occurred at HomeVC#onStartTapped")
+        }
     }
     
     // 改行ボタンを押した時の処理

@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71E8387BE32254BD958E4B49 /* Pods_BrainBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DB03A213311F2A6DCF3E4A /* Pods_BrainBot.framework */; };
+		E383A7E1F6B511A494277860 /* Pods_BrainBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90BD9781A0EFBB881EACF4F /* Pods_BrainBot.framework */; };
 		E50BE95921DA1F74008254A2 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E50BE95821DA1F73008254A2 /* location@2x.png */; };
 		E50BE95B21DA244C008254A2 /* IdeaPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BE95A21DA244C008254A2 /* IdeaPageViewController.swift */; };
 		E50BE95F21DA25D0008254A2 /* IdeaContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BE95E21DA25D0008254A2 /* IdeaContentViewController.swift */; };
 		E50BE96121DA3255008254A2 /* BBMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BE96021DA3255008254A2 /* BBMaterial.swift */; };
 		E50BE96621DA8752008254A2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BE96521DA8752008254A2 /* Common.swift */; };
+		E55A2F7221ECE3360096604F /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A2F7121ECE3360096604F /* Idea.swift */; };
 		E569CCD121DE2ADC00AED26E /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E569CCCF21DE2ADC00AED26E /* left-arrow@2x.png */; };
 		E569CCD221DE2ADC00AED26E /* right-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E569CCD021DE2ADC00AED26E /* right-arrow@2x.png */; };
 		E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5021D498C000B2E1BD /* idea@2x.png */; };
@@ -32,14 +33,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0078FDAEA8EF4BF0E7FFA0A5 /* Pods-BrainBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot.release.xcconfig"; sourceTree = "<group>"; };
-		1A2B4099D6D8A04B8629BA06 /* Pods-BrainBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot.debug.xcconfig"; sourceTree = "<group>"; };
-		23DB03A213311F2A6DCF3E4A /* Pods_BrainBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EF96AF131670963A8434ECE /* Pods-BrainBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot.release.xcconfig"; sourceTree = "<group>"; };
+		8E6E19F9D228550EFFDB63F3 /* Pods-BrainBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot.debug.xcconfig"; sourceTree = "<group>"; };
+		B90BD9781A0EFBB881EACF4F /* Pods_BrainBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50BE95821DA1F73008254A2 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
 		E50BE95A21DA244C008254A2 /* IdeaPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaPageViewController.swift; sourceTree = "<group>"; };
 		E50BE95E21DA25D0008254A2 /* IdeaContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaContentViewController.swift; sourceTree = "<group>"; };
 		E50BE96021DA3255008254A2 /* BBMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBMaterial.swift; sourceTree = "<group>"; };
 		E50BE96521DA8752008254A2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		E55A2F7121ECE3360096604F /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		E569CCCF21DE2ADC00AED26E /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
 		E569CCD021DE2ADC00AED26E /* right-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow@2x.png"; sourceTree = "<group>"; };
 		E5877D5021D498C000B2E1BD /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
@@ -65,26 +67,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71E8387BE32254BD958E4B49 /* Pods_BrainBot.framework in Frameworks */,
+				E383A7E1F6B511A494277860 /* Pods_BrainBot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4941AFBA2634F4269F8726CC /* Frameworks */ = {
+		D7975E1204F8285521482123 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				23DB03A213311F2A6DCF3E4A /* Pods_BrainBot.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DA74419C87F108FF1EA27690 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1A2B4099D6D8A04B8629BA06 /* Pods-BrainBot.debug.xcconfig */,
-				0078FDAEA8EF4BF0E7FFA0A5 /* Pods-BrainBot.release.xcconfig */,
+				8E6E19F9D228550EFFDB63F3 /* Pods-BrainBot.debug.xcconfig */,
+				6EF96AF131670963A8434ECE /* Pods-BrainBot.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -101,6 +95,7 @@
 		E55A2F7021ECE27E0096604F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E55A2F7121ECE3360096604F /* Idea.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -132,8 +127,8 @@
 			children = (
 				E5B4A57C21D47452002413A1 /* BrainBot */,
 				E5B4A57B21D47452002413A1 /* Products */,
-				DA74419C87F108FF1EA27690 /* Pods */,
-				4941AFBA2634F4269F8726CC /* Frameworks */,
+				D7975E1204F8285521482123 /* Pods */,
+				EF506036515E14D037C8E315 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +187,14 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		EF506036515E14D037C8E315 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B90BD9781A0EFBB881EACF4F /* Pods_BrainBot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,11 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5B4A58E21D47453002413A1 /* Build configuration list for PBXNativeTarget "BrainBot" */;
 			buildPhases = (
-				BC4A8E57E1064A005A95E4F5 /* [CP] Check Pods Manifest.lock */,
+				FC3F1F503AFA57CEB69C1F05 /* [CP] Check Pods Manifest.lock */,
 				E5B4A57621D47452002413A1 /* Sources */,
 				E5B4A57721D47452002413A1 /* Frameworks */,
 				E5B4A57821D47452002413A1 /* Resources */,
-				B95F6F205F9132001B455FB3 /* [CP] Embed Pods Frameworks */,
+				E1AB23D8925E83D84A7CD9E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,7 +271,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B95F6F205F9132001B455FB3 /* [CP] Embed Pods Frameworks */ = {
+		E1AB23D8925E83D84A7CD9E9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -296,7 +299,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC4A8E57E1064A005A95E4F5 /* [CP] Check Pods Manifest.lock */ = {
+		FC3F1F503AFA57CEB69C1F05 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,6 +332,7 @@
 				E5889BAF21DD2CD000FAA544 /* BBColor.swift in Sources */,
 				E5B637EA21DF8E850038F2D6 /* FinalViewController.swift in Sources */,
 				E5B4A57E21D47452002413A1 /* AppDelegate.swift in Sources */,
+				E55A2F7221ECE3360096604F /* Idea.swift in Sources */,
 				E5FBBE0C21D9737C007167B9 /* IdeaViewController.swift in Sources */,
 				E5B4A58021D47452002413A1 /* HistoryViewController.swift in Sources */,
 				E5B4A59221D480AD002413A1 /* MenuViewController.swift in Sources */,
@@ -475,7 +479,7 @@
 		};
 		E5B4A58F21D47453002413A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A2B4099D6D8A04B8629BA06 /* Pods-BrainBot.debug.xcconfig */;
+			baseConfigurationReference = 8E6E19F9D228550EFFDB63F3 /* Pods-BrainBot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -496,7 +500,7 @@
 		};
 		E5B4A59021D47453002413A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0078FDAEA8EF4BF0E7FFA0A5 /* Pods-BrainBot.release.xcconfig */;
+			baseConfigurationReference = 6EF96AF131670963A8434ECE /* Pods-BrainBot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
