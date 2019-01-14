@@ -71,9 +71,10 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     }
     
     func showFinalView(_ sender: Any) {
-        if let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "FinalViewController") as? FinalViewController {
-            ideaVC.navigationItem.title = self.navigationItem.title
-            self.show(ideaVC, sender: sender)
+        if let finalVC = self.storyboard?.instantiateViewController(withIdentifier: "FinalViewController") as? FinalViewController {
+            finalVC.navigationItem.title = self.navigationItem.title
+            finalVC.data = containerVC?.data ?? [:]
+            self.show(finalVC, sender: sender)
         }
     }
     

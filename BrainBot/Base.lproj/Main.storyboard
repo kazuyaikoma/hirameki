@@ -639,6 +639,7 @@
                     <connections>
                         <outlet property="message" destination="qlM-T7-fXW" id="rR7-eS-jjf"/>
                         <outlet property="progressCircle" destination="4lz-Hf-XLe" id="154-2J-BGx"/>
+                        <outlet property="textView" destination="hfp-N5-J0y" id="Wt2-Cl-k1Z"/>
                         <outlet property="themeLabel" destination="fr9-Sh-zuT" id="1rt-Jb-Xqi"/>
                     </connections>
                 </viewController>
