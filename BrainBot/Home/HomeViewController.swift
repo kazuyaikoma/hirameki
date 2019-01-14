@@ -114,14 +114,14 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     // MARK: - NotificationCenter
     
     @objc func keyboardWillChange(_ notification: Foundation.Notification) {
-        var info = notification.userInfo as! [String: AnyObject]
-        guard let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])?.cgRectValue
+        guard let info = notification.userInfo as? [String: AnyObject],
+              let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])?.cgRectValue,
+              let duration: Double = (info[UIResponder.keyboardAnimationDurationUserInfoKey])?.doubleValue
         else {
             return
         }
         
         // キーボードに被らないように
-        let duration: TimeInterval? = (info[UIResponder.keyboardAnimationDurationUserInfoKey]!).doubleValue
         let options = UIView.AnimationOptions(rawValue: UInt((info[UIResponder.keyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
         let after = {() -> Void in
             let diff = keyboardFrame.origin.y - UIScreen.main.bounds.size.height
@@ -133,7 +133,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         }
         
         UIView.animate(
-            withDuration: duration!,
+            withDuration: duration,
             delay:0.0,
             options:options,
             animations: after,
