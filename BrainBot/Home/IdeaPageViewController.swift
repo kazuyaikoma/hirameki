@@ -121,9 +121,7 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         guard let vc = pageViewController.viewControllers?.first as? IdeaContentViewController,
             let hintText = vc.hintLabel.text,
             let ideaText = vc.ideaText.text
-            else {
-                return
-        }
+        else { return }
         
         self.data[hintText] = ideaText
     }
@@ -133,9 +131,7 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         guard let vc = pageViewController.viewControllers?.first as? IdeaContentViewController,
             let hintText = vc.hintLabel.text,
             let index = self.hints.firstIndex(of: hintText)
-            else {
-                return
-        }
+        else { return }
         
         self.delegate?.pageView(self, didChangedIndex: index)
     }

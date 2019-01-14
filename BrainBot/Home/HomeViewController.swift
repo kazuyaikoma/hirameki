@@ -90,11 +90,25 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func onStartTapped(_ sender: Any) {
-        if let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") as? IdeaViewController {
-            ideaVC.navigationItem.title = themeText.text
-            ideaVC.designatedCount = self.currentFraction
-            self.show(ideaVC, sender: sender)
+        guard let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") as? IdeaViewController
+        else { return }
+        
+        if let text = self.themeText.text, text.isEmpty {
+            self.showAlert()
+            return
         }
+        
+        ideaVC.navigationItem.title = themeText.text
+        ideaVC.designatedCount = self.currentFraction
+        self.show(ideaVC, sender: sender)
+    }
+    
+    func showAlert() {
+        let alert: UIAlertController = UIAlertController(title: "思いつきたいテーマを上の空欄に入力してください", message: nil, preferredStyle:  UIAlertController.Style.alert)
+        let action = UIAlertAction(title: "確認", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(action)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     // 改行ボタンを押した時の処理
@@ -117,9 +131,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         guard let info = notification.userInfo as? [String: AnyObject],
               let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])?.cgRectValue,
               let duration: Double = (info[UIResponder.keyboardAnimationDurationUserInfoKey])?.doubleValue
-        else {
-            return
-        }
+        else { return }
         
         // キーボードに被らないように
         let options = UIView.AnimationOptions(rawValue: UInt((info[UIResponder.keyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
