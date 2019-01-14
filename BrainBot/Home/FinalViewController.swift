@@ -48,8 +48,7 @@ class FinalViewController: UIViewController {
         self.textView.text = ideas
         
         // キーボード表示・非表示時のイベント登録
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(FinalViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(FinalViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
