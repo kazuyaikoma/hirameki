@@ -29,14 +29,12 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         // キーボード表示・非表示時のイベント登録
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(HomeViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        
         self.countText.text = String(self.currentFraction)
         self.setupSlider()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setupSlider()
         self.keyboardOriginDiff = self.view.frame.origin.y
     }
     
@@ -47,7 +45,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             formatter.maximumIntegerDigits = 2
             formatter.maximumFractionDigits = 0
             var string = formatter.string(from: (fraction * CGFloat(hintsCnt)) as NSNumber) ?? ""
-            if string == "0" { string = "1" }       // 0は1に変換
+            if string == "0" || string == "1" { string = "2" }       // 0又は1は、2に変換
             let strAttrsForFraction: [NSAttributedString.Key : Any] = [
                 .foregroundColor: BBColor.blue,
                 .font: UIFont(name: "HelveticaNeue-Bold", size: 20.0) as Any
@@ -60,7 +58,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             .font: UIFont(name: "HelveticaNeue", size: 18.0) as Any
         ]
         
-        self.slider.setMinimumLabelAttributedText(NSAttributedString(string: "1", attributes: strAttrs))
+        self.slider.setMinimumLabelAttributedText(NSAttributedString(string: "2", attributes: strAttrs))
         self.slider.setMaximumLabelAttributedText(NSAttributedString(string: "\(hintsCnt)", attributes: strAttrs))
         self.slider.fraction = 0.5
         self.slider.shadowOffset = CGSize(width: 0, height: 10)
@@ -78,8 +76,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         self.slider.didEndTracking = { slider in
             let fracStr = slider.attributedTextForFraction(slider.fraction).string
             var fraction = Int(fracStr)
-            // 0は1に変換
-            if fraction == 0 { fraction = 1 }
+            // 0又は1は、2に変換
+            if fraction == 0 || fraction == 1 { fraction = 2 }
             if let f = fraction { self.currentFraction = f }
             
             // countTextAreaを表示
