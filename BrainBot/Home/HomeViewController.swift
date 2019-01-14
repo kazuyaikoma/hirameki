@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "アイデア"
+        self.navigationItem.title = "ブレスト"
         self.themeText.delegate = self
         
         // キーボード表示・非表示時のイベント登録
