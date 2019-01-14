@@ -2,23 +2,27 @@ PODS:
   - fluid-slider (1.0.0):
     - pop
   - pop (1.0.12)
+  - Toast-Swift (4.0.1)
   - UICircularProgressRing (4.1.0)
 
 DEPENDENCIES:
   - fluid-slider
+  - Toast-Swift
   - UICircularProgressRing
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - fluid-slider
     - pop
+    - Toast-Swift
     - UICircularProgressRing
 
 SPEC CHECKSUMS:
   fluid-slider: a19a991606a34a545cba9341e7422073b4ec3a66
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
   UICircularProgressRing: 5a32c01f54474571b1e66e8fa050c0f83d6d981b
 
-PODFILE CHECKSUM: 1a9957c20d45c7dece178979cd513b08abfe699e
+PODFILE CHECKSUM: 208d5e4d413d3b9e7b7b2f5badb158c7dc34f4cb
 
 COCOAPODS: 1.5.3

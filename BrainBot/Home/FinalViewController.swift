@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import UICircularProgressRing
+import Toast_Swift
 
 class FinalViewController: UIViewController {
     @IBOutlet weak var progressCircle: UICircularProgressRing!
@@ -63,6 +64,9 @@ class FinalViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.progressCircle.startProgress(to: self.percent, duration: 1.0)
+        
+        
+        self.makeSaveToast(1.0)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -70,6 +74,16 @@ class FinalViewController: UIViewController {
         if let text = self.textView, text.isFirstResponder {
             text.resignFirstResponder()
         }
+    }
+    
+    func save() {
+        self.makeSaveToast()
+    }
+    
+    func makeSaveToast(_ duration: TimeInterval = 0.5) {
+        var style = ToastStyle()
+        style.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        self.view.makeToast(" 履歴に保存しました ✔︎ ", duration: 0.8, style: style)
     }
     
     // MARK: - NotificationCenter
