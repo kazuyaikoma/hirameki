@@ -98,6 +98,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		E55A2F7021ECE27E0096604F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		E5877D4D21D4988100B2E1BD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +157,7 @@
 				E5B4A58621D47453002413A1 /* Assets.xcassets */,
 				E5B4A58821D47453002413A1 /* LaunchScreen.storyboard */,
 				E5B4A58B21D47453002413A1 /* Info.plist */,
+				E55A2F7021ECE27E0096604F /* Classes */,
 				E50BE96221DA5BA7008254A2 /* Utils */,
 				E5877D4D21D4988100B2E1BD /* Resources */,
 			);
@@ -267,6 +275,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
@@ -274,6 +284,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
