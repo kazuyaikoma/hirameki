@@ -388,7 +388,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onFinishTapped:" destination="RmK-ah-G0f" eventType="touchUpInside" id="tgM-4F-jCv"/>
-                                    <action selector="onStopTapped:" destination="RmK-ah-G0f" eventType="touchUpInside" id="Zwq-eQ-SsL"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDl-s7-obb">
