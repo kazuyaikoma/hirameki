@@ -64,11 +64,13 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     
     @IBAction func onStopTapped(_ sender: Any) {
         self.containerVC?.save()
+        self.containerVC?.hideKeyboard()
         self.showFinalView(sender)
     }
     
     @IBAction func onFinishTapped(_ sender: Any) {
         self.containerVC?.save()
+        self.containerVC?.hideKeyboard()
         self.showFinalView(sender)
     }
     

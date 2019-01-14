@@ -139,4 +139,11 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         
         self.data[hintText] = ideaText
     }
+    
+    func hideKeyboard() {
+        guard let vc = self.pageVC.viewControllers?.first as? IdeaContentViewController
+            else { return }
+        
+        vc.ideaText.resignFirstResponder()
+    }
 }
