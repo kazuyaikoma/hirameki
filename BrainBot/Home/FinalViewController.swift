@@ -24,7 +24,7 @@ class FinalViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // TODO: 完成度を修正
-        self.progressCircle.startProgress(to: 100, duration: 2.0)
+        self.progressCircle.startProgress(to: 100, duration: 1.5)
     }
     
 }
