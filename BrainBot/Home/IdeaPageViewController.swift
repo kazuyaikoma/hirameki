@@ -118,12 +118,7 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-        guard let vc = pageViewController.viewControllers?.first as? IdeaContentViewController,
-            let hintText = vc.hintLabel.text,
-            let ideaText = vc.ideaText.text
-        else { return }
-        
-        self.data[hintText] = ideaText
+        self.save()
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
@@ -134,5 +129,14 @@ class IdeaPageViewController: UIViewController, UIPageViewControllerDataSource, 
         else { return }
         
         self.delegate?.pageView(self, didChangedIndex: index)
+    }
+    
+    func save() {
+        guard let vc = self.pageVC.viewControllers?.first as? IdeaContentViewController,
+            let hintText = vc.hintLabel.text,
+            let ideaText = vc.ideaText.text
+            else { return }
+        
+        self.data[hintText] = ideaText
     }
 }
