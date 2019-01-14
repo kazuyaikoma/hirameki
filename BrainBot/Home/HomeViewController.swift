@@ -11,9 +11,9 @@ import fluid_slider
 
 class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var themeText: UITextField!
-    @IBOutlet weak var sliderArea: UIView!
     @IBOutlet weak var countTextArea: UIView!
     @IBOutlet weak var countText: UILabel!
+    @IBOutlet weak var slider: Slider!
     
     var currentFraction: Int = Int(floor(Double(BBMaterial.hints.count) / 2.0))
     // キーボード入力時の下げ幅
@@ -35,14 +35,13 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.setupSlider()
         self.keyboardOriginDiff = self.view.frame.origin.y
     }
     
     func setupSlider() {
         let hintsCnt = BBMaterial.hints.count
-        let slider = Slider()
-        slider.frame = self.sliderArea.frame
-        slider.attributedTextForFraction = { fraction in
+        self.slider.attributedTextForFraction = { fraction in
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 2
             formatter.maximumFractionDigits = 0
@@ -60,22 +59,22 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             .font: UIFont(name: "HelveticaNeue", size: 18.0) as Any
         ]
         
-        slider.setMinimumLabelAttributedText(NSAttributedString(string: "1", attributes: strAttrs))
-        slider.setMaximumLabelAttributedText(NSAttributedString(string: "\(hintsCnt)", attributes: strAttrs))
-        slider.fraction = 0.5
-        slider.shadowOffset = CGSize(width: 0, height: 10)
-        slider.shadowBlur = 5
-        slider.contentViewColor = BBColor.blue
-        slider.valueViewColor = UIColor.white
+        self.slider.setMinimumLabelAttributedText(NSAttributedString(string: "1", attributes: strAttrs))
+        self.slider.setMaximumLabelAttributedText(NSAttributedString(string: "\(hintsCnt)", attributes: strAttrs))
+        self.slider.fraction = 0.5
+        self.slider.shadowOffset = CGSize(width: 0, height: 10)
+        self.slider.shadowBlur = 5
+        self.slider.contentViewColor = BBColor.blue
+        self.slider.valueViewColor = UIColor.white
         
-        slider.didBeginTracking = { slider in
+        self.slider.didBeginTracking = { slider in
             // countTextAreaを隠す
             UIView.animate(withDuration: 0.25) {
                 self.countTextArea.alpha = 0
             }
         }
         
-        slider.didEndTracking = { slider in
+        self.slider.didEndTracking = { slider in
             let fracStr = slider.attributedTextForFraction(slider.fraction).string
             var fraction = Int(fracStr)
             // 0は1に変換
@@ -88,8 +87,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
                 self.countTextArea.alpha = 1
             }
         }
-        
-        self.view.addSubview(slider)
     }
 
     @IBAction func onStartTapped(_ sender: Any) {

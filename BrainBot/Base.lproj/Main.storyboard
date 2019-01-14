@@ -113,8 +113,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="何を思いつきたいですか？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4d-i7-i6y">
-                                <rect key="frame" x="10" y="65" width="300" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="何を思いつきたい？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4d-i7-i6y">
+                                <rect key="frame" x="47.5" y="65" width="225" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -187,12 +187,11 @@
                                     <constraint firstItem="sMQ-zS-rov" firstAttribute="top" secondItem="Wgx-xL-co0" secondAttribute="top" constant="8" id="vxl-wL-UUL"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzg-qH-8mD">
-                                <rect key="frame" x="30" y="267" width="260" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzg-qH-8mD" customClass="Slider" customModule="fluid_slider">
+                                <rect key="frame" x="50" y="267" width="220" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="F4h-QX-fn7"/>
-                                    <constraint firstAttribute="width" constant="260" id="Ici-bb-Uhv"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -200,14 +199,15 @@
                         <constraints>
                             <constraint firstItem="Nxi-TH-Nc7" firstAttribute="top" secondItem="ht2-Qs-rhM" secondAttribute="bottom" constant="11" id="3iJ-vH-mX8"/>
                             <constraint firstItem="ht2-Qs-rhM" firstAttribute="top" secondItem="V4d-i7-i6y" secondAttribute="bottom" constant="40" id="4UE-wt-p7z"/>
-                            <constraint firstItem="Rzg-qH-8mD" firstAttribute="centerX" secondItem="DlA-6Y-r3a" secondAttribute="centerX" id="4Vk-sC-tKm"/>
                             <constraint firstItem="Wgx-xL-co0" firstAttribute="centerX" secondItem="DlA-6Y-r3a" secondAttribute="centerX" id="B8l-Ah-sqO"/>
                             <constraint firstItem="ht2-Qs-rhM" firstAttribute="centerX" secondItem="DlA-6Y-r3a" secondAttribute="centerX" id="F5l-ds-6Hn"/>
                             <constraint firstItem="Rzg-qH-8mD" firstAttribute="top" secondItem="Wgx-xL-co0" secondAttribute="bottom" constant="2" id="KfQ-bU-njL"/>
                             <constraint firstItem="Pgj-KJ-FK2" firstAttribute="top" secondItem="Rzg-qH-8mD" secondAttribute="bottom" constant="65" id="Kh8-e9-TRA"/>
                             <constraint firstItem="Wgx-xL-co0" firstAttribute="top" secondItem="Nxi-TH-Nc7" secondAttribute="bottom" constant="70" id="KwD-Yq-LB8"/>
+                            <constraint firstItem="Rzg-qH-8mD" firstAttribute="leading" secondItem="DNs-WS-7YD" secondAttribute="leading" constant="50" id="O8p-hK-Kng"/>
                             <constraint firstItem="V4d-i7-i6y" firstAttribute="top" secondItem="DNs-WS-7YD" secondAttribute="top" constant="65" id="Qe1-dk-1hu"/>
                             <constraint firstItem="Pgj-KJ-FK2" firstAttribute="centerX" secondItem="DlA-6Y-r3a" secondAttribute="centerX" id="Zz7-0n-iLI"/>
+                            <constraint firstItem="DNs-WS-7YD" firstAttribute="trailing" secondItem="Rzg-qH-8mD" secondAttribute="trailing" constant="50" id="bPG-LN-3gv"/>
                             <constraint firstItem="Nxi-TH-Nc7" firstAttribute="centerX" secondItem="DlA-6Y-r3a" secondAttribute="centerX" id="ta8-M0-DRy"/>
                             <constraint firstItem="V4d-i7-i6y" firstAttribute="centerX" secondItem="DlA-6Y-r3a" secondAttribute="centerX" id="xIK-SD-HOO"/>
                         </constraints>
@@ -218,7 +218,7 @@
                     <connections>
                         <outlet property="countText" destination="fol-WV-gCe" id="RrG-Rh-WNG"/>
                         <outlet property="countTextArea" destination="Wgx-xL-co0" id="qke-Ye-kt6"/>
-                        <outlet property="sliderArea" destination="Rzg-qH-8mD" id="PnA-FV-ncX"/>
+                        <outlet property="slider" destination="Rzg-qH-8mD" id="iAg-Sa-uIN"/>
                         <outlet property="themeText" destination="ht2-Qs-rhM" id="nmi-JP-GIm"/>
                     </connections>
                 </viewController>
