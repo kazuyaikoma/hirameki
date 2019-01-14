@@ -23,6 +23,13 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateView()
+        
+        // 戻るボタン
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(IdeaViewController.onBackPushed))
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        
+        // エッジスワイプ無効化
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,11 +63,34 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     }
     
     @IBAction func onStopTapped(_ sender: Any) {
-        // TODO: 完了後Viewの表示
+        self.containerVC?.save()
+        self.showFinalView(sender)
     }
     
     @IBAction func onFinishTapped(_ sender: Any) {
-        // TODO: 完了後Viewの表示
+        self.containerVC?.save()
+        self.showFinalView(sender)
+    }
+    
+    func showFinalView(_ sender: Any) {
+        if let finalVC = self.storyboard?.instantiateViewController(withIdentifier: "FinalViewController") as? FinalViewController {
+            finalVC.navigationItem.title = "結果"
+            finalVC.data = containerVC?.data ?? [:]
+            self.show(finalVC, sender: sender)
+        }
+    }
+    
+    @objc func onBackPushed() -> Void {
+        let alert = UIAlertController(title: "本当に戻りますか？", message: "これまでの入力内容は破棄されます", preferredStyle:  UIAlertController.Style.alert)
+        let defaultAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+            self.navigationController?.popViewController(animated: true)
+        })
+        let cancelAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: - IdeaPageViewControllerDelegate

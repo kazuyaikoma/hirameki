@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        if let tabvc = self.window?.rootViewController as? UITabBarController {
+            tabvc.selectedIndex = 1     // 真ん中のタブ選択をデフォルトにする
+        }
+        
         return true
     }
 

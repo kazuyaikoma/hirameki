@@ -11,14 +11,17 @@ import fluid_slider
 
 class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var themeText: UITextField!
-    @IBOutlet weak var sliderArea: UIView!
     @IBOutlet weak var countTextArea: UIView!
     @IBOutlet weak var countText: UILabel!
+    @IBOutlet weak var slider: Slider!
     
     var currentFraction: Int = Int(floor(Double(BBMaterial.hints.count) / 2.0))
+    // キーボード入力時の下げ幅
+    var keyboardOriginDiff: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = "アイデア"
         self.themeText.delegate = self
         
@@ -32,26 +35,13 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // キーボード起動ぞ状態を解除
-        let after = {() -> Void in
-            self.view.frame.origin.y = 0
-            self.themeText.resignFirstResponder()
-        }
-        
-        delay(0.3, callback: {
-            UIView.animate(withDuration: 0.2, delay: 0.0,
-                           options: UIView.AnimationOptions.curveEaseOut,
-                           animations: after,
-                           completion: nil
-            )
-        })
+        self.setupSlider()
+        self.keyboardOriginDiff = self.view.frame.origin.y
     }
     
     func setupSlider() {
         let hintsCnt = BBMaterial.hints.count
-        let slider = Slider()
-        slider.frame = self.sliderArea.frame
-        slider.attributedTextForFraction = { fraction in
+        self.slider.attributedTextForFraction = { fraction in
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 2
             formatter.maximumFractionDigits = 0
@@ -69,22 +59,22 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             .font: UIFont(name: "HelveticaNeue", size: 18.0) as Any
         ]
         
-        slider.setMinimumLabelAttributedText(NSAttributedString(string: "1", attributes: strAttrs))
-        slider.setMaximumLabelAttributedText(NSAttributedString(string: "\(hintsCnt)", attributes: strAttrs))
-        slider.fraction = 0.5
-        slider.shadowOffset = CGSize(width: 0, height: 10)
-        slider.shadowBlur = 5
-        slider.contentViewColor = BBColor.blue
-        slider.valueViewColor = UIColor.white
+        self.slider.setMinimumLabelAttributedText(NSAttributedString(string: "1", attributes: strAttrs))
+        self.slider.setMaximumLabelAttributedText(NSAttributedString(string: "\(hintsCnt)", attributes: strAttrs))
+        self.slider.fraction = 0.5
+        self.slider.shadowOffset = CGSize(width: 0, height: 10)
+        self.slider.shadowBlur = 5
+        self.slider.contentViewColor = BBColor.blue
+        self.slider.valueViewColor = UIColor.white
         
-        slider.didBeginTracking = { slider in
+        self.slider.didBeginTracking = { slider in
             // countTextAreaを隠す
             UIView.animate(withDuration: 0.25) {
                 self.countTextArea.alpha = 0
             }
         }
         
-        slider.didEndTracking = { slider in
+        self.slider.didEndTracking = { slider in
             let fracStr = slider.attributedTextForFraction(slider.fraction).string
             var fraction = Int(fracStr)
             // 0は1に変換
@@ -97,16 +87,28 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
                 self.countTextArea.alpha = 1
             }
         }
-        
-        self.view.addSubview(slider)
     }
 
     @IBAction func onStartTapped(_ sender: Any) {
-        if let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") as? IdeaViewController {
-            ideaVC.navigationItem.title = themeText.text
-            ideaVC.designatedCount = self.currentFraction
-            self.show(ideaVC, sender: sender)
+        guard let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") as? IdeaViewController
+        else { return }
+        
+        if let text = self.themeText.text, text.isEmpty {
+            self.showAlert()
+            return
         }
+        
+        ideaVC.navigationItem.title = themeText.text
+        ideaVC.designatedCount = self.currentFraction
+        self.show(ideaVC, sender: sender)
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "思いつきたいテーマを上の空欄に入力してください", message: nil, preferredStyle:  UIAlertController.Style.alert)
+        let action = UIAlertAction(title: "確認", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(action)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     // 改行ボタンを押した時の処理
@@ -126,23 +128,24 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     // MARK: - NotificationCenter
     
     @objc func keyboardWillChange(_ notification: Foundation.Notification) {
-        var info = notification.userInfo as! [String: AnyObject]
-        let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])!.cgRectValue
+        guard let info = notification.userInfo as? [String: AnyObject],
+              let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])?.cgRectValue,
+              let duration: Double = (info[UIResponder.keyboardAnimationDurationUserInfoKey])?.doubleValue
+        else { return }
         
         // キーボードに被らないように
-        let duration: TimeInterval? = (info[UIResponder.keyboardAnimationDurationUserInfoKey]!).doubleValue
         let options = UIView.AnimationOptions(rawValue: UInt((info[UIResponder.keyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
         let after = {() -> Void in
-            let diff = keyboardFrame!.origin.y - UIScreen.main.bounds.size.height
+            let diff = keyboardFrame.origin.y - UIScreen.main.bounds.size.height
             if diff < 0 {
-                self.view.frame.origin.y = -100
+                self.view.frame.origin.y = -40
             } else {
-                self.view.frame.origin.y = 0
+                self.view.frame.origin.y = self.keyboardOriginDiff
             }
         }
         
         UIView.animate(
-            withDuration: duration!,
+            withDuration: duration,
             delay:0.0,
             options:options,
             animations: after,
