@@ -104,7 +104,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     }
     
     func showAlert() {
-        let alert: UIAlertController = UIAlertController(title: "思いつきたいテーマを上の空欄に入力してください", message: nil, preferredStyle:  UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "思いつきたいテーマを上の空欄に入力してください", message: nil, preferredStyle:  UIAlertController.Style.alert)
         let action = UIAlertAction(title: "確認", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(action)
         

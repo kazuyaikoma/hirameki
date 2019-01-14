@@ -81,15 +81,12 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     }
     
     @objc func onBackPushed() -> Void {
-        let alert: UIAlertController = UIAlertController(title: "本当に戻りますか？", message: "これまでの入力内容は破棄されます", preferredStyle:  UIAlertController.Style.alert)
-        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+        let alert = UIAlertController(title: "本当に戻りますか？", message: "これまでの入力内容は破棄されます", preferredStyle:  UIAlertController.Style.alert)
+        let defaultAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
             (action: UIAlertAction!) -> Void in
             self.navigationController?.popViewController(animated: true)
         })
-        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
-            (action: UIAlertAction!) -> Void in
-            return
-        })
+        let cancelAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(cancelAction)
         alert.addAction(defaultAction)
         
