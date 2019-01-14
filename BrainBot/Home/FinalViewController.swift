@@ -19,6 +19,9 @@ class FinalViewController: UIViewController {
     // キーボード入力時の下げ幅
     var keyboardOriginDiff: CGFloat = 0
     
+    // themeLabel用テキスト
+    var themeTxt: String?
+    
     // key: 質問文(hint), value: ユーザーからの回答
     var data: [String:String] = [:]
     // 回答数
@@ -54,11 +57,12 @@ class FinalViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.keyboardOriginDiff = self.view.frame.origin.y
+        self.themeLabel.text = self.themeTxt
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.progressCircle.startProgress(to: self.percent, duration: 1.5)
+        self.progressCircle.startProgress(to: self.percent, duration: 1.0)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
