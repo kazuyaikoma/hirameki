@@ -14,6 +14,8 @@ class IdeaContentViewController: UIViewController {
     @IBOutlet weak var leftArrow: UIImageView!
     @IBOutlet weak var rightArrow: UIImageView!
     var number: Int?
+    // キーボード入力時の下げ幅
+    var keyboardOriginDiff: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,11 @@ class IdeaContentViewController: UIViewController {
         // キーボード表示・非表示時のイベント登録
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(IdeaContentViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.keyboardOriginDiff = self.view.frame.origin.y
     }
     
     // TODO: FIX: 以下の4つメソッド、subviewsから取得してしまっているが、本来はIBOutlet接続してるUILabelを直接そのまま扱いたい。
@@ -53,23 +60,24 @@ class IdeaContentViewController: UIViewController {
     // MARK: - NotificationCenter
     
     @objc func keyboardWillChange(_ notification: Foundation.Notification) {
-        var info = notification.userInfo as! [String: AnyObject]
-        let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])!.cgRectValue
+        guard let info = notification.userInfo as? [String: AnyObject],
+            let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey])?.cgRectValue,
+            let duration: Double = (info[UIResponder.keyboardAnimationDurationUserInfoKey])?.doubleValue
+            else { return }
         
-        // キーボードに被らないようにする
-        let duration: TimeInterval? = (info[UIResponder.keyboardAnimationDurationUserInfoKey]!).doubleValue
+        // キーボードに被らないように
         let options = UIView.AnimationOptions(rawValue: UInt((info[UIResponder.keyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
         let after = {() -> Void in
-            let diff = keyboardFrame!.origin.y - UIScreen.main.bounds.size.height
+            let diff = keyboardFrame.origin.y - UIScreen.main.bounds.size.height
             if diff < 0 {
                 self.view.frame.origin.y = -30
             } else {
-                self.view.frame.origin.y = 0
+                self.view.frame.origin.y = self.keyboardOriginDiff
             }
         }
         
         UIView.animate(
-            withDuration: duration!,
+            withDuration: duration,
             delay:0.0,
             options:options,
             animations: after,

@@ -64,17 +64,20 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     
     @IBAction func onStopTapped(_ sender: Any) {
         self.containerVC?.save()
+        self.containerVC?.hideKeyboard()
         self.showFinalView(sender)
     }
     
     @IBAction func onFinishTapped(_ sender: Any) {
         self.containerVC?.save()
+        self.containerVC?.hideKeyboard()
         self.showFinalView(sender)
     }
     
     func showFinalView(_ sender: Any) {
         if let finalVC = self.storyboard?.instantiateViewController(withIdentifier: "FinalViewController") as? FinalViewController {
             finalVC.navigationItem.title = "結果"
+            finalVC.themeTxt = self.navigationItem.title
             finalVC.data = containerVC?.data ?? [:]
             self.show(finalVC, sender: sender)
         }

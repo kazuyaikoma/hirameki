@@ -8,6 +8,7 @@
 
 import UIKit
 import fluid_slider
+import RealmSwift
 
 class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var themeText: UITextField!
@@ -22,20 +23,18 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "アイデア"
+        self.navigationItem.title = "ブレスト"
         self.themeText.delegate = self
         
         // キーボード表示・非表示時のイベント登録
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(HomeViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        
         self.countText.text = String(self.currentFraction)
         self.setupSlider()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setupSlider()
         self.keyboardOriginDiff = self.view.frame.origin.y
     }
     
@@ -46,7 +45,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             formatter.maximumIntegerDigits = 2
             formatter.maximumFractionDigits = 0
             var string = formatter.string(from: (fraction * CGFloat(hintsCnt)) as NSNumber) ?? ""
-            if string == "0" { string = "1" }       // 0は1に変換
+            if string == "0" || string == "1" { string = "2" }       // 0又は1は、2に変換
             let strAttrsForFraction: [NSAttributedString.Key : Any] = [
                 .foregroundColor: BBColor.blue,
                 .font: UIFont(name: "HelveticaNeue-Bold", size: 20.0) as Any
@@ -59,7 +58,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             .font: UIFont(name: "HelveticaNeue", size: 18.0) as Any
         ]
         
-        self.slider.setMinimumLabelAttributedText(NSAttributedString(string: "1", attributes: strAttrs))
+        self.slider.setMinimumLabelAttributedText(NSAttributedString(string: "2", attributes: strAttrs))
         self.slider.setMaximumLabelAttributedText(NSAttributedString(string: "\(hintsCnt)", attributes: strAttrs))
         self.slider.fraction = 0.5
         self.slider.shadowOffset = CGSize(width: 0, height: 10)
@@ -77,8 +76,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         self.slider.didEndTracking = { slider in
             let fracStr = slider.attributedTextForFraction(slider.fraction).string
             var fraction = Int(fracStr)
-            // 0は1に変換
-            if fraction == 0 { fraction = 1 }
+            // 0又は1は、2に変換
+            if fraction == 0 || fraction == 1 { fraction = 2 }
             if let f = fraction { self.currentFraction = f }
             
             // countTextAreaを表示
@@ -90,25 +89,40 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func onStartTapped(_ sender: Any) {
-        guard let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") as? IdeaViewController
+        guard let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") as? IdeaViewController,
+        let theme = self.themeText.text
         else { return }
         
-        if let text = self.themeText.text, text.isEmpty {
-            self.showAlert()
-            return
-        }
+        self.checkValid(theme: theme)
         
-        ideaVC.navigationItem.title = themeText.text
+        ideaVC.navigationItem.title = theme
         ideaVC.designatedCount = self.currentFraction
         self.show(ideaVC, sender: sender)
     }
     
-    func showAlert() {
-        let alert = UIAlertController(title: "思いつきたいテーマを上の空欄に入力してください", message: nil, preferredStyle:  UIAlertController.Style.alert)
+    func showAlert(_ message: String) {
+        let alert = UIAlertController(title: message, message: nil, preferredStyle:  UIAlertController.Style.alert)
         let action = UIAlertAction(title: "確認", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(action)
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func checkValid(theme: String) {
+        if theme.isEmpty {
+            self.showAlert("思いつきたいテーマを上の空欄に入力してください")
+            return
+        }
+        
+        do {
+            let realm = try Realm()
+            let ideas = realm.objects(Idea.self)
+            if let _ = ideas.filter("theme = '\(theme)'").first {
+                self.showAlert("すでに同じテーマのアイデアが存在します。「履歴」から再度ブレストできます。")
+            }
+        } catch {
+            print("realm error occurred at HomeVC#onStartTapped")
+        }
     }
     
     // 改行ボタンを押した時の処理

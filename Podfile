@@ -8,5 +8,7 @@ target 'BrainBot' do
   # Pods for BrainBot
   pod 'fluid-slider'
   pod 'UICircularProgressRing'
+  pod 'Toast-Swift'
+  pod 'RealmSwift'
 
 end
