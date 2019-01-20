@@ -52,7 +52,10 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
             let ideas = realm.objects(Idea.self)
             
             if let idea = ideas.filter("theme = '\(self.theme)'").first {
-                try! realm.write { idea.setValue(self.textView.text ?? "", forKey: "ideas") }
+                try! realm.write {
+                    idea.setValue(self.textView.text ?? "", forKey: "ideas")
+                    idea.setValue(Date.init(), forKey: "updatedDate")
+                }
             }
         } catch {
             print("realm error occurred at HistoryDetailVC#save")
@@ -63,8 +66,50 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
     
     func makeSaveToast(_ duration: TimeInterval = 0.5) {
         var style = ToastStyle()
-        style.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        style.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         self.view.makeToast(" 履歴に保存しました ✔︎ ", duration: 0.8, style: style)
+    }
+    
+    @IBAction func onDeletePushed(_ sender: Any) {
+        let alert = UIAlertController(title: "本当に削除しますか？", message: "このアイデアに関する入力内容は破棄されます", preferredStyle:  UIAlertController.Style.alert)
+        let defaultAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+            self.delete()
+        })
+        let cancelAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func onRethinkPushed(_ sender: Any) {
+        // TODO: 実装
+    }
+    
+    func delete() {
+        do {
+            let realm = try Realm()
+            let ideas = realm.objects(Idea.self)
+            
+            if let idea = ideas.filter("theme = '\(self.theme)'").first {
+                try! realm.write {
+                    realm.delete(idea)
+                    self.onDeleteSucceeded()
+                }
+            }
+        } catch {
+            print("realm error occurred at HistoryDetailVC#onDeletePushed")
+        }
+    }
+    
+    func onDeleteSucceeded() {
+        var style = ToastStyle()
+        style.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.view.makeToast(" 履歴から削除しました 🗑 ", duration: 0.5, style: style)
+        delay(0.7, callback: {
+            self.navigationController?.popViewController(animated: true)
+        })
     }
     
     // MARK: - NotificationCenter
