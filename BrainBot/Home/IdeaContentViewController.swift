@@ -20,8 +20,6 @@ class IdeaContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.hintLabel.numberOfLines = 0
-        
         // キーボード表示・非表示時のイベント登録
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(IdeaContentViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)

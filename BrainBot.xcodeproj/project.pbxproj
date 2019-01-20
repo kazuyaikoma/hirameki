@@ -17,6 +17,7 @@
 		E560AA6221F46527006E1B5F /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6121F46527006E1B5F /* HistoryTableViewCell.xib */; };
 		E560AA6421F465FD006E1B5F /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */; };
 		E560AA6721F473DB006E1B5F /* blue-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */; };
+		E560AA6921F498FE006E1B5F /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560AA6821F498FE006E1B5F /* HistoryDetailViewController.swift */; };
 		E569CCD121DE2ADC00AED26E /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E569CCCF21DE2ADC00AED26E /* left-arrow@2x.png */; };
 		E569CCD221DE2ADC00AED26E /* right-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E569CCD021DE2ADC00AED26E /* right-arrow@2x.png */; };
 		E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5021D498C000B2E1BD /* idea@2x.png */; };
@@ -48,6 +49,7 @@
 		E560AA6121F46527006E1B5F /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-yellow@2x.png"; sourceTree = "<group>"; };
+		E560AA6821F498FE006E1B5F /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		E569CCCF21DE2ADC00AED26E /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
 		E569CCD021DE2ADC00AED26E /* right-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow@2x.png"; sourceTree = "<group>"; };
 		E5877D5021D498C000B2E1BD /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				E5B4A57F21D47452002413A1 /* HistoryViewController.swift */,
+				E560AA6821F498FE006E1B5F /* HistoryDetailViewController.swift */,
 				E560AA6121F46527006E1B5F /* HistoryTableViewCell.xib */,
 				E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */,
 			);
@@ -355,6 +358,7 @@
 				E55A2F7221ECE3360096604F /* Idea.swift in Sources */,
 				E5FBBE0C21D9737C007167B9 /* IdeaViewController.swift in Sources */,
 				E5B4A58021D47452002413A1 /* HistoryViewController.swift in Sources */,
+				E560AA6921F498FE006E1B5F /* HistoryDetailViewController.swift in Sources */,
 				E5B4A59221D480AD002413A1 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

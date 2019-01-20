@@ -35,8 +35,6 @@ class FinalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.progressCircle.gradientColors = [UIColor.red, UIColor.blue]
-        self.message.numberOfLines = 0
-        self.themeLabel.numberOfLines = 0
         
         var ideas = ""
         for (_, idea) in self.data {
