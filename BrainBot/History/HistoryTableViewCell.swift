@@ -14,9 +14,13 @@ class HistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var theme: UILabel!
     @IBOutlet weak var idea: UILabel!
+    @IBOutlet weak var dateHighlight: UIView!
+    @IBOutlet weak var mainHighlight: UIView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.dateHighlight.alpha = 0
+        self.mainHighlight.alpha = 0
     }
     
     func update(date: Date, theme: String, idea: String) {
@@ -30,5 +34,11 @@ class HistoryTableViewCell: UITableViewCell {
         
         self.theme.text = theme
         self.idea.text = idea
+    }
+    
+    func changeHighlight(_ highlight: Bool) {
+        let alpha: CGFloat = highlight ? 1 : 0
+        self.dateHighlight.alpha = alpha
+        self.mainHighlight.alpha = alpha
     }
 }

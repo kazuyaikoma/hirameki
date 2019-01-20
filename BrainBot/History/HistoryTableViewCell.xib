@@ -24,6 +24,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHy-Rx-SmN">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="114"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1b-Hz-ow0">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="114"/>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2D-jY-FK7">
                                         <rect key="frame" x="19.5" y="26" width="41" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -39,11 +43,15 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.44705882349999998" green="0.79215686269999996" blue="0.76862745099999996" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="n1b-Hz-ow0" firstAttribute="top" secondItem="bHy-Rx-SmN" secondAttribute="top" id="28N-f2-PSh"/>
                                     <constraint firstAttribute="bottom" secondItem="dA1-ak-2TM" secondAttribute="bottom" constant="26" id="2kA-3c-acj"/>
                                     <constraint firstItem="A2D-jY-FK7" firstAttribute="top" secondItem="bHy-Rx-SmN" secondAttribute="top" constant="26" id="KnM-Ay-Llc"/>
                                     <constraint firstItem="dA1-ak-2TM" firstAttribute="centerX" secondItem="bHy-Rx-SmN" secondAttribute="centerX" id="Qw2-my-6Ob"/>
                                     <constraint firstItem="A2D-jY-FK7" firstAttribute="centerX" secondItem="bHy-Rx-SmN" secondAttribute="centerX" id="Tzs-Cd-b3p"/>
+                                    <constraint firstItem="n1b-Hz-ow0" firstAttribute="leading" secondItem="bHy-Rx-SmN" secondAttribute="leading" id="apx-zK-WbV"/>
+                                    <constraint firstAttribute="trailing" secondItem="n1b-Hz-ow0" secondAttribute="trailing" id="k5T-4L-uCX"/>
                                     <constraint firstAttribute="width" constant="80" id="loG-e7-qQe"/>
+                                    <constraint firstAttribute="bottom" secondItem="n1b-Hz-ow0" secondAttribute="bottom" id="yr7-gn-hA4"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="田舎の自販機を売れるようにする方法" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0y-9d-vVA">
@@ -71,6 +79,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Z3-hH-BHE">
+                                <rect key="frame" x="80" y="0.0" width="263" height="114"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="bHy-Rx-SmN" secondAttribute="bottom" id="2LW-G8-sK9"/>
@@ -79,10 +91,14 @@
                             <constraint firstItem="bHy-Rx-SmN" firstAttribute="top" secondItem="V8X-Z5-tf6" secondAttribute="top" id="FdB-YT-L7S"/>
                             <constraint firstItem="RTq-Gu-uca" firstAttribute="leading" secondItem="bHy-Rx-SmN" secondAttribute="trailing" constant="15" id="J1g-vk-Vmy"/>
                             <constraint firstItem="O0y-9d-vVA" firstAttribute="leading" secondItem="bHy-Rx-SmN" secondAttribute="trailing" constant="15" id="S9X-6z-BKh"/>
+                            <constraint firstItem="8Z3-hH-BHE" firstAttribute="leading" secondItem="bHy-Rx-SmN" secondAttribute="trailing" id="TGj-m9-Xw4"/>
                             <constraint firstItem="RTq-Gu-uca" firstAttribute="top" secondItem="O0y-9d-vVA" secondAttribute="bottom" constant="-8" id="YQB-gN-uxm"/>
                             <constraint firstItem="bHy-Rx-SmN" firstAttribute="leading" secondItem="V8X-Z5-tf6" secondAttribute="leading" id="Zgq-XM-fho"/>
                             <constraint firstAttribute="trailing" secondItem="RTq-Gu-uca" secondAttribute="trailing" constant="15" id="byq-A7-tAD"/>
+                            <constraint firstAttribute="trailing" secondItem="8Z3-hH-BHE" secondAttribute="trailing" id="fUA-3A-CII"/>
+                            <constraint firstAttribute="bottom" secondItem="8Z3-hH-BHE" secondAttribute="bottom" id="obq-aw-LGR"/>
                             <constraint firstAttribute="trailing" secondItem="O0y-9d-vVA" secondAttribute="trailing" constant="15" id="uay-hV-i49"/>
+                            <constraint firstItem="8Z3-hH-BHE" firstAttribute="top" secondItem="V8X-Z5-tf6" secondAttribute="top" id="wZj-RG-cbJ"/>
                         </constraints>
                     </view>
                     <blurEffect style="extraLight"/>
@@ -104,7 +120,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="date" destination="dA1-ak-2TM" id="AKX-Jg-BxI"/>
+                <outlet property="dateHighlight" destination="n1b-Hz-ow0" id="K5P-ac-bJQ"/>
                 <outlet property="idea" destination="RTq-Gu-uca" id="lAt-J6-rP1"/>
+                <outlet property="mainHighlight" destination="8Z3-hH-BHE" id="cRU-EX-BiI"/>
                 <outlet property="theme" destination="O0y-9d-vVA" id="tPv-Eb-Puh"/>
                 <outlet property="year" destination="A2D-jY-FK7" id="VlD-uG-wsY"/>
             </connections>

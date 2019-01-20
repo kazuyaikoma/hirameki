@@ -64,20 +64,34 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell: HistoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId) as! HistoryTableViewCell
         let idx = indexPath.row
         cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
         cell.update(date: self.dates[idx], theme: self.themes[idx], idea: self.ideas[idx])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO: 実装
+        guard let cell = tableView.cellForRow(at: indexPath) as? HistoryTableViewCell else {
+            return
+        }
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         // TODO: 実装
+        guard let cell = tableView.cellForRow(at: indexPath) as? HistoryTableViewCell else {
+            return
+        }
+        cell.changeHighlight(true)
     }
     
     func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         // TODO: 実装
+        guard let cell = tableView.cellForRow(at: indexPath) as? HistoryTableViewCell else {
+            return
+        }
+        UIView.animate(withDuration: 0.3) {
+            cell.changeHighlight(false)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
