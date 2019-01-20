@@ -11,6 +11,7 @@ import RealmSwift
 
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noHistoryView: UILabel!
     
     let cellId = "HistoryCell"
     
@@ -33,6 +34,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         self.reloadData()
+        self.noHistoryView.isHidden = !self.dates.isEmpty
         self.tableView.reloadData()
     }
     

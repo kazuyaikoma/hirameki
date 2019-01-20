@@ -64,12 +64,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まだ履歴がありません" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ou-P0-qdL">
+                                <rect key="frame" x="70" y="180" width="180" height="95"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="skT-F3-aT4" firstAttribute="bottom" secondItem="3Ou-P0-qdL" secondAttribute="bottom" constant="180" id="SPn-Cz-mew"/>
                             <constraint firstItem="Y3q-qV-55w" firstAttribute="leading" secondItem="skT-F3-aT4" secondAttribute="leading" id="Wim-u4-7JH"/>
                             <constraint firstItem="skT-F3-aT4" firstAttribute="bottom" secondItem="Y3q-qV-55w" secondAttribute="bottom" id="ZgF-6L-6a2"/>
                             <constraint firstItem="skT-F3-aT4" firstAttribute="trailing" secondItem="Y3q-qV-55w" secondAttribute="trailing" id="bE1-8O-EDv"/>
+                            <constraint firstItem="3Ou-P0-qdL" firstAttribute="centerX" secondItem="3ir-7w-J8H" secondAttribute="centerX" id="kws-hu-hYj"/>
+                            <constraint firstItem="3Ou-P0-qdL" firstAttribute="top" secondItem="skT-F3-aT4" secondAttribute="top" constant="180" id="rnY-u8-7W0"/>
                             <constraint firstItem="Y3q-qV-55w" firstAttribute="top" secondItem="skT-F3-aT4" secondAttribute="top" id="wx7-la-sTr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="skT-F3-aT4"/>
@@ -77,12 +86,13 @@
                     <tabBarItem key="tabBarItem" title="履歴" image="tabBarItem:idX-Lk-8UX:image" id="idX-Lk-8UX"/>
                     <navigationItem key="navigationItem" id="6Zh-uh-FhO"/>
                     <connections>
+                        <outlet property="noHistoryView" destination="3Ou-P0-qdL" id="zy5-Xj-0tI"/>
                         <outlet property="tableView" destination="Y3q-qV-55w" id="gcg-Cq-XXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8d-x9-zRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518" y="-600"/>
+            <point key="canvasLocation" x="1516.875" y="-600"/>
         </scene>
         <!--History Detail View Controller-->
         <scene sceneID="zqZ-Nc-te2">
