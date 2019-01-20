@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import Toast_Swift
 import RealmSwift
+import LINEActivity
 
 class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
     
@@ -25,6 +26,7 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(HistoryDetailViewController.onSharePushed))
         
         // キーボード表示・非表示時のイベント登録
         NotificationCenter.default.addObserver(self, selector: #selector(HistoryDetailViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
@@ -130,6 +132,18 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
         ideaVC.oldIdeas = self.textView.text
         ideaVC.designatedCount = BBMaterial.hints.count / 2
         self.show(ideaVC, sender: nil)
+    }
+    
+    @objc func onSharePushed() -> Void {
+        let theme = "テーマ: " + (self.themeLabel.text ?? "")
+        let idea = "アイデア: " + (self.textView.text ?? "")
+        let text = theme + "\n" + idea
+        
+        let LineKit = LINEActivity()
+        let activities = [LineKit]
+        
+        let activityVC = UIActivityViewController(activityItems: [text], applicationActivities: activities)
+        present(activityVC, animated: true, completion: nil)
     }
     
     // MARK: - NotificationCenter

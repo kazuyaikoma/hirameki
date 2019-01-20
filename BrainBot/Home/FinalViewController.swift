@@ -11,6 +11,7 @@ import Foundation
 import UICircularProgressRing
 import Toast_Swift
 import RealmSwift
+import LINEActivity
 
 class FinalViewController: UIViewController {
     @IBOutlet weak var progressCircle: UICircularProgressRing!
@@ -37,6 +38,8 @@ class FinalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(FinalViewController.onSharePushed))
+        
         self.progressCircle.gradientColors = [UIColor.red, UIColor.blue]
         
         var ideas = ""
@@ -104,6 +107,18 @@ class FinalViewController: UIViewController {
         var style = ToastStyle()
         style.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         self.view.makeToast(" 履歴に保存しました ✔︎ ", duration: 0.8, style: style)
+    }
+    
+    @objc func onSharePushed() -> Void {
+        let theme = "テーマ: " + (self.themeLabel.text ?? "")
+        let idea = "アイデア: " + (self.textView.text ?? "")
+        let text = theme + "\n" + idea
+        
+        let LineKit = LINEActivity()
+        let activities = [LineKit]
+        
+        let activityVC = UIActivityViewController(activityItems: [text], applicationActivities: activities)
+        present(activityVC, animated: true, completion: nil)
     }
     
     // MARK: - NotificationCenter
