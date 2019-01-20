@@ -9,7 +9,6 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
