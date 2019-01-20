@@ -84,7 +84,16 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onRethinkPushed(_ sender: Any) {
-        // TODO: 実装
+        let alert = UIAlertController(title: "もう一度ブレストしますか？", message: "これまで出したアイデアを引き継いで、再度ブレストします", preferredStyle:  UIAlertController.Style.alert)
+        let defaultAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+            self.rethink()
+        })
+        let cancelAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func delete() {
@@ -110,6 +119,17 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
         delay(0.7, callback: {
             self.navigationController?.popViewController(animated: true)
         })
+    }
+    
+    func rethink() {
+        guard let ideaVC = self.storyboard?.instantiateViewController(withIdentifier: "IdeaViewController") as? IdeaViewController else {
+            return
+        }
+        
+        ideaVC.navigationItem.title = self.theme
+        ideaVC.oldIdeas = self.textView.text
+        ideaVC.designatedCount = BBMaterial.hints.count / 2
+        self.show(ideaVC, sender: nil)
     }
     
     // MARK: - NotificationCenter

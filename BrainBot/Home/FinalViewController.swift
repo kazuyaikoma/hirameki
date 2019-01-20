@@ -31,12 +31,19 @@ class FinalViewController: UIViewController {
     // 回答率
     var percent: CGFloat = 0
     
+    // 履歴画面から再ブレストする際に渡されるアイデアデータ
+    var oldIdeas: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.progressCircle.gradientColors = [UIColor.red, UIColor.blue]
         
         var ideas = ""
+        if let oldIdea = self.oldIdeas {
+            ideas = oldIdea + "\n"
+        }
+        
         for (_, idea) in self.data {
             if idea.isEmpty { continue }
             let str = idea.replacingOccurrences(of: "\n", with: "\n - ")
