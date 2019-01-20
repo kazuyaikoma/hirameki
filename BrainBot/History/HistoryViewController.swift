@@ -34,10 +34,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         self.reloadData()
         self.tableView.reloadData()
-        
-        self.tableView.indexPathsForSelectedRows?.forEach {
-            self.tableView.deselectRow(at: $0, animated: true)
-        }
     }
     
     func reloadData() {
@@ -77,9 +73,12 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "HistoryDetailViewController") as? HistoryDetailViewController,
              let cell = tableView.cellForRow(at: indexPath) as? HistoryTableViewCell
         else { return }
+        let idx = indexPath.row
         
-        // TODO: 実装
         detailVC.navigationItem.title = "詳細"
+        detailVC.date = self.dates[idx]
+        detailVC.theme = self.themes[idx]
+        detailVC.ideas = self.ideas[idx]
         self.show(detailVC, sender: nil)
     }
     
