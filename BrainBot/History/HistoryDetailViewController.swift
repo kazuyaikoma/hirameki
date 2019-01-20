@@ -115,8 +115,8 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
     func onDeleteSucceeded() {
         var style = ToastStyle()
         style.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        self.view.makeToast(" 履歴から削除しました 🗑 ", duration: 0.5, style: style)
-        delay(0.7, callback: {
+        self.view.makeToast(" 履歴から削除しました 🗑 ", duration: 0.4, position: .center, style: style)
+        delay(0.45, callback: {
             self.navigationController?.popViewController(animated: true)
         })
     }
