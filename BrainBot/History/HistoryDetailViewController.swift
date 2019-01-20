@@ -25,6 +25,7 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // キーボード表示・非表示時のイベント登録
         NotificationCenter.default.addObserver(self, selector: #selector(HistoryDetailViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(HistoryDetailViewController.keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
