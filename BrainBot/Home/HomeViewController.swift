@@ -24,6 +24,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.navigationItem.title = "ブレスト"
+        self.themeText.attributedPlaceholder = NSAttributedString(string: "例：田舎の自販機を売れるようにする方法", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.7)])
         self.themeText.delegate = self
         
         // キーボード表示・非表示時のイベント登録

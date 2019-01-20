@@ -31,14 +31,19 @@ class FinalViewController: UIViewController {
     // 回答率
     var percent: CGFloat = 0
     
+    // 履歴画面から再ブレストする際に渡されるアイデアデータ
+    var oldIdeas: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.progressCircle.gradientColors = [UIColor.red, UIColor.blue]
-        self.message.numberOfLines = 0
-        self.themeLabel.numberOfLines = 0
         
         var ideas = ""
+        if let oldIdea = self.oldIdeas {
+            ideas = oldIdea + "\n"
+        }
+        
         for (_, idea) in self.data {
             if idea.isEmpty { continue }
             let str = idea.replacingOccurrences(of: "\n", with: "\n - ")
@@ -85,7 +90,7 @@ class FinalViewController: UIViewController {
             if let theme = self.themeTxt, let idea = ideas.filter("theme = '\(theme)'").first {
                 try! realm.write { idea.setValue(self.textView.text ?? "", forKey: "ideas") }
             } else {
-                let idea = Idea(value: ["date": Date.init(), "theme": self.themeTxt ?? "", "ideas": self.textView.text ?? ""])
+                let idea = Idea(value: ["updatedDate": Date.init(), "theme": self.themeTxt ?? "", "ideas": self.textView.text ?? ""])
                 try! realm.write { realm.add(idea) }
             }
         } catch {
@@ -97,7 +102,7 @@ class FinalViewController: UIViewController {
     
     func makeSaveToast(_ duration: TimeInterval = 0.5) {
         var style = ToastStyle()
-        style.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        style.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         self.view.makeToast(" 履歴に保存しました ✔︎ ", duration: 0.8, style: style)
     }
     

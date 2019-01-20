@@ -20,6 +20,9 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
     var currentIndex = 0
     var containerVC: IdeaPageViewController?
     
+    // 履歴画面から再ブレストする際に渡されるアイデアデータ
+    var oldIdeas: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateView()
@@ -79,6 +82,7 @@ class IdeaViewController: UIViewController, IdeaPageViewControllerDelegate {
             finalVC.navigationItem.title = "結果"
             finalVC.themeTxt = self.navigationItem.title
             finalVC.data = containerVC?.data ?? [:]
+            finalVC.oldIdeas = self.oldIdeas
             self.show(finalVC, sender: sender)
         }
     }
