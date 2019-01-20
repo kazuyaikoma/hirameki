@@ -2,11 +2,11 @@ PODS:
   - fluid-slider (1.0.0):
     - pop
   - pop (1.0.12)
-  - Realm (3.13.0):
-    - Realm/Headers (= 3.13.0)
-  - Realm/Headers (3.13.0)
-  - RealmSwift (3.13.0):
-    - Realm (= 3.13.0)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
   - Toast-Swift (4.0.1)
   - UICircularProgressRing (4.1.0)
 
@@ -28,8 +28,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   fluid-slider: a19a991606a34a545cba9341e7422073b4ec3a66
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
-  Realm: 5edd2ee65406aef591a4f9895de5a3440e51b3d8
-  RealmSwift: be5ebc7930e37cd3376b41cec7f21984528aaa16
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
   UICircularProgressRing: 5a32c01f54474571b1e66e8fa050c0f83d6d981b
 
