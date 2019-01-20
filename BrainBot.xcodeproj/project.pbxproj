@@ -18,6 +18,11 @@
 		E560AA6421F465FD006E1B5F /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */; };
 		E560AA6721F473DB006E1B5F /* blue-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */; };
 		E560AA6921F498FE006E1B5F /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560AA6821F498FE006E1B5F /* HistoryDetailViewController.swift */; };
+		E560AA6D21F4B6EC006E1B5F /* red-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6A21F4B6EB006E1B5F /* red-yellow@2x.png */; };
+		E560AA6E21F4B6EC006E1B5F /* yellow-red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6B21F4B6EB006E1B5F /* yellow-red@2x.png */; };
+		E560AA6F21F4B6EC006E1B5F /* yellow-blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */; };
+		E560AA7121F4D7B0006E1B5F /* yellow-red-horizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */; };
+		E560AA7321F4D85E006E1B5F /* yellow-blue-horizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */; };
 		E569CCD121DE2ADC00AED26E /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E569CCCF21DE2ADC00AED26E /* left-arrow@2x.png */; };
 		E569CCD221DE2ADC00AED26E /* right-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E569CCD021DE2ADC00AED26E /* right-arrow@2x.png */; };
 		E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5021D498C000B2E1BD /* idea@2x.png */; };
@@ -50,6 +55,11 @@
 		E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-yellow@2x.png"; sourceTree = "<group>"; };
 		E560AA6821F498FE006E1B5F /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
+		E560AA6A21F4B6EB006E1B5F /* red-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-yellow@2x.png"; sourceTree = "<group>"; };
+		E560AA6B21F4B6EB006E1B5F /* yellow-red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-red@2x.png"; sourceTree = "<group>"; };
+		E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-blue@2x.png"; sourceTree = "<group>"; };
+		E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-red-horizontal@2x.png"; sourceTree = "<group>"; };
+		E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-blue-horizontal@2x.png"; sourceTree = "<group>"; };
 		E569CCCF21DE2ADC00AED26E /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
 		E569CCD021DE2ADC00AED26E /* right-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow@2x.png"; sourceTree = "<group>"; };
 		E5877D5021D498C000B2E1BD /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
@@ -112,6 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */,
+				E560AA6A21F4B6EB006E1B5F /* red-yellow@2x.png */,
+				E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */,
+				E560AA6B21F4B6EB006E1B5F /* yellow-red@2x.png */,
+				E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */,
+				E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -277,14 +292,19 @@
 			files = (
 				E5B4A58A21D47453002413A1 /* LaunchScreen.storyboard in Resources */,
 				E569CCD121DE2ADC00AED26E /* left-arrow@2x.png in Resources */,
+				E560AA6F21F4B6EC006E1B5F /* yellow-blue@2x.png in Resources */,
 				E560AA6221F46527006E1B5F /* HistoryTableViewCell.xib in Resources */,
+				E560AA7121F4D7B0006E1B5F /* yellow-red-horizontal@2x.png in Resources */,
 				E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */,
 				E50BE95921DA1F74008254A2 /* location@2x.png in Resources */,
 				E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */,
+				E560AA6E21F4B6EC006E1B5F /* yellow-red@2x.png in Resources */,
 				E5FBBE0821D96AB8007167B9 /* history@2x.png in Resources */,
 				E569CCD221DE2ADC00AED26E /* right-arrow@2x.png in Resources */,
+				E560AA7321F4D85E006E1B5F /* yellow-blue-horizontal@2x.png in Resources */,
 				E560AA6721F473DB006E1B5F /* blue-yellow@2x.png in Resources */,
 				E5BEA33C21EA042400FBB549 /* back@2x.png in Resources */,
+				E560AA6D21F4B6EC006E1B5F /* red-yellow@2x.png in Resources */,
 				E5B4A58721D47453002413A1 /* Assets.xcassets in Resources */,
 				E5B4A58521D47452002413A1 /* Main.storyboard in Resources */,
 			);
