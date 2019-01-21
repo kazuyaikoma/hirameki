@@ -25,7 +25,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(UINib(nibName: "HistoryTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
+        self.tableView.register(UINib(nibName: "HistoryTableViewCell", bundle: nil), forCellReuseIdentifier: self.cellId)
         
         let imageView = UIImageView(frame: self.tableView.frame)
         imageView.image = UIImage(named: "blue-yellow")
@@ -33,6 +33,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.reloadData()
         self.noHistoryView.isHidden = !self.dates.isEmpty
         self.tableView.reloadData()

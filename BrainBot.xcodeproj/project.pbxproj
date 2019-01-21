@@ -27,6 +27,9 @@
 		E560AA7121F4D7B0006E1B5F /* yellow-red-horizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */; };
 		E560AA7321F4D85E006E1B5F /* yellow-blue-horizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */; };
 		E56CC27F21F670A5007BFA52 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E56CC27E21F670A5007BFA52 /* Settings.bundle */; };
+		E56CC28121F6832C007BFA52 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56CC28021F6832C007BFA52 /* MenuTableViewCell.xib */; };
+		E56CC28321F6833A007BFA52 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CC28221F6833A007BFA52 /* MenuTableViewCell.swift */; };
+		E56CC28A21F687CD007BFA52 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CC28921F687CD007BFA52 /* WebViewController.swift */; };
 		E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5021D498C000B2E1BD /* idea@2x.png */; };
 		E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5121D498C000B2E1BD /* menu@2x.png */; };
 		E5889BAF21DD2CD000FAA544 /* BBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5889BAE21DD2CD000FAA544 /* BBColor.swift */; };
@@ -66,6 +69,9 @@
 		E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-red-horizontal@2x.png"; sourceTree = "<group>"; };
 		E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-blue-horizontal@2x.png"; sourceTree = "<group>"; };
 		E56CC27E21F670A5007BFA52 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E56CC28021F6832C007BFA52 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		E56CC28221F6833A007BFA52 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		E56CC28921F687CD007BFA52 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E5877D5021D498C000B2E1BD /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
 		E5877D5121D498C000B2E1BD /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		E5889BAE21DD2CD000FAA544 /* BBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBColor.swift; sourceTree = "<group>"; };
@@ -224,6 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				E5B4A59121D480AD002413A1 /* MenuViewController.swift */,
+				E56CC28021F6832C007BFA52 /* MenuTableViewCell.xib */,
+				E56CC28221F6833A007BFA52 /* MenuTableViewCell.swift */,
+				E56CC28921F687CD007BFA52 /* WebViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -314,6 +323,7 @@
 				E560AA6D21F4B6EC006E1B5F /* red-yellow@2x.png in Resources */,
 				E5B4A58721D47453002413A1 /* Assets.xcassets in Resources */,
 				E5B4A58521D47452002413A1 /* Main.storyboard in Resources */,
+				E56CC28121F6832C007BFA52 /* MenuTableViewCell.xib in Resources */,
 				E518CEA621F5134D00A47682 /* left-arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +400,8 @@
 				E5B4A58021D47452002413A1 /* HistoryViewController.swift in Sources */,
 				E560AA6921F498FE006E1B5F /* HistoryDetailViewController.swift in Sources */,
 				E5B4A59221D480AD002413A1 /* MenuViewController.swift in Sources */,
+				E56CC28321F6833A007BFA52 /* MenuTableViewCell.swift in Sources */,
+				E56CC28A21F687CD007BFA52 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
