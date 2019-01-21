@@ -13,6 +13,9 @@
 		E50BE95F21DA25D0008254A2 /* IdeaContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BE95E21DA25D0008254A2 /* IdeaContentViewController.swift */; };
 		E50BE96121DA3255008254A2 /* BBMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BE96021DA3255008254A2 /* BBMaterial.swift */; };
 		E50BE96621DA8752008254A2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BE96521DA8752008254A2 /* Common.swift */; };
+		E518CEA521F5134D00A47682 /* right-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E518CEA321F5134C00A47682 /* right-arrow@2x.png */; };
+		E518CEA621F5134D00A47682 /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E518CEA421F5134C00A47682 /* left-arrow@2x.png */; };
+		E518CEA821F5144F00A47682 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E518CEA721F5144F00A47682 /* share@2x.png */; };
 		E55A2F7221ECE3360096604F /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A2F7121ECE3360096604F /* Idea.swift */; };
 		E560AA6221F46527006E1B5F /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6121F46527006E1B5F /* HistoryTableViewCell.xib */; };
 		E560AA6421F465FD006E1B5F /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */; };
@@ -23,8 +26,6 @@
 		E560AA6F21F4B6EC006E1B5F /* yellow-blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */; };
 		E560AA7121F4D7B0006E1B5F /* yellow-red-horizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */; };
 		E560AA7321F4D85E006E1B5F /* yellow-blue-horizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */; };
-		E569CCD121DE2ADC00AED26E /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E569CCCF21DE2ADC00AED26E /* left-arrow@2x.png */; };
-		E569CCD221DE2ADC00AED26E /* right-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E569CCD021DE2ADC00AED26E /* right-arrow@2x.png */; };
 		E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5021D498C000B2E1BD /* idea@2x.png */; };
 		E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5121D498C000B2E1BD /* menu@2x.png */; };
 		E5889BAF21DD2CD000FAA544 /* BBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5889BAE21DD2CD000FAA544 /* BBColor.swift */; };
@@ -50,6 +51,9 @@
 		E50BE95E21DA25D0008254A2 /* IdeaContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaContentViewController.swift; sourceTree = "<group>"; };
 		E50BE96021DA3255008254A2 /* BBMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBMaterial.swift; sourceTree = "<group>"; };
 		E50BE96521DA8752008254A2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		E518CEA321F5134C00A47682 /* right-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow@2x.png"; sourceTree = "<group>"; };
+		E518CEA421F5134C00A47682 /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
+		E518CEA721F5144F00A47682 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
 		E55A2F7121ECE3360096604F /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		E560AA6121F46527006E1B5F /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -60,8 +64,6 @@
 		E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-blue@2x.png"; sourceTree = "<group>"; };
 		E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-red-horizontal@2x.png"; sourceTree = "<group>"; };
 		E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-blue-horizontal@2x.png"; sourceTree = "<group>"; };
-		E569CCCF21DE2ADC00AED26E /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
-		E569CCD021DE2ADC00AED26E /* right-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow@2x.png"; sourceTree = "<group>"; };
 		E5877D5021D498C000B2E1BD /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
 		E5877D5121D498C000B2E1BD /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		E5889BAE21DD2CD000FAA544 /* BBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBColor.swift; sourceTree = "<group>"; };
@@ -143,9 +145,10 @@
 		E5877D4E21D4988C00B2E1BD /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				E518CEA721F5144F00A47682 /* share@2x.png */,
+				E518CEA421F5134C00A47682 /* left-arrow@2x.png */,
+				E518CEA321F5134C00A47682 /* right-arrow@2x.png */,
 				E5BEA33B21EA042200FBB549 /* back@2x.png */,
-				E569CCCF21DE2ADC00AED26E /* left-arrow@2x.png */,
-				E569CCD021DE2ADC00AED26E /* right-arrow@2x.png */,
 				E50BE95821DA1F73008254A2 /* location@2x.png */,
 				E5FBBE0721D96AB8007167B9 /* history@2x.png */,
 				E5877D5021D498C000B2E1BD /* idea@2x.png */,
@@ -291,22 +294,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5B4A58A21D47453002413A1 /* LaunchScreen.storyboard in Resources */,
-				E569CCD121DE2ADC00AED26E /* left-arrow@2x.png in Resources */,
 				E560AA6F21F4B6EC006E1B5F /* yellow-blue@2x.png in Resources */,
+				E518CEA821F5144F00A47682 /* share@2x.png in Resources */,
 				E560AA6221F46527006E1B5F /* HistoryTableViewCell.xib in Resources */,
 				E560AA7121F4D7B0006E1B5F /* yellow-red-horizontal@2x.png in Resources */,
 				E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */,
+				E518CEA521F5134D00A47682 /* right-arrow@2x.png in Resources */,
 				E50BE95921DA1F74008254A2 /* location@2x.png in Resources */,
 				E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */,
 				E560AA6E21F4B6EC006E1B5F /* yellow-red@2x.png in Resources */,
 				E5FBBE0821D96AB8007167B9 /* history@2x.png in Resources */,
-				E569CCD221DE2ADC00AED26E /* right-arrow@2x.png in Resources */,
 				E560AA7321F4D85E006E1B5F /* yellow-blue-horizontal@2x.png in Resources */,
 				E560AA6721F473DB006E1B5F /* blue-yellow@2x.png in Resources */,
 				E5BEA33C21EA042400FBB549 /* back@2x.png in Resources */,
 				E560AA6D21F4B6EC006E1B5F /* red-yellow@2x.png in Resources */,
 				E5B4A58721D47453002413A1 /* Assets.xcassets in Resources */,
 				E5B4A58521D47452002413A1 /* Main.storyboard in Resources */,
+				E518CEA621F5134D00A47682 /* left-arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +324,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LINEActivity/LINEActivity.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -329,6 +334,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LINEActivity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",

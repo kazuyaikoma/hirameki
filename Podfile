@@ -10,5 +10,6 @@ target 'BrainBot' do
   pod 'UICircularProgressRing'
   pod 'Toast-Swift'
   pod 'RealmSwift'
+  pod "LINEActivity"
 
 end

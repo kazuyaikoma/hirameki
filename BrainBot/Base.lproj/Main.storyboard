@@ -125,7 +125,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7W-JE-WlY">
-                                <rect key="frame" x="20" y="204" width="374" height="568"/>
+                                <rect key="frame" x="20" y="194" width="374" height="578"/>
                                 <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -200,7 +200,7 @@
                             <constraint firstItem="l2f-ku-86b" firstAttribute="trailing" secondItem="P7W-JE-WlY" secondAttribute="trailing" constant="20" id="6ge-PJ-kMz"/>
                             <constraint firstItem="hNz-41-8tP" firstAttribute="leading" secondItem="l2f-ku-86b" secondAttribute="leading" constant="20" id="D9r-32-zBX"/>
                             <constraint firstItem="hNz-41-8tP" firstAttribute="top" secondItem="l2f-ku-86b" secondAttribute="top" constant="30" id="Dgo-Fs-2b5"/>
-                            <constraint firstItem="P7W-JE-WlY" firstAttribute="top" secondItem="hNz-41-8tP" secondAttribute="bottom" constant="30" id="GVA-2q-79D"/>
+                            <constraint firstItem="P7W-JE-WlY" firstAttribute="top" secondItem="hNz-41-8tP" secondAttribute="bottom" constant="20" id="GVA-2q-79D"/>
                             <constraint firstItem="P7W-JE-WlY" firstAttribute="leading" secondItem="l2f-ku-86b" secondAttribute="leading" constant="20" id="dBd-Uy-f8H"/>
                             <constraint firstItem="g5a-f1-Qck" firstAttribute="top" secondItem="l2f-ku-86b" secondAttribute="top" id="fqt-sP-OCs"/>
                             <constraint firstItem="g5a-f1-Qck" firstAttribute="bottom" secondItem="l2f-ku-86b" secondAttribute="bottom" id="i1C-1l-lP4"/>
