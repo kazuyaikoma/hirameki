@@ -26,6 +26,7 @@
 		E560AA6F21F4B6EC006E1B5F /* yellow-blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */; };
 		E560AA7121F4D7B0006E1B5F /* yellow-red-horizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */; };
 		E560AA7321F4D85E006E1B5F /* yellow-blue-horizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */; };
+		E56CC27F21F670A5007BFA52 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E56CC27E21F670A5007BFA52 /* Settings.bundle */; };
 		E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5021D498C000B2E1BD /* idea@2x.png */; };
 		E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5121D498C000B2E1BD /* menu@2x.png */; };
 		E5889BAF21DD2CD000FAA544 /* BBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5889BAE21DD2CD000FAA544 /* BBColor.swift */; };
@@ -64,6 +65,7 @@
 		E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-blue@2x.png"; sourceTree = "<group>"; };
 		E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-red-horizontal@2x.png"; sourceTree = "<group>"; };
 		E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-blue-horizontal@2x.png"; sourceTree = "<group>"; };
+		E56CC27E21F670A5007BFA52 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E5877D5021D498C000B2E1BD /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
 		E5877D5121D498C000B2E1BD /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		E5889BAE21DD2CD000FAA544 /* BBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBColor.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		E5B4A57121D47452002413A1 = {
 			isa = PBXGroup;
 			children = (
+				E56CC27E21F670A5007BFA52 /* Settings.bundle */,
 				E5B4A57C21D47452002413A1 /* BrainBot */,
 				E5B4A57B21D47452002413A1 /* Products */,
 				D7975E1204F8285521482123 /* Pods */,
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5B4A58A21D47453002413A1 /* LaunchScreen.storyboard in Resources */,
+				E56CC27F21F670A5007BFA52 /* Settings.bundle in Resources */,
 				E560AA6F21F4B6EC006E1B5F /* yellow-blue@2x.png in Resources */,
 				E518CEA821F5144F00A47682 /* share@2x.png in Resources */,
 				E560AA6221F46527006E1B5F /* HistoryTableViewCell.xib in Resources */,
