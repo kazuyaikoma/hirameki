@@ -19,11 +19,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                             "アップデート予定"
                           ]
     
-    // TODO: fix icons
     let icons: [String] = [
-                            "share",
-                            "share",
-                            "share"
+                            "information",
+                            "concept",
+                            "update"
                           ]
     
     

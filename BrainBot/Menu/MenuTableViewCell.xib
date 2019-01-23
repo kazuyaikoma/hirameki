@@ -16,19 +16,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rCF-MF-wwm">
-                    <rect key="frame" x="7" y="4" width="53" height="53"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WM7-JJ-0Yk">
-                    <rect key="frame" x="87" y="11" width="225" height="38"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WM7-JJ-0Yk">
+                    <rect key="frame" x="75" y="10" width="270" height="40"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rCF-MF-wwm">
+                    <rect key="frame" x="10" y="10" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="57z-V9-fqr"/>
+                        <constraint firstAttribute="width" constant="40" id="tsg-dz-3eu"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rCF-MF-wwm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="31Y-8I-ikx"/>
+                <constraint firstItem="rCF-MF-wwm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="9vx-8b-zU4"/>
+                <constraint firstItem="WM7-JJ-0Yk" firstAttribute="leading" secondItem="rCF-MF-wwm" secondAttribute="trailing" constant="25" id="I7J-bd-kXT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rCF-MF-wwm" secondAttribute="bottom" constant="10" id="Q6v-nu-a7Q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WM7-JJ-0Yk" secondAttribute="bottom" constant="10" id="XJI-ih-XfS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WM7-JJ-0Yk" secondAttribute="trailing" constant="30" id="bp2-F6-t7x"/>
+                <constraint firstItem="WM7-JJ-0Yk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="hqT-S8-B9G"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>

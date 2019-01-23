@@ -17,6 +17,9 @@
 		E518CEA621F5134D00A47682 /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E518CEA421F5134C00A47682 /* left-arrow@2x.png */; };
 		E518CEA821F5144F00A47682 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E518CEA721F5144F00A47682 /* share@2x.png */; };
 		E55A2F7221ECE3360096604F /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A2F7121ECE3360096604F /* Idea.swift */; };
+		E55BFC9021F8FF4E0001991B /* information@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55BFC8D21F8FF4E0001991B /* information@2x.png */; };
+		E55BFC9121F8FF4E0001991B /* concept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55BFC8E21F8FF4E0001991B /* concept@2x.png */; };
+		E55BFC9221F8FF4E0001991B /* update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55BFC8F21F8FF4E0001991B /* update@2x.png */; };
 		E560AA6221F46527006E1B5F /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6121F46527006E1B5F /* HistoryTableViewCell.xib */; };
 		E560AA6421F465FD006E1B5F /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */; };
 		E560AA6721F473DB006E1B5F /* blue-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */; };
@@ -59,6 +62,9 @@
 		E518CEA421F5134C00A47682 /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
 		E518CEA721F5144F00A47682 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
 		E55A2F7121ECE3360096604F /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
+		E55BFC8D21F8FF4E0001991B /* information@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "information@2x.png"; path = "BrainBot/Resources/icons/information@2x.png"; sourceTree = SOURCE_ROOT; };
+		E55BFC8E21F8FF4E0001991B /* concept@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "concept@2x.png"; path = "BrainBot/Resources/icons/concept@2x.png"; sourceTree = SOURCE_ROOT; };
+		E55BFC8F21F8FF4E0001991B /* update@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "update@2x.png"; path = "BrainBot/Resources/icons/update@2x.png"; sourceTree = SOURCE_ROOT; };
 		E560AA6121F46527006E1B5F /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-yellow@2x.png"; sourceTree = "<group>"; };
@@ -131,6 +137,9 @@
 		E560AA6521F473AF006E1B5F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E55BFC8E21F8FF4E0001991B /* concept@2x.png */,
+				E55BFC8D21F8FF4E0001991B /* information@2x.png */,
+				E55BFC8F21F8FF4E0001991B /* update@2x.png */,
 				E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */,
 				E560AA6A21F4B6EB006E1B5F /* red-yellow@2x.png */,
 				E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */,
@@ -306,14 +315,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5B4A58A21D47453002413A1 /* LaunchScreen.storyboard in Resources */,
+				E55BFC9121F8FF4E0001991B /* concept@2x.png in Resources */,
 				E56CC27F21F670A5007BFA52 /* Settings.bundle in Resources */,
 				E560AA6F21F4B6EC006E1B5F /* yellow-blue@2x.png in Resources */,
 				E518CEA821F5144F00A47682 /* share@2x.png in Resources */,
+				E55BFC9021F8FF4E0001991B /* information@2x.png in Resources */,
 				E560AA6221F46527006E1B5F /* HistoryTableViewCell.xib in Resources */,
 				E560AA7121F4D7B0006E1B5F /* yellow-red-horizontal@2x.png in Resources */,
 				E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */,
 				E518CEA521F5134D00A47682 /* right-arrow@2x.png in Resources */,
 				E50BE95921DA1F74008254A2 /* location@2x.png in Resources */,
+				E55BFC9221F8FF4E0001991B /* update@2x.png in Resources */,
 				E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */,
 				E560AA6E21F4B6EC006E1B5F /* yellow-red@2x.png in Resources */,
 				E5FBBE0821D96AB8007167B9 /* history@2x.png in Resources */,
