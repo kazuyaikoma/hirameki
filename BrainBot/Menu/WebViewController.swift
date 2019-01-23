@@ -18,12 +18,14 @@ class WebViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.webView = WKWebView(frame: CGRect(x:0, y:0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
-        
         guard let encodedUrlString = self.urlString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed),
-            let url = NSURL(string: encodedUrlString) as URL? else {
+            let url = NSURL(string: encodedUrlString) as URL?,
+            let tabHeight = self.parent?.tabBarController?.tabBar.frame.height else {
                 return
         }
+        
+        self.webView = WKWebView(frame: CGRect(x:0, y:0, width: self.view.bounds.size.width, height: self.view.bounds.size.height - tabHeight))
+        
         let request = NSURLRequest(url: url)
         self.webView.load(request as URLRequest)
         self.view.addSubview(self.webView)
