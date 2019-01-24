@@ -13,29 +13,39 @@ import paper_onboarding
 class OnboardingViewController: UIViewController, PaperOnboardingDelegate, PaperOnboardingDataSource {
     
     @IBOutlet var startButton: UIButton!
+    @IBOutlet weak var nonFirstArea: UIView!
+    
+    var isFirst = true
     
     static let titleFont = UIFont(name: "Nunito-Bold", size: 36.0) ?? UIFont.boldSystemFont(ofSize: 36.0)
     static let descriptionFont = UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.systemFont(ofSize: 14.0)
     
+    static let firstImg = UIImage(named: "onboarding-first") ?? UIImage(named: "idea")!
+    static let secondImg = UIImage(named: "onboarding-second") ?? UIImage(named: "idea")!
+    static let thirdImg = UIImage(named: "onboarding-third") ?? UIImage(named: "idea")!
+    static let firstNumImg = UIImage(named: "one") ?? UIImage(named: "idea")!
+    static let secondNumImg = UIImage(named: "two") ?? UIImage(named: "idea")!
+    static let thirdNumImg = UIImage(named: "three") ?? UIImage(named: "idea")!
+    
     fileprivate let items = [
-        OnboardingItemInfo(informationImage: UIImage(named: "share")!,
-                           title: "Hotels",
-                           description: "All hotels and hostels are sorted by hospitality rating",
-                           pageIcon: UIImage(named: "share")!,
+        OnboardingItemInfo(informationImage: OnboardingViewController.firstImg,
+                           title: "１. テーマを決める",
+                           description: "「田舎の自販機を売れるようにしたい」\nだったり、\n「イベントになんとか100人集めたい」\nだったり。\nあなたは何をヒラメキたい？",
+                           pageIcon: OnboardingViewController.firstNumImg,
                            color: BBColor.red,
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: OnboardingViewController.titleFont, descriptionFont: OnboardingViewController.descriptionFont),
         
-        OnboardingItemInfo(informationImage: UIImage(named: "share")!,
-                           title: "Banks",
-                           description: "We carefully verify all banks before add them into the app",
-                           pageIcon: UIImage(named: "share")!,
+        OnboardingItemInfo(informationImage: OnboardingViewController.secondImg,
+                           title: "２. ひらめく",
+                           description: "決めたテーマについて、\nアプリの質問に答えながら一人ブレスト。\n画期的なアイデアが生まれるはず。",
+                           pageIcon: OnboardingViewController.secondNumImg,
                            color: BBColor.yellow,
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: OnboardingViewController.titleFont, descriptionFont: OnboardingViewController.descriptionFont),
         
-        OnboardingItemInfo(informationImage: UIImage(named: "share")!,
-                           title: "Stores",
-                           description: "All local stores are categorized for your convenience",
-                           pageIcon: UIImage(named: "share")!,
+        OnboardingItemInfo(informationImage: OnboardingViewController.thirdImg,
+                           title: "３. シェア",
+                           description: "ひらめいたアイデアを、\n仲間とLINEやSlack、twitter等でシェア。\nさらにアイデアが膨らむかも。",
+                           pageIcon: OnboardingViewController.thirdNumImg,
                            color: BBColor.blue,
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: OnboardingViewController.titleFont, descriptionFont: OnboardingViewController.descriptionFont),
         
@@ -43,11 +53,13 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startButton.isHidden = true
+        self.startButton.isHidden = true
+        self.nonFirstArea.isHidden = true
         
         setupPaperOnboardingView()
         
-        view.bringSubviewToFront(startButton)
+        view.bringSubviewToFront(self.startButton)
+        view.bringSubviewToFront(self.nonFirstArea)
     }
     
     private func setupPaperOnboardingView() {
@@ -62,7 +74,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
             let constraint = NSLayoutConstraint(item: onboarding,
                                                 attribute: attribute,
                                                 relatedBy: .equal,
-                                                toItem: view,
+                                                toItem: self.view,
                                                 attribute: attribute,
                                                 multiplier: 1,
                                                 constant: 0)
@@ -74,19 +86,30 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func onOkTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onDetailTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        // TODO: 詳細画面をscrapboxのページで開くようWebVC使って実装
+    }
+    
     // MARK: PaperOnboardingDelegate
     
     func onboardingWillTransitonToIndex(_ index: Int) {
-        startButton.isHidden = index == 2 ? false : true
+        let isFinal = index == 2
+        if self.isFirst {
+            self.startButton.isHidden = !isFinal
+        } else {
+            self.nonFirstArea.isHidden = !isFinal
+        }
     }
     
     func onboardingDidTransitonToIndex(_: Int) {
     }
     
     func onboardingConfigurationItem(_ item: OnboardingContentViewItem, index: Int) {
-        //item.titleLabel?.backgroundColor = .redColor()
-        //item.descriptionLabel?.backgroundColor = .redColor()
-        //item.imageView = ...
     }
     
     // MARK: PaperOnboardingDataSource
@@ -108,7 +131,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
     }
     
     func onboardingPageItemColor(at index: Int) -> UIColor {
-        return [UIColor.white, UIColor.red, UIColor.green][index]
+        return [BBColor.red, BBColor.yellow, BBColor.blue][index]
     }
 }
 

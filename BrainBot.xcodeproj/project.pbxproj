@@ -38,6 +38,12 @@
 		E5889BAF21DD2CD000FAA544 /* BBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5889BAE21DD2CD000FAA544 /* BBColor.swift */; };
 		E599861221FA16C2009DC4B5 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E599861121FA16C2009DC4B5 /* Onboarding.storyboard */; };
 		E599861421FA16ED009DC4B5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599861321FA16ED009DC4B5 /* OnboardingViewController.swift */; };
+		E59E793F21FA524A007B6D99 /* onboarding-second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E793C21FA5248007B6D99 /* onboarding-second@2x.png */; };
+		E59E794021FA524A007B6D99 /* onboarding-first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E793D21FA5249007B6D99 /* onboarding-first@2x.png */; };
+		E59E794121FA524A007B6D99 /* onboarding-third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E793E21FA524A007B6D99 /* onboarding-third@2x.png */; };
+		E59E794B21FA5D64007B6D99 /* three@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E794821FA5D63007B6D99 /* three@2x.png */; };
+		E59E794C21FA5D64007B6D99 /* one@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E794921FA5D64007B6D99 /* one@2x.png */; };
+		E59E794D21FA5D64007B6D99 /* two@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E794A21FA5D64007B6D99 /* two@2x.png */; };
 		E5B4A57E21D47452002413A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A57D21D47452002413A1 /* AppDelegate.swift */; };
 		E5B4A58021D47452002413A1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A57F21D47452002413A1 /* HistoryViewController.swift */; };
 		E5B4A58221D47452002413A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A58121D47452002413A1 /* HomeViewController.swift */; };
@@ -85,6 +91,12 @@
 		E5889BAE21DD2CD000FAA544 /* BBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBColor.swift; sourceTree = "<group>"; };
 		E599861121FA16C2009DC4B5 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E599861321FA16ED009DC4B5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		E59E793C21FA5248007B6D99 /* onboarding-second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-second@2x.png"; sourceTree = "<group>"; };
+		E59E793D21FA5249007B6D99 /* onboarding-first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-first@2x.png"; sourceTree = "<group>"; };
+		E59E793E21FA524A007B6D99 /* onboarding-third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-third@2x.png"; sourceTree = "<group>"; };
+		E59E794821FA5D63007B6D99 /* three@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three@2x.png"; sourceTree = "<group>"; };
+		E59E794921FA5D64007B6D99 /* one@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "one@2x.png"; sourceTree = "<group>"; };
+		E59E794A21FA5D64007B6D99 /* two@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "two@2x.png"; sourceTree = "<group>"; };
 		E5B4A57A21D47452002413A1 /* BrainBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B4A57D21D47452002413A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5B4A57F21D47452002413A1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +153,9 @@
 		E560AA6521F473AF006E1B5F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E59E793D21FA5249007B6D99 /* onboarding-first@2x.png */,
+				E59E793C21FA5248007B6D99 /* onboarding-second@2x.png */,
+				E59E793E21FA524A007B6D99 /* onboarding-third@2x.png */,
 				E55BFC8E21F8FF4E0001991B /* concept@2x.png */,
 				E55BFC8D21F8FF4E0001991B /* information@2x.png */,
 				E55BFC8F21F8FF4E0001991B /* update@2x.png */,
@@ -166,6 +181,9 @@
 		E5877D4E21D4988C00B2E1BD /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				E59E794921FA5D64007B6D99 /* one@2x.png */,
+				E59E794821FA5D63007B6D99 /* three@2x.png */,
+				E59E794A21FA5D64007B6D99 /* two@2x.png */,
 				E518CEA721F5144F00A47682 /* share@2x.png */,
 				E518CEA421F5134C00A47682 /* left-arrow@2x.png */,
 				E518CEA321F5134C00A47682 /* right-arrow@2x.png */,
@@ -330,6 +348,7 @@
 			files = (
 				E5B4A58A21D47453002413A1 /* LaunchScreen.storyboard in Resources */,
 				E55BFC9121F8FF4E0001991B /* concept@2x.png in Resources */,
+				E59E794121FA524A007B6D99 /* onboarding-third@2x.png in Resources */,
 				E56CC27F21F670A5007BFA52 /* Settings.bundle in Resources */,
 				E560AA6F21F4B6EC006E1B5F /* yellow-blue@2x.png in Resources */,
 				E518CEA821F5144F00A47682 /* share@2x.png in Resources */,
@@ -338,14 +357,19 @@
 				E560AA7121F4D7B0006E1B5F /* yellow-red-horizontal@2x.png in Resources */,
 				E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */,
 				E518CEA521F5134D00A47682 /* right-arrow@2x.png in Resources */,
+				E59E794021FA524A007B6D99 /* onboarding-first@2x.png in Resources */,
 				E50BE95921DA1F74008254A2 /* location@2x.png in Resources */,
 				E55BFC9221F8FF4E0001991B /* update@2x.png in Resources */,
 				E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */,
 				E560AA6E21F4B6EC006E1B5F /* yellow-red@2x.png in Resources */,
 				E5FBBE0821D96AB8007167B9 /* history@2x.png in Resources */,
+				E59E794B21FA5D64007B6D99 /* three@2x.png in Resources */,
+				E59E794C21FA5D64007B6D99 /* one@2x.png in Resources */,
+				E59E794D21FA5D64007B6D99 /* two@2x.png in Resources */,
 				E599861221FA16C2009DC4B5 /* Onboarding.storyboard in Resources */,
 				E560AA7321F4D85E006E1B5F /* yellow-blue-horizontal@2x.png in Resources */,
 				E560AA6721F473DB006E1B5F /* blue-yellow@2x.png in Resources */,
+				E59E793F21FA524A007B6D99 /* onboarding-second@2x.png in Resources */,
 				E5BEA33C21EA042400FBB549 /* back@2x.png in Resources */,
 				E560AA6D21F4B6EC006E1B5F /* red-yellow@2x.png in Resources */,
 				E5B4A58721D47453002413A1 /* Assets.xcassets in Resources */,

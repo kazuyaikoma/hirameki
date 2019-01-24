@@ -25,6 +25,7 @@ class BBColor {
     static let darkRed = UIColor(rgbValue: 0xB5555B)
     static let red = UIColor(rgbValue: 0xEB7470)
     static let yellow = UIColor(rgbValue: 0xF3D84B)
+    static let darkYellow = UIColor(rgbValue: 0xD4BF02)
     static let blue = UIColor(rgbValue: 0x72CAC4)
     static let darkBlue = UIColor(rgbValue: 0x56636F)
 }

@@ -64,7 +64,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch cell.title.text {
         case "アプリの使い方":
-            // TODO: ウォークスルー画面の表示
+            // Onboarding画面の表示
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+            vc.isFirst = false
+            self.present(vc, animated: true, completion: nil)
             return
         case "コンセプト":
             let vc = WebViewController()

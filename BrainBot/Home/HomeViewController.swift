@@ -33,10 +33,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         self.countText.text = String(self.currentFraction)
         self.setupSlider()
         
-        // Onboarding画面の表示
-        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
-        self.present(vc, animated: true, completion: nil)
+        self.showOnboardingForFirst()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -104,6 +101,22 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         ideaVC.navigationItem.title = theme
         ideaVC.designatedCount = self.currentFraction
         self.show(ideaVC, sender: sender)
+    }
+    
+    func showOnboardingForFirst() {
+        let userDefault = UserDefaults.standard
+        let dict = ["firstLaunch": true]
+        userDefault.register(defaults: dict)
+        
+        // 初回起動時のみ実行
+        if userDefault.bool(forKey: "firstLaunch") {
+            // Onboarding画面の表示
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+            self.present(vc, animated: true, completion: {
+                userDefault.set(false, forKey: "firstLaunch")
+            })
+        }
     }
     
     func showAlert(_ message: String) {
