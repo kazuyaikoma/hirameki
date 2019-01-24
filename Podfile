@@ -12,5 +12,6 @@ target 'BrainBot' do
   pod 'RealmSwift'
   pod "LINEActivity"
   pod 'paper-onboarding'
+  pod 'RAMReel'
 
 end
