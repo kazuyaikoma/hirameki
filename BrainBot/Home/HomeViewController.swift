@@ -32,6 +32,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
                                                selector: #selector(HomeViewController.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         self.countText.text = String(self.currentFraction)
         self.setupSlider()
+        
+        // Onboarding画面の表示
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

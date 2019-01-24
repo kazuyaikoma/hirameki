@@ -36,6 +36,8 @@
 		E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5021D498C000B2E1BD /* idea@2x.png */; };
 		E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5121D498C000B2E1BD /* menu@2x.png */; };
 		E5889BAF21DD2CD000FAA544 /* BBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5889BAE21DD2CD000FAA544 /* BBColor.swift */; };
+		E599861221FA16C2009DC4B5 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E599861121FA16C2009DC4B5 /* Onboarding.storyboard */; };
+		E599861421FA16ED009DC4B5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599861321FA16ED009DC4B5 /* OnboardingViewController.swift */; };
 		E5B4A57E21D47452002413A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A57D21D47452002413A1 /* AppDelegate.swift */; };
 		E5B4A58021D47452002413A1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A57F21D47452002413A1 /* HistoryViewController.swift */; };
 		E5B4A58221D47452002413A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A58121D47452002413A1 /* HomeViewController.swift */; };
@@ -81,6 +83,8 @@
 		E5877D5021D498C000B2E1BD /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
 		E5877D5121D498C000B2E1BD /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		E5889BAE21DD2CD000FAA544 /* BBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBColor.swift; sourceTree = "<group>"; };
+		E599861121FA16C2009DC4B5 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		E599861321FA16ED009DC4B5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E5B4A57A21D47452002413A1 /* BrainBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B4A57D21D47452002413A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5B4A57F21D47452002413A1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,15 @@
 			path = icons;
 			sourceTree = "<group>";
 		};
+		E599861021FA16AC009DC4B5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E599861121FA16C2009DC4B5 /* Onboarding.storyboard */,
+				E599861321FA16ED009DC4B5 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		E5B4A57121D47452002413A1 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +209,7 @@
 		E5B4A57C21D47452002413A1 /* BrainBot */ = {
 			isa = PBXGroup;
 			children = (
+				E599861021FA16AC009DC4B5 /* Onboarding */,
 				E5B4A59521D48530002413A1 /* Menu */,
 				E5B4A59421D48522002413A1 /* History */,
 				E5B4A59321D48518002413A1 /* Home */,
@@ -329,6 +343,7 @@
 				E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */,
 				E560AA6E21F4B6EC006E1B5F /* yellow-red@2x.png in Resources */,
 				E5FBBE0821D96AB8007167B9 /* history@2x.png in Resources */,
+				E599861221FA16C2009DC4B5 /* Onboarding.storyboard in Resources */,
 				E560AA7321F4D85E006E1B5F /* yellow-blue-horizontal@2x.png in Resources */,
 				E560AA6721F473DB006E1B5F /* blue-yellow@2x.png in Resources */,
 				E5BEA33C21EA042400FBB549 /* back@2x.png in Resources */,
@@ -356,6 +371,7 @@
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -366,6 +382,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +418,7 @@
 				E50BE95F21DA25D0008254A2 /* IdeaContentViewController.swift in Sources */,
 				E50BE95B21DA244C008254A2 /* IdeaPageViewController.swift in Sources */,
 				E560AA6421F465FD006E1B5F /* HistoryTableViewCell.swift in Sources */,
+				E599861421FA16ED009DC4B5 /* OnboardingViewController.swift in Sources */,
 				E50BE96121DA3255008254A2 /* BBMaterial.swift in Sources */,
 				E5B4A58221D47452002413A1 /* HomeViewController.swift in Sources */,
 				E50BE96621DA8752008254A2 /* Common.swift in Sources */,

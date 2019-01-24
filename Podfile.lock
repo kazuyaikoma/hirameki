@@ -2,6 +2,7 @@ PODS:
   - fluid-slider (1.0.0):
     - pop
   - LINEActivity (0.2.0)
+  - paper-onboarding (5.0.0)
   - pop (1.0.12)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
@@ -14,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - fluid-slider
   - LINEActivity
+  - paper-onboarding
   - RealmSwift
   - Toast-Swift
   - UICircularProgressRing
@@ -22,6 +24,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - fluid-slider
     - LINEActivity
+    - paper-onboarding
     - pop
     - Realm
     - RealmSwift
@@ -31,12 +34,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   fluid-slider: a19a991606a34a545cba9341e7422073b4ec3a66
   LINEActivity: 3cf844b075bc7f8338ea86b41bd46acd5ec934d8
+  paper-onboarding: a2e3a710fd27ac0b5635ec5490660e7ec09289b5
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
   UICircularProgressRing: 5a32c01f54474571b1e66e8fa050c0f83d6d981b
 
-PODFILE CHECKSUM: 319d9940bb8625ba1277f4812239fb30f5432d22
+PODFILE CHECKSUM: 50fc40100cc9f9889f9426a5385a923163a7e8bd
 
 COCOAPODS: 1.5.3
