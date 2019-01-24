@@ -16,9 +16,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCo-zU-C7z">
-                    <rect key="frame" x="16" y="8" width="343" height="114"/>
+                    <rect key="frame" x="15" y="8" width="345" height="114"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V8X-Z5-tf6">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="114"/>
+                        <rect key="frame" x="0.0" y="0.0" width="345" height="114"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHy-Rx-SmN">
@@ -55,7 +55,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="田舎の自販機を売れるようにする方法" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0y-9d-vVA">
-                                <rect key="frame" x="95" y="10" width="233" height="45"/>
+                                <rect key="frame" x="95" y="10" width="235" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fyY-GC-u73"/>
                                 </constraints>
@@ -69,7 +69,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- どんな環境でも動作させる...\n- どんな環境でも動作させる...\n- どんな環境でも動作させる...\n- どんな環境でも動作させる..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTq-Gu-uca">
-                                <rect key="frame" x="95" y="47" width="233" height="59"/>
+                                <rect key="frame" x="95" y="47" width="235" height="59"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Z3-hH-BHE">
-                                <rect key="frame" x="80" y="0.0" width="263" height="114"/>
+                                <rect key="frame" x="80" y="0.0" width="265" height="114"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -112,10 +112,10 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="zCo-zU-C7z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="D6F-pw-qrs"/>
+                <constraint firstItem="zCo-zU-C7z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="D6F-pw-qrs"/>
                 <constraint firstItem="zCo-zU-C7z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="MJo-Fq-d27"/>
                 <constraint firstAttribute="bottom" secondItem="zCo-zU-C7z" secondAttribute="bottom" constant="8" id="qf8-vH-Hsy"/>
-                <constraint firstAttribute="trailing" secondItem="zCo-zU-C7z" secondAttribute="trailing" constant="16" id="yup-8f-gr1"/>
+                <constraint firstAttribute="trailing" secondItem="zCo-zU-C7z" secondAttribute="trailing" constant="15" id="yup-8f-gr1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

@@ -30,6 +30,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let imageView = UIImageView(frame: self.tableView.frame)
         imageView.image = UIImage(named: "blue-yellow")
         self.tableView.backgroundView = imageView
+        self.tableView.contentInset.top = 8
+        self.tableView.contentInset.bottom = 8
     }
     
     override func viewWillAppear(_ animated: Bool) {
