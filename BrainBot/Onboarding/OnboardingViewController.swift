@@ -16,6 +16,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
     @IBOutlet weak var nonFirstArea: UIView!
     
     var isFirst = true
+    var parentVC: UIViewController?
     
     static let titleFont = UIFont(name: "Nunito-Bold", size: 36.0) ?? UIFont.boldSystemFont(ofSize: 36.0)
     static let descriptionFont = UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.systemFont(ofSize: 14.0)
@@ -91,8 +92,13 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
     }
     
     @IBAction func onDetailTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-        // TODO: 詳細画面をscrapboxのページで開くようWebVC使って実装
+        self.dismiss(animated: true, completion: {
+            let vc = WebViewController()
+            vc.urlString = "https://scrapbox.io/hirameki-app/アプリの使い方"
+            if let menuVC = self.parentVC as? MenuViewController {
+                menuVC.show(vc, sender: nil)
+            }
+        })
     }
     
     // MARK: PaperOnboardingDelegate
