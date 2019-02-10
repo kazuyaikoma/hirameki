@@ -11,5 +11,7 @@ target 'BrainBot' do
   pod 'Toast-Swift'
   pod 'RealmSwift'
   pod "LINEActivity"
+  pod 'paper-onboarding'
+  pod 'RAMReel'
 
 end

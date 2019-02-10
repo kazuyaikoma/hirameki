@@ -1,0 +1,47 @@
+name: fluid-slider, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 1.0.0
+
+name: LINEActivity, nameSpecified: 
+body: Copyright (c) 2012 N…
+version: 0.2.0
+
+name: paper-onboarding, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.0.0
+
+name: pop, nameSpecified: 
+body: BSD License
+
+For Pop…
+version: 1.0.12
+
+name: RAMReel, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: Realm, nameSpecified: 
+body: TABLE OF CONTENTS
+
+1…
+version: 3.13.1
+
+name: RealmSwift, nameSpecified: 
+body: TABLE OF CONTENTS
+
+1…
+version: 3.13.1
+
+name: Toast-Swift, nameSpecified: 
+body: Copyright (c) 2015-2…
+version: 4.0.1
+
+name: UICircularProgressRing, nameSpecified: 
+body: Copyright (c) 2017 L…
+version: 4.1.0
+
+add-version-numbers: false
+
+LicensePlist Version: 1.8.3

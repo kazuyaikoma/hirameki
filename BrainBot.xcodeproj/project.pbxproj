@@ -17,6 +17,9 @@
 		E518CEA621F5134D00A47682 /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E518CEA421F5134C00A47682 /* left-arrow@2x.png */; };
 		E518CEA821F5144F00A47682 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E518CEA721F5144F00A47682 /* share@2x.png */; };
 		E55A2F7221ECE3360096604F /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A2F7121ECE3360096604F /* Idea.swift */; };
+		E55BFC9021F8FF4E0001991B /* information@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55BFC8D21F8FF4E0001991B /* information@2x.png */; };
+		E55BFC9121F8FF4E0001991B /* concept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55BFC8E21F8FF4E0001991B /* concept@2x.png */; };
+		E55BFC9221F8FF4E0001991B /* update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55BFC8F21F8FF4E0001991B /* update@2x.png */; };
 		E560AA6221F46527006E1B5F /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6121F46527006E1B5F /* HistoryTableViewCell.xib */; };
 		E560AA6421F465FD006E1B5F /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */; };
 		E560AA6721F473DB006E1B5F /* blue-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */; };
@@ -26,9 +29,21 @@
 		E560AA6F21F4B6EC006E1B5F /* yellow-blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */; };
 		E560AA7121F4D7B0006E1B5F /* yellow-red-horizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */; };
 		E560AA7321F4D85E006E1B5F /* yellow-blue-horizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */; };
+		E56CC27F21F670A5007BFA52 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E56CC27E21F670A5007BFA52 /* Settings.bundle */; };
+		E56CC28121F6832C007BFA52 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56CC28021F6832C007BFA52 /* MenuTableViewCell.xib */; };
+		E56CC28321F6833A007BFA52 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CC28221F6833A007BFA52 /* MenuTableViewCell.swift */; };
+		E56CC28A21F687CD007BFA52 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CC28921F687CD007BFA52 /* WebViewController.swift */; };
 		E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5021D498C000B2E1BD /* idea@2x.png */; };
 		E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5877D5121D498C000B2E1BD /* menu@2x.png */; };
 		E5889BAF21DD2CD000FAA544 /* BBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5889BAE21DD2CD000FAA544 /* BBColor.swift */; };
+		E599861221FA16C2009DC4B5 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E599861121FA16C2009DC4B5 /* Onboarding.storyboard */; };
+		E599861421FA16ED009DC4B5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599861321FA16ED009DC4B5 /* OnboardingViewController.swift */; };
+		E59E793F21FA524A007B6D99 /* onboarding-second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E793C21FA5248007B6D99 /* onboarding-second@2x.png */; };
+		E59E794021FA524A007B6D99 /* onboarding-first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E793D21FA5249007B6D99 /* onboarding-first@2x.png */; };
+		E59E794121FA524A007B6D99 /* onboarding-third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E793E21FA524A007B6D99 /* onboarding-third@2x.png */; };
+		E5A0B59422104A6300470EC0 /* one@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A0B59122104A6300470EC0 /* one@2x.png */; };
+		E5A0B59522104A6300470EC0 /* three@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A0B59222104A6300470EC0 /* three@2x.png */; };
+		E5A0B59622104A6300470EC0 /* two@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A0B59322104A6300470EC0 /* two@2x.png */; };
 		E5B4A57E21D47452002413A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A57D21D47452002413A1 /* AppDelegate.swift */; };
 		E5B4A58021D47452002413A1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A57F21D47452002413A1 /* HistoryViewController.swift */; };
 		E5B4A58221D47452002413A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4A58121D47452002413A1 /* HomeViewController.swift */; };
@@ -55,6 +70,9 @@
 		E518CEA421F5134C00A47682 /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
 		E518CEA721F5144F00A47682 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
 		E55A2F7121ECE3360096604F /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
+		E55BFC8D21F8FF4E0001991B /* information@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "information@2x.png"; path = "BrainBot/Resources/icons/information@2x.png"; sourceTree = SOURCE_ROOT; };
+		E55BFC8E21F8FF4E0001991B /* concept@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "concept@2x.png"; path = "BrainBot/Resources/icons/concept@2x.png"; sourceTree = SOURCE_ROOT; };
+		E55BFC8F21F8FF4E0001991B /* update@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "update@2x.png"; path = "BrainBot/Resources/icons/update@2x.png"; sourceTree = SOURCE_ROOT; };
 		E560AA6121F46527006E1B5F /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		E560AA6321F465FD006E1B5F /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-yellow@2x.png"; sourceTree = "<group>"; };
@@ -64,9 +82,21 @@
 		E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-blue@2x.png"; sourceTree = "<group>"; };
 		E560AA7021F4D7AE006E1B5F /* yellow-red-horizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-red-horizontal@2x.png"; sourceTree = "<group>"; };
 		E560AA7221F4D85E006E1B5F /* yellow-blue-horizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-blue-horizontal@2x.png"; sourceTree = "<group>"; };
+		E56CC27E21F670A5007BFA52 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E56CC28021F6832C007BFA52 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		E56CC28221F6833A007BFA52 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		E56CC28921F687CD007BFA52 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E5877D5021D498C000B2E1BD /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
 		E5877D5121D498C000B2E1BD /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		E5889BAE21DD2CD000FAA544 /* BBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBColor.swift; sourceTree = "<group>"; };
+		E599861121FA16C2009DC4B5 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		E599861321FA16ED009DC4B5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		E59E793C21FA5248007B6D99 /* onboarding-second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-second@2x.png"; sourceTree = "<group>"; };
+		E59E793D21FA5249007B6D99 /* onboarding-first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-first@2x.png"; sourceTree = "<group>"; };
+		E59E793E21FA524A007B6D99 /* onboarding-third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding-third@2x.png"; sourceTree = "<group>"; };
+		E5A0B59122104A6300470EC0 /* one@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "one@2x.png"; sourceTree = "<group>"; };
+		E5A0B59222104A6300470EC0 /* three@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three@2x.png"; sourceTree = "<group>"; };
+		E5A0B59322104A6300470EC0 /* two@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "two@2x.png"; sourceTree = "<group>"; };
 		E5B4A57A21D47452002413A1 /* BrainBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B4A57D21D47452002413A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5B4A57F21D47452002413A1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +153,12 @@
 		E560AA6521F473AF006E1B5F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E59E793D21FA5249007B6D99 /* onboarding-first@2x.png */,
+				E59E793C21FA5248007B6D99 /* onboarding-second@2x.png */,
+				E59E793E21FA524A007B6D99 /* onboarding-third@2x.png */,
+				E55BFC8E21F8FF4E0001991B /* concept@2x.png */,
+				E55BFC8D21F8FF4E0001991B /* information@2x.png */,
+				E55BFC8F21F8FF4E0001991B /* update@2x.png */,
 				E560AA6621F473DB006E1B5F /* blue-yellow@2x.png */,
 				E560AA6A21F4B6EB006E1B5F /* red-yellow@2x.png */,
 				E560AA6C21F4B6EB006E1B5F /* yellow-blue@2x.png */,
@@ -145,6 +181,9 @@
 		E5877D4E21D4988C00B2E1BD /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				E5A0B59122104A6300470EC0 /* one@2x.png */,
+				E5A0B59222104A6300470EC0 /* three@2x.png */,
+				E5A0B59322104A6300470EC0 /* two@2x.png */,
 				E518CEA721F5144F00A47682 /* share@2x.png */,
 				E518CEA421F5134C00A47682 /* left-arrow@2x.png */,
 				E518CEA321F5134C00A47682 /* right-arrow@2x.png */,
@@ -157,9 +196,19 @@
 			path = icons;
 			sourceTree = "<group>";
 		};
+		E599861021FA16AC009DC4B5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E599861121FA16C2009DC4B5 /* Onboarding.storyboard */,
+				E599861321FA16ED009DC4B5 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		E5B4A57121D47452002413A1 = {
 			isa = PBXGroup;
 			children = (
+				E56CC27E21F670A5007BFA52 /* Settings.bundle */,
 				E5B4A57C21D47452002413A1 /* BrainBot */,
 				E5B4A57B21D47452002413A1 /* Products */,
 				D7975E1204F8285521482123 /* Pods */,
@@ -178,6 +227,7 @@
 		E5B4A57C21D47452002413A1 /* BrainBot */ = {
 			isa = PBXGroup;
 			children = (
+				E599861021FA16AC009DC4B5 /* Onboarding */,
 				E5B4A59521D48530002413A1 /* Menu */,
 				E5B4A59421D48522002413A1 /* History */,
 				E5B4A59321D48518002413A1 /* Home */,
@@ -221,6 +271,9 @@
 			isa = PBXGroup;
 			children = (
 				E5B4A59121D480AD002413A1 /* MenuViewController.swift */,
+				E56CC28021F6832C007BFA52 /* MenuTableViewCell.xib */,
+				E56CC28221F6833A007BFA52 /* MenuTableViewCell.swift */,
+				E56CC28921F687CD007BFA52 /* WebViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -294,22 +347,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5B4A58A21D47453002413A1 /* LaunchScreen.storyboard in Resources */,
+				E55BFC9121F8FF4E0001991B /* concept@2x.png in Resources */,
+				E59E794121FA524A007B6D99 /* onboarding-third@2x.png in Resources */,
+				E56CC27F21F670A5007BFA52 /* Settings.bundle in Resources */,
 				E560AA6F21F4B6EC006E1B5F /* yellow-blue@2x.png in Resources */,
 				E518CEA821F5144F00A47682 /* share@2x.png in Resources */,
+				E55BFC9021F8FF4E0001991B /* information@2x.png in Resources */,
 				E560AA6221F46527006E1B5F /* HistoryTableViewCell.xib in Resources */,
 				E560AA7121F4D7B0006E1B5F /* yellow-red-horizontal@2x.png in Resources */,
 				E5877D5421D498C000B2E1BD /* menu@2x.png in Resources */,
 				E518CEA521F5134D00A47682 /* right-arrow@2x.png in Resources */,
+				E59E794021FA524A007B6D99 /* onboarding-first@2x.png in Resources */,
 				E50BE95921DA1F74008254A2 /* location@2x.png in Resources */,
+				E55BFC9221F8FF4E0001991B /* update@2x.png in Resources */,
 				E5877D5321D498C000B2E1BD /* idea@2x.png in Resources */,
 				E560AA6E21F4B6EC006E1B5F /* yellow-red@2x.png in Resources */,
 				E5FBBE0821D96AB8007167B9 /* history@2x.png in Resources */,
+				E599861221FA16C2009DC4B5 /* Onboarding.storyboard in Resources */,
 				E560AA7321F4D85E006E1B5F /* yellow-blue-horizontal@2x.png in Resources */,
+				E5A0B59622104A6300470EC0 /* two@2x.png in Resources */,
 				E560AA6721F473DB006E1B5F /* blue-yellow@2x.png in Resources */,
+				E59E793F21FA524A007B6D99 /* onboarding-second@2x.png in Resources */,
 				E5BEA33C21EA042400FBB549 /* back@2x.png in Resources */,
 				E560AA6D21F4B6EC006E1B5F /* red-yellow@2x.png in Resources */,
+				E5A0B59522104A6300470EC0 /* three@2x.png in Resources */,
 				E5B4A58721D47453002413A1 /* Assets.xcassets in Resources */,
 				E5B4A58521D47452002413A1 /* Main.storyboard in Resources */,
+				E5A0B59422104A6300470EC0 /* one@2x.png in Resources */,
+				E56CC28121F6832C007BFA52 /* MenuTableViewCell.xib in Resources */,
 				E518CEA621F5134D00A47682 /* left-arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,21 +390,25 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LINEActivity/LINEActivity.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMReel/RAMReel.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LINEActivity.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMReel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +444,7 @@
 				E50BE95F21DA25D0008254A2 /* IdeaContentViewController.swift in Sources */,
 				E50BE95B21DA244C008254A2 /* IdeaPageViewController.swift in Sources */,
 				E560AA6421F465FD006E1B5F /* HistoryTableViewCell.swift in Sources */,
+				E599861421FA16ED009DC4B5 /* OnboardingViewController.swift in Sources */,
 				E50BE96121DA3255008254A2 /* BBMaterial.swift in Sources */,
 				E5B4A58221D47452002413A1 /* HomeViewController.swift in Sources */,
 				E50BE96621DA8752008254A2 /* Common.swift in Sources */,
@@ -386,6 +456,8 @@
 				E5B4A58021D47452002413A1 /* HistoryViewController.swift in Sources */,
 				E560AA6921F498FE006E1B5F /* HistoryDetailViewController.swift in Sources */,
 				E5B4A59221D480AD002413A1 /* MenuViewController.swift in Sources */,
+				E56CC28321F6833A007BFA52 /* MenuTableViewCell.swift in Sources */,
+				E56CC28A21F687CD007BFA52 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +612,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kaz.BrainBot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaz.BrainBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -561,7 +633,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kaz.BrainBot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaz.BrainBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
