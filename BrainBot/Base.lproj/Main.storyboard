@@ -168,7 +168,7 @@
                                             <constraint firstAttribute="height" constant="45" id="uk0-Hi-Dw7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="再ブレスト">
+                                        <state key="normal" title="再ヒラメキ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -222,11 +222,11 @@
             </objects>
             <point key="canvasLocation" x="2278.2608695652175" y="-600.66964285714278"/>
         </scene>
-        <!--ブレスト-->
+        <!--ヒラメキ-->
         <scene sceneID="tIs-Ev-lmL">
             <objects>
                 <navigationController id="bji-NP-mal" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ブレスト" image="idea.png" id="Rqx-CN-ilH"/>
+                    <tabBarItem key="tabBarItem" title="ヒラメキ" image="idea.png" id="Rqx-CN-ilH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="kqt-D1-cky">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -244,7 +244,7 @@
             </objects>
             <point key="canvasLocation" x="798" y="103"/>
         </scene>
-        <!--ブレスト-->
+        <!--ヒラメキ-->
         <scene sceneID="az5-54-gC3">
             <objects>
                 <viewController id="Ljm-N6-3aG" customClass="HomeViewController" customModule="BrainBot" customModuleProvider="target" sceneMemberID="viewController">
@@ -255,7 +255,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-yellow.png" translatesAutoresizingMaskIntoConstraints="NO" id="BsY-qC-KUG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="何をヒラメキたい？💡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4d-i7-i6y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="何を思いつきたい？💡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4d-i7-i6y">
                                 <rect key="frame" x="62" y="183" width="290" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,12 +295,12 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgx-xL-co0">
-                                <rect key="frame" x="134.5" y="339" width="145" height="30"/>
+                                <rect key="frame" x="159.5" y="339" width="95" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標アイデア数: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMQ-zS-rov">
-                                        <rect key="frame" x="0.0" y="8" width="115" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問数: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMQ-zS-rov">
+                                        <rect key="frame" x="0.0" y="8" width="60" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="115" id="2O7-BI-Ut5"/>
+                                            <constraint firstAttribute="width" constant="60" id="2O7-BI-Ut5"/>
                                             <constraint firstAttribute="height" constant="18" id="2Yo-gF-jxX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -308,7 +308,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fol-WV-gCe">
-                                        <rect key="frame" x="115" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="60" y="0.0" width="35" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -321,7 +321,7 @@
                                     <constraint firstItem="sMQ-zS-rov" firstAttribute="leading" secondItem="Wgx-xL-co0" secondAttribute="leading" id="PuT-yk-2F4"/>
                                     <constraint firstAttribute="bottom" secondItem="sMQ-zS-rov" secondAttribute="bottom" constant="4" id="XDs-75-bTd"/>
                                     <constraint firstAttribute="bottom" secondItem="fol-WV-gCe" secondAttribute="bottom" id="aHc-3b-MxI"/>
-                                    <constraint firstAttribute="width" constant="145" id="jv8-zx-jRL"/>
+                                    <constraint firstAttribute="width" constant="95" id="jv8-zx-jRL"/>
                                     <constraint firstAttribute="height" constant="30" id="sQv-LQ-9i6"/>
                                     <constraint firstItem="fol-WV-gCe" firstAttribute="leading" secondItem="sMQ-zS-rov" secondAttribute="trailing" id="tkS-T6-27w"/>
                                     <constraint firstItem="sMQ-zS-rov" firstAttribute="top" secondItem="Wgx-xL-co0" secondAttribute="top" constant="8" id="vxl-wL-UUL"/>
@@ -334,11 +334,22 @@
                                     <constraint firstAttribute="height" constant="50" id="F4h-QX-fn7"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="長押しで変更できます" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOl-J2-G4N">
+                                <rect key="frame" x="107" y="439" width="200" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="O0b-jF-ehv"/>
+                                    <constraint firstAttribute="width" constant="200" id="dwP-2b-wq2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BsY-qC-KUG" firstAttribute="top" secondItem="DNs-WS-7YD" secondAttribute="top" id="2Fc-UW-Wdk"/>
                             <constraint firstItem="Rzg-qH-8mD" firstAttribute="centerY" secondItem="DlA-6Y-r3a" secondAttribute="centerY" id="3Ke-JW-245"/>
+                            <constraint firstItem="iOl-J2-G4N" firstAttribute="top" secondItem="Rzg-qH-8mD" secondAttribute="bottom" constant="10" id="6TQ-n7-SkF"/>
                             <constraint firstItem="Wgx-xL-co0" firstAttribute="centerX" secondItem="DlA-6Y-r3a" secondAttribute="centerX" id="B8l-Ah-sqO"/>
                             <constraint firstItem="BsY-qC-KUG" firstAttribute="trailing" secondItem="DNs-WS-7YD" secondAttribute="trailing" id="BKq-y6-Z4W"/>
                             <constraint firstItem="DNs-WS-7YD" firstAttribute="trailing" secondItem="Pgj-KJ-FK2" secondAttribute="trailing" constant="80" id="CYH-Zz-UIk"/>
@@ -350,6 +361,7 @@
                             <constraint firstItem="Pgj-KJ-FK2" firstAttribute="leading" secondItem="DNs-WS-7YD" secondAttribute="leading" constant="80" id="N26-VB-JxU"/>
                             <constraint firstItem="Rzg-qH-8mD" firstAttribute="leading" secondItem="DNs-WS-7YD" secondAttribute="leading" constant="50" id="O8p-hK-Kng"/>
                             <constraint firstItem="BsY-qC-KUG" firstAttribute="bottom" secondItem="DNs-WS-7YD" secondAttribute="bottom" id="PjY-6V-Ka3"/>
+                            <constraint firstItem="iOl-J2-G4N" firstAttribute="centerX" secondItem="DlA-6Y-r3a" secondAttribute="centerX" id="QlT-E2-n1S"/>
                             <constraint firstItem="Wgx-xL-co0" firstAttribute="top" secondItem="Nxi-TH-Nc7" secondAttribute="bottom" constant="75" id="a4a-Jj-4pR"/>
                             <constraint firstItem="DNs-WS-7YD" firstAttribute="trailing" secondItem="Rzg-qH-8mD" secondAttribute="trailing" constant="50" id="bPG-LN-3gv"/>
                             <constraint firstItem="Nxi-TH-Nc7" firstAttribute="top" secondItem="ht2-Qs-rhM" secondAttribute="bottom" constant="5" id="cAU-n3-wG0"/>
@@ -361,7 +373,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DNs-WS-7YD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ブレスト" image="idea.png" id="OzW-AP-xrq"/>
+                    <tabBarItem key="tabBarItem" title="ヒラメキ" image="idea.png" id="OzW-AP-xrq"/>
                     <navigationItem key="navigationItem" id="qk4-Xq-kOx"/>
                     <connections>
                         <outlet property="countText" destination="fol-WV-gCe" id="RrG-Rh-WNG"/>

@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "ブレスト"
+        self.navigationItem.title = "ヒラメキ"
         self.themeText.attributedPlaceholder = NSAttributedString(string: "例：田舎の自販機を売れるようにする方法", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.7)])
         self.themeText.delegate = self
         
@@ -137,7 +137,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             let realm = try Realm()
             let ideas = realm.objects(Idea.self)
             if let _ = ideas.filter("theme = '\(theme)'").first {
-                self.showAlert("すでに同じテーマのアイデアが存在します。「履歴」から再度ブレストできます。")
+                self.showAlert("すでに同じテーマのアイデアが存在します。「履歴」からヒラメクことができます。")
             }
         } catch {
             print("realm error occurred at HomeVC#onStartTapped")

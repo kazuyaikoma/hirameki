@@ -18,8 +18,8 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
     var isFirst = true
     var parentVC: UIViewController?
     
-    static let titleFont = UIFont(name: "Nunito-Bold", size: 36.0) ?? UIFont.boldSystemFont(ofSize: 36.0)
-    static let descriptionFont = UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.systemFont(ofSize: 14.0)
+    static let titleFont = UIFont(name: "HelveticaNeue-Bold", size: 30.0) ?? UIFont.boldSystemFont(ofSize: 30.0)
+    static let descriptionFont = UIFont(name: "HelveticaNeue", size: 18.0) ?? UIFont.systemFont(ofSize: 18.0)
     
     static let firstImg = UIImage(named: "onboarding-first") ?? UIImage(named: "idea")!
     static let secondImg = UIImage(named: "onboarding-second") ?? UIImage(named: "idea")!
@@ -29,23 +29,30 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
     static let thirdNumImg = UIImage(named: "three") ?? UIImage(named: "idea")!
     
     fileprivate let items = [
+        OnboardingItemInfo(informationImage: OnboardingViewController.secondImg,
+                           title: "Hirameki へようこそ。",
+                           description: "「Hirameki」はひらめき支援アプリです。\nこのアプリを使って、次の3ステップで画期的なアイデアを生み出しましょう。",
+                           pageIcon: UIImage(),
+                           color: BBColor.red,
+                           titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: OnboardingViewController.titleFont, descriptionFont: OnboardingViewController.descriptionFont),
+        
         OnboardingItemInfo(informationImage: OnboardingViewController.firstImg,
                            title: "１. テーマを決める",
-                           description: "「田舎の自販機を売れるようにしたい」\nだったり、\n「イベントになんとか100人集めたい」\nだったり。\nあなたは何をヒラメキたい？",
+                           description: "「田舎の自販機を売れるようにしたい」だったり、\n「イベントになんとか100人集めたい」だったり。\n思いつきたいテーマを決めましょう。",
                            pageIcon: OnboardingViewController.firstNumImg,
                            color: BBColor.red,
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: OnboardingViewController.titleFont, descriptionFont: OnboardingViewController.descriptionFont),
         
         OnboardingItemInfo(informationImage: OnboardingViewController.secondImg,
                            title: "２. ひらめく",
-                           description: "決めたテーマについて、\nアプリの質問に答えながら一人ブレスト。\n画期的なアイデアが生まれるはず。",
+                           description: "決めたテーマについて、アプリの質問に答えながらひらめく💡\n画期的なアイデアが生まれるはず。",
                            pageIcon: OnboardingViewController.secondNumImg,
                            color: BBColor.yellow,
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: OnboardingViewController.titleFont, descriptionFont: OnboardingViewController.descriptionFont),
         
         OnboardingItemInfo(informationImage: OnboardingViewController.thirdImg,
                            title: "３. シェア",
-                           description: "ひらめいたアイデアを、\n仲間とLINEやSlack、twitter等でシェア。\nさらにアイデアが膨らむかも。",
+                           description: "ひらめいたアイデアを、仲間とLINEやSlack、twitter等でシェア。\nさらにアイデアが膨らむかも。",
                            pageIcon: OnboardingViewController.thirdNumImg,
                            color: BBColor.blue,
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: OnboardingViewController.titleFont, descriptionFont: OnboardingViewController.descriptionFont),
@@ -104,7 +111,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
     // MARK: PaperOnboardingDelegate
     
     func onboardingWillTransitonToIndex(_ index: Int) {
-        let isFinal = index == 2
+        let isFinal = index == (self.items.count - 1)
         if self.isFirst {
             self.startButton.isHidden = !isFinal
         } else {
@@ -125,7 +132,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
     }
     
     func onboardingItemsCount() -> Int {
-        return 3
+        return items.count
     }
     
     func onboardinPageItemRadius() -> CGFloat {
@@ -137,7 +144,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDelegate, Paper
     }
     
     func onboardingPageItemColor(at index: Int) -> UIColor {
-        return [BBColor.red, BBColor.yellow, BBColor.blue][index]
+        return [BBColor.red, BBColor.red, BBColor.yellow, BBColor.blue][index]
     }
 }
 
