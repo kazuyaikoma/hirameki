@@ -86,7 +86,7 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onRethinkPushed(_ sender: Any) {
-        let alert = UIAlertController(title: "もう一度ブレストしますか？", message: "これまで出したアイデアを引き継いで、再度ブレストします", preferredStyle:  UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "もう一度ヒラメキますか？", message: "これまで出したアイデアを引き継いで、もう一度考えます", preferredStyle:  UIAlertController.Style.alert)
         let defaultAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
             (action: UIAlertAction!) -> Void in
             self.rethink()
