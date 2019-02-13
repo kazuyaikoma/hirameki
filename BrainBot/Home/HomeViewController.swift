@@ -138,7 +138,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             let realm = try Realm()
             let ideas = realm.objects(Idea.self)
             if let _ = ideas.filter("theme = '\(theme)'").first {
-                self.showAlert("すでに同じテーマのアイデアが存在します。「履歴」からヒラメクことができます。")
+                self.showAlert("すでに同じテーマのアイデアが存在します。「履歴」からもう一度考えることが出来ます。")
             }
         } catch {
             print("realm error occurred at HomeVC#onStartTapped")
