@@ -66,6 +66,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         self.slider.fraction = 0.5
         self.slider.shadowOffset = CGSize(width: 0, height: 10)
         self.slider.shadowBlur = 5
+        self.slider.contentViewCornerRadius = self.slider.frame.height / 2
         self.slider.contentViewColor = BBColor.blue
         self.slider.valueViewColor = UIColor.white
         

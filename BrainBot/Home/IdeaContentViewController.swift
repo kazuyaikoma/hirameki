@@ -33,11 +33,11 @@ class IdeaContentViewController: UIViewController {
     // TODO: FIX: 以下の4つメソッド、subviewsから取得してしまっているが、本来はIBOutlet接続してるUILabelを直接そのまま扱いたい。
     // しかしこの時点で評価するとなぜかnilになる
     func setHint(_ hint: String) {
-        ((self.view.subviews.filter({ $0 is UILabel }).first) as? UILabel)?.text = hint
+        ((self.view.subviews.first?.subviews.filter({ $0 is UILabel }).first) as? UILabel)?.text = hint
     }
     
     func getHint() -> String? {
-        return ((self.view.subviews.filter({ $0 is UILabel }).first) as? UILabel)?.text
+        return ((self.view.subviews.first?.subviews.filter({ $0 is UILabel }).first) as? UILabel)?.text
     }
     
     func setIdea(_ idea: String) {
