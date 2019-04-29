@@ -1,17 +1,17 @@
 PODS:
-  - fluid-slider (1.0.0):
+  - fluid-slider (1.1.0):
     - pop
   - LINEActivity (0.2.0)
-  - paper-onboarding (5.0.0)
+  - paper-onboarding (6.1.3)
   - pop (1.0.12)
-  - RAMReel (4.0.0)
-  - Realm (3.13.1):
-    - Realm/Headers (= 3.13.1)
-  - Realm/Headers (3.13.1)
-  - RealmSwift (3.13.1):
-    - Realm (= 3.13.1)
-  - Toast-Swift (4.0.1)
-  - UICircularProgressRing (4.1.0)
+  - RAMReel (4.1.0)
+  - Realm (3.14.2):
+    - Realm/Headers (= 3.14.2)
+  - Realm/Headers (3.14.2)
+  - RealmSwift (3.14.2):
+    - Realm (= 3.14.2)
+  - Toast-Swift (5.0.0)
+  - UICircularProgressRing (6.1.0)
 
 DEPENDENCIES:
   - fluid-slider
@@ -35,16 +35,16 @@ SPEC REPOS:
     - UICircularProgressRing
 
 SPEC CHECKSUMS:
-  fluid-slider: a19a991606a34a545cba9341e7422073b4ec3a66
+  fluid-slider: 68037ac7247f16a89f3e24ff5d0167c8eea6f50b
   LINEActivity: 3cf844b075bc7f8338ea86b41bd46acd5ec934d8
-  paper-onboarding: a2e3a710fd27ac0b5635ec5490660e7ec09289b5
+  paper-onboarding: 47ded9ede6ae9dd7ec135dddd8bd3e170b79d799
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
-  RAMReel: 815addc9594886e6816b891a1559058f05ff9580
-  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
-  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
-  Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
-  UICircularProgressRing: 5a32c01f54474571b1e66e8fa050c0f83d6d981b
+  RAMReel: 198e41f62d65f54c44797679ade03b4a1cef9709
+  Realm: 179c6706e3a49dbfe112e572fd3c03d3169bea35
+  RealmSwift: 1797f272fb51c555b764fada32e82159a2c65247
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
+  UICircularProgressRing: b3eba859a515e4d9d38503eec913f09c28450785
 
 PODFILE CHECKSUM: bfcc36fbda3b1b4100819a359f693fb89c674192
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

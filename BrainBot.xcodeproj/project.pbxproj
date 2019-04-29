@@ -320,6 +320,7 @@
 				TargetAttributes = {
 					E5B4A57921D47452002413A1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -388,7 +389,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BrainBot/Pods-BrainBot-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LINEActivity/LINEActivity.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMReel/RAMReel.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -413,7 +414,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrainBot/Pods-BrainBot-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BrainBot/Pods-BrainBot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FC3F1F503AFA57CEB69C1F05 /* [CP] Check Pods Manifest.lock */ = {
@@ -615,7 +616,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaz.BrainBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -636,7 +637,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaz.BrainBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

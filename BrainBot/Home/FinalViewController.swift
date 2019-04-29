@@ -40,8 +40,6 @@ class FinalViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(FinalViewController.onSharePushed))
         
-        self.progressCircle.gradientColors = [UIColor.red, UIColor.blue]
-        
         var ideas = ""
         if let oldIdea = self.oldIdeas {
             ideas = oldIdea + "\n"
