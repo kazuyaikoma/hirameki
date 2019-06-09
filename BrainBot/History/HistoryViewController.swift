@@ -75,8 +75,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "HistoryDetailViewController") as? HistoryDetailViewController,
-             let cell = tableView.cellForRow(at: indexPath) as? HistoryTableViewCell
+        guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "HistoryDetailViewController") as? HistoryDetailViewController
         else { return }
         let idx = indexPath.row
         
