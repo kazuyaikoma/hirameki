@@ -1,4 +1,6 @@
-# BrainBot iOS
+# Hirameki iOS
+
+[AppStore](https://apps.apple.com/us/app/hirameki-5分でアイデアをひらめく/id1451743349)
 
 ## Requirements
 
