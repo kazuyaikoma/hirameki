@@ -9,9 +9,18 @@ target 'BrainBot' do
   pod 'fluid-slider'
   pod 'UICircularProgressRing'
   pod 'Toast-Swift'
-  pod 'RealmSwift'
   pod "LINEActivity"
   pod 'paper-onboarding'
   pod 'RAMReel'
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if target.name.include?('Realm')
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+      end
+    end
+  end
 end

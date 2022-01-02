@@ -9,7 +9,6 @@
 import UIKit
 import Foundation
 import Toast_Swift
-import RealmSwift
 import LINEActivity
 
 class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
@@ -49,20 +48,6 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     func save(_ toastInterval: TimeInterval = 0.5) {
-        do {
-            let realm = try Realm()
-            let ideas = realm.objects(Idea.self)
-            
-            if let idea = ideas.filter("theme = '\(self.theme)'").first {
-                try! realm.write {
-                    idea.setValue(self.textView.text ?? "", forKey: "ideas")
-                    idea.setValue(Date.init(), forKey: "updatedDate")
-                }
-            }
-        } catch {
-            print("realm error occurred at HistoryDetailVC#save")
-        }
-        
         self.makeSaveToast(toastInterval)
     }
     
@@ -99,19 +84,6 @@ class HistoryDetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     func delete() {
-        do {
-            let realm = try Realm()
-            let ideas = realm.objects(Idea.self)
-            
-            if let idea = ideas.filter("theme = '\(self.theme)'").first {
-                try! realm.write {
-                    realm.delete(idea)
-                    self.onDeleteSucceeded()
-                }
-            }
-        } catch {
-            print("realm error occurred at HistoryDetailVC#onDeletePushed")
-        }
     }
     
     func onDeleteSucceeded() {

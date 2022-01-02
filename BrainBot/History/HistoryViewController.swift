@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -45,18 +44,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.dates = []
         self.themes = []
         self.ideas = []
-        
-        do {
-            let realm = try Realm()
-            let datas = realm.objects(Idea.self).sorted(byKeyPath: "updatedDate", ascending: false)
-            for data in datas {
-                self.dates.append(data.updatedDate)
-                self.themes.append(data.theme)
-                self.ideas.append(data.ideas)
-            }
-        } catch {
-            print("realm error occurred at HistoryViewController#viewWillAppear")
-        }
     }
 
     // MARK: - TableViewDelegate

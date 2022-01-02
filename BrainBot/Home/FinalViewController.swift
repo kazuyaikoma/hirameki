@@ -10,7 +10,6 @@ import UIKit
 import Foundation
 import UICircularProgressRing
 import Toast_Swift
-import RealmSwift
 import LINEActivity
 
 class FinalViewController: UIViewController {
@@ -84,20 +83,6 @@ class FinalViewController: UIViewController {
     }
     
     func save(_ toastInterval: TimeInterval = 0.5) {
-        do {
-            let realm = try Realm()
-            let ideas = realm.objects(Idea.self)
-            
-            if let theme = self.themeTxt, let idea = ideas.filter("theme = '\(theme)'").first {
-                try! realm.write { idea.setValue(self.textView.text ?? "", forKey: "ideas") }
-            } else {
-                let idea = Idea(value: ["updatedDate": Date.init(), "theme": self.themeTxt ?? "", "ideas": self.textView.text ?? ""])
-                try! realm.write { realm.add(idea) }
-            }
-        } catch {
-            print("realm error occurred at FinalVC#save")
-        }
-        
         self.makeSaveToast(toastInterval)
     }
     
